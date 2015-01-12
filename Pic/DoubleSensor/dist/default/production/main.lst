@@ -1,0 +1,2843 @@
+CCS PCM C Compiler, Version 5.033d, 1               18-Dec-14 23:21
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   C:\Users\Daniel\Desktop\PIC\Projetos\DoubleSensor.X\dist\default\production\main.lst
+
+               ROM used:   1987 words (24%)
+                           Largest free fragment is 2048
+               RAM used:   22 (6%) at main() level
+                           51 (14%) worst case
+               Stack used: 3 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  07
+0001:  MOVWF  0A
+0002:  GOTO   74A
+0003:  NOP
+.................... #include <main.h> 
+.................... #include <16F886.h> 
+.................... //////////// Standard Header file for the PIC16F886 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F886 
+0004:  DATA A5,34
+0005:  DATA A0,16
+0006:  DATA 2D,10
+0007:  DATA 25,18
+0008:  DATA 35,17
+0009:  DATA B1,33
+000A:  DATA 8A,06
+000B:  DATA 00,10
+000C:  DATA 78,3C
+000D:  DATA 8A,06
+000E:  DATA 00,00
+*
+01D1:  CLRF   78
+01D2:  CLRF   79
+01D3:  CLRF   77
+01D4:  CLRF   7A
+01D5:  MOVF   40,W
+01D6:  BTFSS  03.2
+01D7:  GOTO   1DB
+01D8:  MOVF   3F,W
+01D9:  BTFSC  03.2
+01DA:  GOTO   1F5
+01DB:  MOVLW  10
+01DC:  MOVWF  41
+01DD:  BCF    03.0
+01DE:  RLF    3D,F
+01DF:  RLF    3E,F
+01E0:  RLF    77,F
+01E1:  RLF    7A,F
+01E2:  MOVF   40,W
+01E3:  SUBWF  7A,W
+01E4:  BTFSS  03.2
+01E5:  GOTO   1E8
+01E6:  MOVF   3F,W
+01E7:  SUBWF  77,W
+01E8:  BTFSS  03.0
+01E9:  GOTO   1F1
+01EA:  MOVF   3F,W
+01EB:  SUBWF  77,F
+01EC:  BTFSS  03.0
+01ED:  DECF   7A,F
+01EE:  MOVF   40,W
+01EF:  SUBWF  7A,F
+01F0:  BSF    03.0
+01F1:  RLF    78,F
+01F2:  RLF    79,F
+01F3:  DECFSZ 41,F
+01F4:  GOTO   1DD
+*
+0216:  MOVLW  8E
+0217:  MOVWF  77
+0218:  MOVF   2E,W
+0219:  MOVWF  78
+021A:  MOVF   2D,W
+021B:  MOVWF  79
+021C:  CLRF   7A
+021D:  BTFSS  2E.7
+021E:  GOTO   224
+021F:  COMF   78,F
+0220:  COMF   79,F
+0221:  INCF   79,F
+0222:  BTFSC  03.2
+0223:  INCF   78,F
+0224:  MOVF   78,F
+0225:  BTFSS  03.2
+0226:  GOTO   231
+0227:  MOVF   79,W
+0228:  MOVWF  78
+0229:  CLRF   79
+022A:  MOVLW  08
+022B:  SUBWF  77,F
+022C:  MOVF   78,F
+022D:  BTFSS  03.2
+022E:  GOTO   231
+022F:  CLRF   77
+0230:  GOTO   23A
+0231:  BCF    03.0
+0232:  BTFSC  78.7
+0233:  GOTO   238
+0234:  RLF    79,F
+0235:  RLF    78,F
+0236:  DECF   77,F
+0237:  GOTO   231
+0238:  BTFSS  2E.7
+0239:  BCF    78.7
+*
+024F:  MOVF   31,W
+0250:  BTFSC  03.2
+0251:  GOTO   314
+0252:  MOVWF  3D
+0253:  MOVF   35,W
+0254:  BTFSC  03.2
+0255:  GOTO   314
+0256:  SUBWF  3D,F
+0257:  BTFSS  03.0
+0258:  GOTO   25E
+0259:  MOVLW  7F
+025A:  ADDWF  3D,F
+025B:  BTFSC  03.0
+025C:  GOTO   314
+025D:  GOTO   264
+025E:  MOVLW  81
+025F:  SUBWF  3D,F
+0260:  BTFSS  03.0
+0261:  GOTO   314
+0262:  BTFSC  03.2
+0263:  GOTO   314
+0264:  MOVF   3D,W
+0265:  MOVWF  77
+0266:  CLRF   78
+0267:  CLRF   79
+0268:  CLRF   7A
+0269:  CLRF   3C
+026A:  MOVF   32,W
+026B:  MOVWF  3B
+026C:  BSF    3B.7
+026D:  MOVF   33,W
+026E:  MOVWF  3A
+026F:  MOVF   34,W
+0270:  MOVWF  39
+0271:  MOVLW  19
+0272:  MOVWF  3D
+0273:  MOVF   38,W
+0274:  SUBWF  39,F
+0275:  BTFSC  03.0
+0276:  GOTO   287
+0277:  MOVLW  01
+0278:  SUBWF  3A,F
+0279:  BTFSC  03.0
+027A:  GOTO   287
+027B:  SUBWF  3B,F
+027C:  BTFSC  03.0
+027D:  GOTO   287
+027E:  SUBWF  3C,F
+027F:  BTFSC  03.0
+0280:  GOTO   287
+0281:  INCF   3C,F
+0282:  INCF   3B,F
+0283:  INCF   3A,F
+0284:  MOVF   38,W
+0285:  ADDWF  39,F
+0286:  GOTO   2B9
+0287:  MOVF   37,W
+0288:  SUBWF  3A,F
+0289:  BTFSC  03.0
+028A:  GOTO   2A2
+028B:  MOVLW  01
+028C:  SUBWF  3B,F
+028D:  BTFSC  03.0
+028E:  GOTO   2A2
+028F:  SUBWF  3C,F
+0290:  BTFSC  03.0
+0291:  GOTO   2A2
+0292:  INCF   3C,F
+0293:  INCF   3B,F
+0294:  MOVF   37,W
+0295:  ADDWF  3A,F
+0296:  MOVF   38,W
+0297:  ADDWF  39,F
+0298:  BTFSS  03.0
+0299:  GOTO   2B9
+029A:  INCF   3A,F
+029B:  BTFSS  03.2
+029C:  GOTO   2B9
+029D:  INCF   3B,F
+029E:  BTFSS  03.2
+029F:  GOTO   2B9
+02A0:  INCF   3C,F
+02A1:  GOTO   2B9
+02A2:  MOVF   36,W
+02A3:  IORLW  80
+02A4:  SUBWF  3B,F
+02A5:  BTFSC  03.0
+02A6:  GOTO   2B8
+02A7:  MOVLW  01
+02A8:  SUBWF  3C,F
+02A9:  BTFSC  03.0
+02AA:  GOTO   2B8
+02AB:  INCF   3C,F
+02AC:  MOVF   36,W
+02AD:  IORLW  80
+02AE:  ADDWF  3B,F
+02AF:  MOVF   37,W
+02B0:  ADDWF  3A,F
+02B1:  BTFSS  03.0
+02B2:  GOTO   296
+02B3:  INCF   3B,F
+02B4:  BTFSS  03.2
+02B5:  GOTO   296
+02B6:  INCF   3C,F
+02B7:  GOTO   296
+02B8:  BSF    7A.0
+02B9:  DECFSZ 3D,F
+02BA:  GOTO   2BC
+02BB:  GOTO   2C7
+02BC:  BCF    03.0
+02BD:  RLF    39,F
+02BE:  RLF    3A,F
+02BF:  RLF    3B,F
+02C0:  RLF    3C,F
+02C1:  BCF    03.0
+02C2:  RLF    7A,F
+02C3:  RLF    79,F
+02C4:  RLF    78,F
+02C5:  RLF    3E,F
+02C6:  GOTO   273
+02C7:  BTFSS  3E.0
+02C8:  GOTO   2CF
+02C9:  BCF    03.0
+02CA:  RRF    78,F
+02CB:  RRF    79,F
+02CC:  RRF    7A,F
+02CD:  RRF    3E,F
+02CE:  GOTO   2D2
+02CF:  DECF   77,F
+02D0:  BTFSC  03.2
+02D1:  GOTO   314
+02D2:  BTFSC  3E.7
+02D3:  GOTO   2FB
+02D4:  BCF    03.0
+02D5:  RLF    39,F
+02D6:  RLF    3A,F
+02D7:  RLF    3B,F
+02D8:  RLF    3C,F
+02D9:  MOVF   38,W
+02DA:  SUBWF  39,F
+02DB:  BTFSC  03.0
+02DC:  GOTO   2E7
+02DD:  MOVLW  01
+02DE:  SUBWF  3A,F
+02DF:  BTFSC  03.0
+02E0:  GOTO   2E7
+02E1:  SUBWF  3B,F
+02E2:  BTFSC  03.0
+02E3:  GOTO   2E7
+02E4:  SUBWF  3C,F
+02E5:  BTFSS  03.0
+02E6:  GOTO   30A
+02E7:  MOVF   37,W
+02E8:  SUBWF  3A,F
+02E9:  BTFSC  03.0
+02EA:  GOTO   2F2
+02EB:  MOVLW  01
+02EC:  SUBWF  3B,F
+02ED:  BTFSC  03.0
+02EE:  GOTO   2F2
+02EF:  SUBWF  3C,F
+02F0:  BTFSS  03.0
+02F1:  GOTO   30A
+02F2:  MOVF   36,W
+02F3:  IORLW  80
+02F4:  SUBWF  3B,F
+02F5:  BTFSC  03.0
+02F6:  GOTO   2FB
+02F7:  MOVLW  01
+02F8:  SUBWF  3C,F
+02F9:  BTFSS  03.0
+02FA:  GOTO   30A
+02FB:  INCF   7A,F
+02FC:  BTFSS  03.2
+02FD:  GOTO   30A
+02FE:  INCF   79,F
+02FF:  BTFSS  03.2
+0300:  GOTO   30A
+0301:  INCF   78,F
+0302:  BTFSS  03.2
+0303:  GOTO   30A
+0304:  INCF   77,F
+0305:  BTFSC  03.2
+0306:  GOTO   314
+0307:  RRF    78,F
+0308:  RRF    79,F
+0309:  RRF    7A,F
+030A:  MOVF   32,W
+030B:  MOVWF  3D
+030C:  MOVF   36,W
+030D:  XORWF  3D,F
+030E:  BTFSS  3D.7
+030F:  GOTO   312
+0310:  BSF    78.7
+0311:  GOTO   318
+0312:  BCF    78.7
+0313:  GOTO   318
+0314:  CLRF   77
+0315:  CLRF   78
+0316:  CLRF   79
+0317:  CLRF   7A
+*
+031B:  MOVF   38,W
+031C:  CLRF   78
+031D:  SUBWF  37,W
+031E:  BTFSC  03.0
+031F:  GOTO   323
+0320:  MOVF   37,W
+0321:  MOVWF  77
+0322:  GOTO   32F
+0323:  CLRF   77
+0324:  MOVLW  08
+0325:  MOVWF  39
+0326:  RLF    37,F
+0327:  RLF    77,F
+0328:  MOVF   38,W
+0329:  SUBWF  77,W
+032A:  BTFSC  03.0
+032B:  MOVWF  77
+032C:  RLF    78,F
+032D:  DECFSZ 39,F
+032E:  GOTO   326
+032F:  RETURN
+0330:  MOVLW  20
+0331:  BTFSS  32.4
+0332:  MOVLW  30
+0333:  MOVWF  33
+0334:  MOVF   31,W
+0335:  MOVWF  77
+0336:  BTFSS  31.7
+0337:  GOTO   340
+0338:  COMF   77,F
+0339:  INCF   77,F
+033A:  MOVF   77,W
+033B:  MOVWF  31
+033C:  MOVLW  2D
+033D:  MOVWF  33
+033E:  BSF    32.7
+033F:  BSF    32.0
+0340:  MOVF   31,W
+0341:  MOVWF  37
+0342:  MOVLW  64
+0343:  MOVWF  38
+0344:  CALL   31B
+0345:  MOVF   77,W
+0346:  MOVWF  31
+0347:  MOVLW  30
+0348:  ADDWF  78,W
+0349:  MOVWF  34
+034A:  MOVF   31,W
+034B:  MOVWF  37
+034C:  MOVLW  0A
+034D:  MOVWF  38
+034E:  CALL   31B
+034F:  MOVLW  30
+0350:  ADDWF  77,W
+0351:  MOVWF  36
+0352:  MOVLW  30
+0353:  ADDWF  78,W
+0354:  MOVWF  35
+0355:  MOVF   33,W
+0356:  MOVWF  77
+0357:  MOVLW  30
+0358:  SUBWF  34,W
+0359:  BTFSC  03.2
+035A:  GOTO   35F
+035B:  BSF    32.1
+035C:  BTFSC  32.7
+035D:  BSF    32.2
+035E:  GOTO   373
+035F:  MOVF   33,W
+0360:  MOVWF  34
+0361:  MOVLW  20
+0362:  MOVWF  33
+0363:  MOVLW  30
+0364:  SUBWF  35,W
+0365:  BTFSC  03.2
+0366:  GOTO   36B
+0367:  BSF    32.0
+0368:  BTFSC  32.7
+0369:  BSF    32.1
+036A:  GOTO   373
+036B:  BTFSS  03.2
+036C:  BSF    32.0
+036D:  BTFSS  03.2
+036E:  GOTO   373
+036F:  MOVF   34,W
+0370:  MOVWF  35
+0371:  MOVLW  20
+0372:  MOVWF  34
+0373:  BTFSC  32.2
+0374:  GOTO   37A
+0375:  BTFSC  32.1
+0376:  GOTO   37E
+0377:  BTFSC  32.0
+0378:  GOTO   382
+0379:  GOTO   386
+037A:  MOVF   33,W
+037B:  BTFSS  0C.4
+037C:  GOTO   37B
+037D:  MOVWF  19
+037E:  MOVF   34,W
+037F:  BTFSS  0C.4
+0380:  GOTO   37F
+0381:  MOVWF  19
+0382:  MOVF   35,W
+0383:  BTFSS  0C.4
+0384:  GOTO   383
+0385:  MOVWF  19
+0386:  MOVF   36,W
+0387:  BTFSS  0C.4
+0388:  GOTO   387
+0389:  MOVWF  19
+038A:  BCF    0A.3
+038B:  BCF    0A.4
+038C:  GOTO   78D (RETURN)
+038D:  MOVF   0B,W
+038E:  MOVWF  32
+038F:  BCF    0B.7
+0390:  BSF    03.5
+0391:  BSF    03.6
+0392:  BSF    0C.7
+0393:  BSF    0C.0
+0394:  NOP
+0395:  NOP
+0396:  BCF    03.5
+0397:  BCF    03.6
+0398:  BTFSC  32.7
+0399:  BSF    0B.7
+039A:  BTFSC  03.0
+039B:  GOTO   3C5
+039C:  BSF    03.6
+039D:  MOVF   0C,W
+039E:  ANDLW  7F
+039F:  BCF    03.6
+03A0:  MOVWF  32
+03A1:  BSF    03.6
+03A2:  MOVF   0D,W
+03A3:  BCF    03.6
+03A4:  MOVWF  33
+03A5:  BSF    03.6
+03A6:  MOVF   0F,W
+03A7:  BCF    03.6
+03A8:  MOVWF  34
+03A9:  MOVF   32,W
+03AA:  BTFSS  0C.4
+03AB:  GOTO   3AA
+03AC:  MOVWF  19
+03AD:  MOVF   33,W
+03AE:  BSF    03.6
+03AF:  MOVWF  0D
+03B0:  BCF    03.6
+03B1:  MOVF   34,W
+03B2:  BSF    03.6
+03B3:  MOVWF  0F
+03B4:  BCF    03.6
+03B5:  MOVF   0B,W
+03B6:  MOVWF  35
+03B7:  BCF    0B.7
+03B8:  BSF    03.5
+03B9:  BSF    03.6
+03BA:  BSF    0C.7
+03BB:  BSF    0C.0
+03BC:  NOP
+03BD:  NOP
+03BE:  BCF    03.5
+03BF:  BCF    03.6
+03C0:  BTFSC  35.7
+03C1:  BSF    0B.7
+03C2:  DECFSZ 31,F
+03C3:  GOTO   3C5
+03C4:  GOTO   3E5
+03C5:  BSF    03.6
+03C6:  RLF    0C,W
+03C7:  RLF    0E,W
+03C8:  ANDLW  7F
+03C9:  BCF    03.6
+03CA:  MOVWF  32
+03CB:  BSF    03.6
+03CC:  MOVF   0D,W
+03CD:  BCF    03.6
+03CE:  MOVWF  33
+03CF:  BSF    03.6
+03D0:  MOVF   0F,W
+03D1:  BCF    03.6
+03D2:  MOVWF  34
+03D3:  MOVF   32,W
+03D4:  BTFSS  0C.4
+03D5:  GOTO   3D4
+03D6:  MOVWF  19
+03D7:  MOVF   33,W
+03D8:  BSF    03.6
+03D9:  MOVWF  0D
+03DA:  BCF    03.6
+03DB:  MOVF   34,W
+03DC:  BSF    03.6
+03DD:  MOVWF  0F
+03DE:  INCF   0D,F
+03DF:  BTFSC  03.2
+03E0:  INCF   0F,F
+03E1:  BCF    03.0
+03E2:  BCF    03.6
+03E3:  DECFSZ 31,F
+03E4:  GOTO   38D
+03E5:  BCF    0A.3
+03E6:  BCF    0A.4
+03E7:  GOTO   797 (RETURN)
+03E8:  BTFSC  03.1
+03E9:  GOTO   3ED
+03EA:  MOVLW  46
+03EB:  MOVWF  04
+03EC:  BCF    03.7
+03ED:  CLRF   77
+03EE:  CLRF   78
+03EF:  CLRF   79
+03F0:  CLRF   7A
+03F1:  CLRF   46
+03F2:  CLRF   47
+03F3:  CLRF   48
+03F4:  CLRF   49
+03F5:  MOVF   45,W
+03F6:  IORWF  44,W
+03F7:  IORWF  43,W
+03F8:  IORWF  42,W
+03F9:  BTFSC  03.2
+03FA:  GOTO   42B
+03FB:  MOVLW  20
+03FC:  MOVWF  4A
+03FD:  BCF    03.0
+03FE:  RLF    3E,F
+03FF:  RLF    3F,F
+0400:  RLF    40,F
+0401:  RLF    41,F
+0402:  RLF    46,F
+0403:  RLF    47,F
+0404:  RLF    48,F
+0405:  RLF    49,F
+0406:  MOVF   45,W
+0407:  SUBWF  49,W
+0408:  BTFSS  03.2
+0409:  GOTO   414
+040A:  MOVF   44,W
+040B:  SUBWF  48,W
+040C:  BTFSS  03.2
+040D:  GOTO   414
+040E:  MOVF   43,W
+040F:  SUBWF  47,W
+0410:  BTFSS  03.2
+0411:  GOTO   414
+0412:  MOVF   42,W
+0413:  SUBWF  46,W
+0414:  BTFSS  03.0
+0415:  GOTO   425
+0416:  MOVF   42,W
+0417:  SUBWF  46,F
+0418:  MOVF   43,W
+0419:  BTFSS  03.0
+041A:  INCFSZ 43,W
+041B:  SUBWF  47,F
+041C:  MOVF   44,W
+041D:  BTFSS  03.0
+041E:  INCFSZ 44,W
+041F:  SUBWF  48,F
+0420:  MOVF   45,W
+0421:  BTFSS  03.0
+0422:  INCFSZ 45,W
+0423:  SUBWF  49,F
+0424:  BSF    03.0
+0425:  RLF    77,F
+0426:  RLF    78,F
+0427:  RLF    79,F
+0428:  RLF    7A,F
+0429:  DECFSZ 4A,F
+042A:  GOTO   3FD
+042B:  MOVF   46,W
+042C:  MOVWF  00
+042D:  INCF   04,F
+042E:  MOVF   47,W
+042F:  MOVWF  00
+0430:  INCF   04,F
+0431:  MOVF   48,W
+0432:  MOVWF  00
+0433:  INCF   04,F
+0434:  MOVF   49,W
+0435:  MOVWF  00
+0436:  RETURN
+0437:  MOVF   04,W
+0438:  MOVWF  36
+0439:  MOVF   35,W
+043A:  MOVWF  38
+043B:  BTFSC  03.2
+043C:  GOTO   4C9
+043D:  MOVF   34,W
+043E:  MOVWF  41
+043F:  MOVF   33,W
+0440:  MOVWF  40
+0441:  MOVF   32,W
+0442:  MOVWF  3F
+0443:  MOVF   31,W
+0444:  MOVWF  3E
+0445:  CLRF   45
+0446:  CLRF   44
+0447:  MOVLW  20
+0448:  MOVWF  43
+0449:  MOVLW  82
+044A:  MOVWF  42
+044B:  MOVF   3E,W
+044C:  BTFSC  03.2
+044D:  GOTO   4BB
+044E:  MOVWF  46
+044F:  MOVF   42,W
+0450:  BTFSC  03.2
+0451:  GOTO   4BB
+0452:  ADDWF  46,F
+0453:  BTFSC  03.0
+0454:  GOTO   45C
+0455:  MOVLW  7F
+0456:  SUBWF  46,F
+0457:  BTFSS  03.0
+0458:  GOTO   4BB
+0459:  BTFSC  03.2
+045A:  GOTO   4BB
+045B:  GOTO   460
+045C:  MOVLW  81
+045D:  ADDWF  46,F
+045E:  BTFSC  03.0
+045F:  GOTO   4BB
+0460:  MOVF   46,W
+0461:  MOVWF  77
+0462:  CLRF   78
+0463:  CLRF   79
+0464:  CLRF   7A
+0465:  MOVF   3F,W
+0466:  MOVWF  4A
+0467:  BSF    4A.7
+0468:  MOVF   40,W
+0469:  MOVWF  49
+046A:  MOVF   41,W
+046B:  MOVWF  48
+046C:  MOVLW  18
+046D:  MOVWF  46
+046E:  CLRF   47
+046F:  BTFSS  48.0
+0470:  GOTO   489
+0471:  MOVF   45,W
+0472:  ADDWF  7A,F
+0473:  BTFSS  03.0
+0474:  GOTO   47B
+0475:  INCF   79,F
+0476:  BTFSS  03.2
+0477:  GOTO   47B
+0478:  INCF   78,F
+0479:  BTFSC  03.2
+047A:  BSF    47.7
+047B:  MOVF   44,W
+047C:  ADDWF  79,F
+047D:  BTFSS  03.0
+047E:  GOTO   482
+047F:  INCF   78,F
+0480:  BTFSC  03.2
+0481:  BSF    47.7
+0482:  MOVF   43,W
+0483:  MOVWF  40
+0484:  BSF    40.7
+0485:  MOVF   40,W
+0486:  ADDWF  78,F
+0487:  BTFSC  03.0
+0488:  BSF    47.7
+0489:  RLF    47,F
+048A:  RRF    78,F
+048B:  RRF    79,F
+048C:  RRF    7A,F
+048D:  RRF    4A,F
+048E:  RRF    49,F
+048F:  RRF    48,F
+0490:  BCF    03.0
+0491:  DECFSZ 46,F
+0492:  GOTO   46E
+0493:  MOVLW  01
+0494:  ADDWF  77,F
+0495:  BTFSC  03.0
+0496:  GOTO   4BB
+0497:  BTFSC  78.7
+0498:  GOTO   4A0
+0499:  RLF    4A,F
+049A:  RLF    7A,F
+049B:  RLF    79,F
+049C:  RLF    78,F
+049D:  DECF   77,F
+049E:  BTFSC  03.2
+049F:  GOTO   4BB
+04A0:  BTFSS  4A.7
+04A1:  GOTO   4B1
+04A2:  INCF   7A,F
+04A3:  BTFSS  03.2
+04A4:  GOTO   4B1
+04A5:  INCF   79,F
+04A6:  BTFSS  03.2
+04A7:  GOTO   4B1
+04A8:  INCF   78,F
+04A9:  BTFSS  03.2
+04AA:  GOTO   4B1
+04AB:  RRF    78,F
+04AC:  RRF    79,F
+04AD:  RRF    7A,F
+04AE:  INCF   77,F
+04AF:  BTFSC  03.2
+04B0:  GOTO   4BB
+04B1:  MOVF   3F,W
+04B2:  MOVWF  47
+04B3:  MOVF   43,W
+04B4:  XORWF  47,F
+04B5:  BTFSS  47.7
+04B6:  GOTO   4B9
+04B7:  BSF    78.7
+04B8:  GOTO   4BF
+04B9:  BCF    78.7
+04BA:  GOTO   4BF
+04BB:  CLRF   77
+04BC:  CLRF   78
+04BD:  CLRF   79
+04BE:  CLRF   7A
+04BF:  MOVF   7A,W
+04C0:  MOVWF  34
+04C1:  MOVF   79,W
+04C2:  MOVWF  33
+04C3:  MOVF   78,W
+04C4:  MOVWF  32
+04C5:  MOVF   77,W
+04C6:  MOVWF  31
+04C7:  DECFSZ 38,F
+04C8:  GOTO   43D
+04C9:  MOVLW  7E
+04CA:  MOVWF  77
+04CB:  CLRF   78
+04CC:  BTFSC  32.7
+04CD:  BSF    78.7
+04CE:  CLRF   79
+04CF:  CLRF   7A
+04D0:  BCF    03.1
+04D1:  MOVF   34,W
+04D2:  MOVWF  41
+04D3:  MOVF   33,W
+04D4:  MOVWF  40
+04D5:  MOVF   32,W
+04D6:  MOVWF  3F
+04D7:  MOVF   31,W
+04D8:  MOVWF  3E
+04D9:  MOVF   7A,W
+04DA:  MOVWF  45
+04DB:  MOVF   79,W
+04DC:  MOVWF  44
+04DD:  MOVF   78,W
+04DE:  MOVWF  43
+04DF:  MOVF   77,W
+04E0:  MOVWF  42
+04E1:  MOVLW  80
+04E2:  BTFSC  03.1
+04E3:  XORWF  43,F
+04E4:  CLRF   48
+04E5:  CLRF   49
+04E6:  MOVF   3F,W
+04E7:  MOVWF  47
+04E8:  MOVF   43,W
+04E9:  XORWF  47,F
+04EA:  MOVF   3E,W
+04EB:  BTFSC  03.2
+04EC:  GOTO   5D1
+04ED:  MOVWF  46
+04EE:  MOVWF  77
+04EF:  MOVF   42,W
+04F0:  BTFSC  03.2
+04F1:  GOTO   5DA
+04F2:  SUBWF  46,F
+04F3:  BTFSC  03.2
+04F4:  GOTO   576
+04F5:  BTFSS  03.0
+04F6:  GOTO   534
+04F7:  MOVF   43,W
+04F8:  MOVWF  4C
+04F9:  BSF    4C.7
+04FA:  MOVF   44,W
+04FB:  MOVWF  4B
+04FC:  MOVF   45,W
+04FD:  MOVWF  4A
+04FE:  CLRF   49
+04FF:  BCF    03.0
+0500:  RRF    4C,F
+0501:  RRF    4B,F
+0502:  RRF    4A,F
+0503:  RRF    49,F
+0504:  DECFSZ 46,F
+0505:  GOTO   4FE
+0506:  BTFSS  47.7
+0507:  GOTO   50B
+0508:  BSF    48.0
+0509:  GOTO   5EE
+050A:  BCF    48.0
+050B:  BCF    46.0
+050C:  BSF    48.4
+050D:  MOVLW  41
+050E:  MOVWF  04
+050F:  BCF    03.7
+0510:  GOTO   603
+0511:  BCF    48.4
+0512:  BTFSC  47.7
+0513:  GOTO   51E
+0514:  BTFSS  46.0
+0515:  GOTO   529
+0516:  RRF    4C,F
+0517:  RRF    4B,F
+0518:  RRF    4A,F
+0519:  RRF    49,F
+051A:  INCF   77,F
+051B:  BTFSC  03.2
+051C:  GOTO   5E9
+051D:  GOTO   529
+051E:  BTFSC  4C.7
+051F:  GOTO   52C
+0520:  BCF    03.0
+0521:  RLF    49,F
+0522:  RLF    4A,F
+0523:  RLF    4B,F
+0524:  RLF    4C,F
+0525:  DECF   77,F
+0526:  BTFSC  03.2
+0527:  GOTO   5E9
+0528:  GOTO   51E
+0529:  BSF    48.6
+052A:  GOTO   596
+052B:  BCF    48.6
+052C:  MOVF   3F,W
+052D:  MOVWF  47
+052E:  BTFSS  47.7
+052F:  GOTO   532
+0530:  BSF    4C.7
+0531:  GOTO   5E2
+0532:  BCF    4C.7
+0533:  GOTO   5E2
+0534:  MOVF   42,W
+0535:  MOVWF  46
+0536:  MOVWF  77
+0537:  MOVF   3E,W
+0538:  SUBWF  46,F
+0539:  MOVF   3F,W
+053A:  MOVWF  4C
+053B:  BSF    4C.7
+053C:  MOVF   40,W
+053D:  MOVWF  4B
+053E:  MOVF   41,W
+053F:  MOVWF  4A
+0540:  CLRF   49
+0541:  BCF    03.0
+0542:  RRF    4C,F
+0543:  RRF    4B,F
+0544:  RRF    4A,F
+0545:  RRF    49,F
+0546:  DECFSZ 46,F
+0547:  GOTO   540
+0548:  BTFSS  47.7
+0549:  GOTO   54D
+054A:  BSF    48.1
+054B:  GOTO   5EE
+054C:  BCF    48.1
+054D:  BCF    46.0
+054E:  BSF    48.5
+054F:  MOVLW  45
+0550:  MOVWF  04
+0551:  BCF    03.7
+0552:  GOTO   603
+0553:  BCF    48.5
+0554:  BTFSC  47.7
+0555:  GOTO   560
+0556:  BTFSS  46.0
+0557:  GOTO   56B
+0558:  RRF    4C,F
+0559:  RRF    4B,F
+055A:  RRF    4A,F
+055B:  RRF    49,F
+055C:  INCF   77,F
+055D:  BTFSC  03.2
+055E:  GOTO   5E9
+055F:  GOTO   56B
+0560:  BTFSC  4C.7
+0561:  GOTO   56E
+0562:  BCF    03.0
+0563:  RLF    49,F
+0564:  RLF    4A,F
+0565:  RLF    4B,F
+0566:  RLF    4C,F
+0567:  DECF   77,F
+0568:  BTFSC  03.2
+0569:  GOTO   5E9
+056A:  GOTO   560
+056B:  BSF    48.7
+056C:  GOTO   596
+056D:  BCF    48.7
+056E:  MOVF   43,W
+056F:  MOVWF  47
+0570:  BTFSS  47.7
+0571:  GOTO   574
+0572:  BSF    4C.7
+0573:  GOTO   5E2
+0574:  BCF    4C.7
+0575:  GOTO   5E2
+0576:  MOVF   43,W
+0577:  MOVWF  4C
+0578:  BSF    4C.7
+0579:  MOVF   44,W
+057A:  MOVWF  4B
+057B:  MOVF   45,W
+057C:  MOVWF  4A
+057D:  BTFSS  47.7
+057E:  GOTO   583
+057F:  BCF    4C.7
+0580:  BSF    48.2
+0581:  GOTO   5EE
+0582:  BCF    48.2
+0583:  CLRF   49
+0584:  BCF    46.0
+0585:  MOVLW  41
+0586:  MOVWF  04
+0587:  BCF    03.7
+0588:  GOTO   603
+0589:  BTFSC  47.7
+058A:  GOTO   5AC
+058B:  MOVF   3F,W
+058C:  MOVWF  47
+058D:  BTFSS  46.0
+058E:  GOTO   596
+058F:  RRF    4C,F
+0590:  RRF    4B,F
+0591:  RRF    4A,F
+0592:  RRF    49,F
+0593:  INCF   77,F
+0594:  BTFSC  03.2
+0595:  GOTO   5E9
+0596:  BTFSS  49.7
+0597:  GOTO   5A7
+0598:  INCF   4A,F
+0599:  BTFSS  03.2
+059A:  GOTO   5A7
+059B:  INCF   4B,F
+059C:  BTFSS  03.2
+059D:  GOTO   5A7
+059E:  INCF   4C,F
+059F:  BTFSS  03.2
+05A0:  GOTO   5A7
+05A1:  RRF    4C,F
+05A2:  RRF    4B,F
+05A3:  RRF    4A,F
+05A4:  INCF   77,F
+05A5:  BTFSC  03.2
+05A6:  GOTO   5E9
+05A7:  BTFSC  48.6
+05A8:  GOTO   52B
+05A9:  BTFSC  48.7
+05AA:  GOTO   56D
+05AB:  GOTO   5CB
+05AC:  MOVLW  80
+05AD:  XORWF  4C,F
+05AE:  BTFSS  4C.7
+05AF:  GOTO   5B4
+05B0:  GOTO   5EE
+05B1:  MOVF   43,W
+05B2:  MOVWF  47
+05B3:  GOTO   5C1
+05B4:  MOVF   3F,W
+05B5:  MOVWF  47
+05B6:  MOVF   4C,F
+05B7:  BTFSS  03.2
+05B8:  GOTO   5C1
+05B9:  MOVF   4B,F
+05BA:  BTFSS  03.2
+05BB:  GOTO   5C1
+05BC:  MOVF   4A,F
+05BD:  BTFSS  03.2
+05BE:  GOTO   5C1
+05BF:  CLRF   77
+05C0:  GOTO   5E2
+05C1:  BTFSC  4C.7
+05C2:  GOTO   5CB
+05C3:  BCF    03.0
+05C4:  RLF    49,F
+05C5:  RLF    4A,F
+05C6:  RLF    4B,F
+05C7:  RLF    4C,F
+05C8:  DECFSZ 77,F
+05C9:  GOTO   5C1
+05CA:  GOTO   5E9
+05CB:  BTFSS  47.7
+05CC:  GOTO   5CF
+05CD:  BSF    4C.7
+05CE:  GOTO   5E2
+05CF:  BCF    4C.7
+05D0:  GOTO   5E2
+05D1:  MOVF   42,W
+05D2:  MOVWF  77
+05D3:  MOVF   43,W
+05D4:  MOVWF  4C
+05D5:  MOVF   44,W
+05D6:  MOVWF  4B
+05D7:  MOVF   45,W
+05D8:  MOVWF  4A
+05D9:  GOTO   5E2
+05DA:  MOVF   3E,W
+05DB:  MOVWF  77
+05DC:  MOVF   3F,W
+05DD:  MOVWF  4C
+05DE:  MOVF   40,W
+05DF:  MOVWF  4B
+05E0:  MOVF   41,W
+05E1:  MOVWF  4A
+05E2:  MOVF   4C,W
+05E3:  MOVWF  78
+05E4:  MOVF   4B,W
+05E5:  MOVWF  79
+05E6:  MOVF   4A,W
+05E7:  MOVWF  7A
+05E8:  GOTO   621
+05E9:  CLRF   77
+05EA:  CLRF   78
+05EB:  CLRF   79
+05EC:  CLRF   7A
+05ED:  GOTO   621
+05EE:  CLRF   49
+05EF:  COMF   4A,F
+05F0:  COMF   4B,F
+05F1:  COMF   4C,F
+05F2:  COMF   49,F
+05F3:  INCF   49,F
+05F4:  BTFSS  03.2
+05F5:  GOTO   5FC
+05F6:  INCF   4A,F
+05F7:  BTFSS  03.2
+05F8:  GOTO   5FC
+05F9:  INCF   4B,F
+05FA:  BTFSC  03.2
+05FB:  INCF   4C,F
+05FC:  BTFSC  48.0
+05FD:  GOTO   50A
+05FE:  BTFSC  48.1
+05FF:  GOTO   54C
+0600:  BTFSC  48.2
+0601:  GOTO   582
+0602:  GOTO   5B1
+0603:  MOVF   00,W
+0604:  ADDWF  4A,F
+0605:  BTFSS  03.0
+0606:  GOTO   60D
+0607:  INCF   4B,F
+0608:  BTFSS  03.2
+0609:  GOTO   60D
+060A:  INCF   4C,F
+060B:  BTFSC  03.2
+060C:  BSF    46.0
+060D:  DECF   04,F
+060E:  MOVF   00,W
+060F:  ADDWF  4B,F
+0610:  BTFSS  03.0
+0611:  GOTO   615
+0612:  INCF   4C,F
+0613:  BTFSC  03.2
+0614:  BSF    46.0
+0615:  DECF   04,F
+0616:  MOVF   00,W
+0617:  BTFSS  00.7
+0618:  XORLW  80
+0619:  ADDWF  4C,F
+061A:  BTFSC  03.0
+061B:  BSF    46.0
+061C:  BTFSC  48.4
+061D:  GOTO   511
+061E:  BTFSC  48.5
+061F:  GOTO   553
+0620:  GOTO   589
+0621:  MOVF   7A,W
+0622:  MOVWF  34
+0623:  MOVF   79,W
+0624:  MOVWF  33
+0625:  MOVF   78,W
+0626:  MOVWF  32
+0627:  MOVF   77,W
+0628:  MOVWF  31
+0629:  MOVF   34,W
+062A:  MOVWF  41
+062B:  MOVF   33,W
+062C:  MOVWF  40
+062D:  MOVF   32,W
+062E:  MOVWF  3F
+062F:  MOVF   31,W
+0630:  MOVWF  3E
+0631:  MOVF   3E,W
+0632:  SUBLW  B6
+0633:  MOVWF  3E
+0634:  CLRF   7A
+0635:  MOVF   3F,W
+0636:  MOVWF  42
+0637:  BSF    3F.7
+0638:  BCF    03.0
+0639:  RRF    3F,F
+063A:  RRF    40,F
+063B:  RRF    41,F
+063C:  RRF    7A,F
+063D:  RRF    79,F
+063E:  RRF    78,F
+063F:  RRF    77,F
+0640:  DECFSZ 3E,F
+0641:  GOTO   638
+0642:  BTFSS  42.7
+0643:  GOTO   64F
+0644:  COMF   77,F
+0645:  COMF   78,F
+0646:  COMF   79,F
+0647:  COMF   7A,F
+0648:  INCF   77,F
+0649:  BTFSC  03.2
+064A:  INCF   78,F
+064B:  BTFSC  03.2
+064C:  INCF   79,F
+064D:  BTFSC  03.2
+064E:  INCF   7A,F
+064F:  MOVF   7A,W
+0650:  MOVWF  34
+0651:  MOVF   79,W
+0652:  MOVWF  33
+0653:  MOVF   78,W
+0654:  MOVWF  32
+0655:  MOVF   77,W
+0656:  MOVWF  31
+0657:  BTFSS  34.7
+0658:  GOTO   666
+0659:  DECF   36,F
+065A:  BSF    36.5
+065B:  COMF   31,F
+065C:  COMF   32,F
+065D:  COMF   33,F
+065E:  COMF   34,F
+065F:  INCF   31,F
+0660:  BTFSC  03.2
+0661:  INCF   32,F
+0662:  BTFSC  03.2
+0663:  INCF   33,F
+0664:  BTFSC  03.2
+0665:  INCF   34,F
+0666:  MOVLW  3B
+0667:  MOVWF  3D
+0668:  MOVLW  9A
+0669:  MOVWF  3C
+066A:  MOVLW  CA
+066B:  MOVWF  3B
+066C:  CLRF   3A
+066D:  MOVLW  0A
+066E:  MOVWF  38
+066F:  MOVF   35,W
+0670:  BTFSC  03.2
+0671:  INCF   36,F
+0672:  BSF    03.1
+0673:  MOVLW  31
+0674:  MOVWF  04
+0675:  BCF    03.7
+0676:  MOVF   34,W
+0677:  MOVWF  41
+0678:  MOVF   33,W
+0679:  MOVWF  40
+067A:  MOVF   32,W
+067B:  MOVWF  3F
+067C:  MOVF   31,W
+067D:  MOVWF  3E
+067E:  MOVF   3D,W
+067F:  MOVWF  45
+0680:  MOVF   3C,W
+0681:  MOVWF  44
+0682:  MOVF   3B,W
+0683:  MOVWF  43
+0684:  MOVF   3A,W
+0685:  MOVWF  42
+0686:  CALL   3E8
+0687:  MOVF   78,W
+0688:  MOVF   77,F
+0689:  BTFSS  03.2
+068A:  GOTO   69E
+068B:  INCF   35,W
+068C:  SUBWF  38,W
+068D:  BTFSC  03.2
+068E:  GOTO   69E
+068F:  MOVF   36,W
+0690:  BTFSC  03.2
+0691:  GOTO   6A0
+0692:  ANDLW  0F
+0693:  SUBWF  38,W
+0694:  BTFSC  03.2
+0695:  GOTO   698
+0696:  BTFSC  03.0
+0697:  GOTO   6D4
+0698:  BTFSC  36.7
+0699:  GOTO   6D4
+069A:  BTFSC  36.6
+069B:  GOTO   6A0
+069C:  MOVLW  20
+069D:  GOTO   6CF
+069E:  MOVLW  20
+069F:  ANDWF  36,F
+06A0:  BTFSS  36.5
+06A1:  GOTO   6AF
+06A2:  BCF    36.5
+06A3:  MOVF   35,W
+06A4:  BTFSS  03.2
+06A5:  DECF   36,F
+06A6:  MOVF   77,W
+06A7:  MOVWF  36
+06A8:  MOVLW  2D
+06A9:  BTFSS  0C.4
+06AA:  GOTO   6A9
+06AB:  MOVWF  19
+06AC:  MOVF   36,W
+06AD:  MOVWF  77
+06AE:  CLRF   36
+06AF:  MOVF   35,W
+06B0:  SUBWF  38,W
+06B1:  BTFSS  03.2
+06B2:  GOTO   6BE
+06B3:  MOVF   77,W
+06B4:  MOVWF  36
+06B5:  MOVLW  2E
+06B6:  BTFSS  0C.4
+06B7:  GOTO   6B6
+06B8:  MOVWF  19
+06B9:  MOVF   36,W
+06BA:  MOVWF  77
+06BB:  MOVLW  20
+06BC:  ANDWF  36,F
+06BD:  MOVLW  00
+06BE:  MOVLW  30
+06BF:  BTFSS  36.5
+06C0:  GOTO   6CF
+06C1:  BCF    36.5
+06C2:  MOVF   35,W
+06C3:  BTFSS  03.2
+06C4:  DECF   36,F
+06C5:  MOVF   77,W
+06C6:  MOVWF  36
+06C7:  MOVLW  2D
+06C8:  BTFSS  0C.4
+06C9:  GOTO   6C8
+06CA:  MOVWF  19
+06CB:  MOVF   36,W
+06CC:  MOVWF  77
+06CD:  CLRF   36
+06CE:  MOVLW  30
+06CF:  ADDWF  77,F
+06D0:  MOVF   77,W
+06D1:  BTFSS  0C.4
+06D2:  GOTO   6D1
+06D3:  MOVWF  19
+06D4:  BCF    03.1
+06D5:  MOVF   3D,W
+06D6:  MOVWF  41
+06D7:  MOVF   3C,W
+06D8:  MOVWF  40
+06D9:  MOVF   3B,W
+06DA:  MOVWF  3F
+06DB:  MOVF   3A,W
+06DC:  MOVWF  3E
+06DD:  CLRF   45
+06DE:  CLRF   44
+06DF:  CLRF   43
+06E0:  MOVLW  0A
+06E1:  MOVWF  42
+06E2:  CALL   3E8
+06E3:  MOVF   7A,W
+06E4:  MOVWF  3D
+06E5:  MOVF   79,W
+06E6:  MOVWF  3C
+06E7:  MOVF   78,W
+06E8:  MOVWF  3B
+06E9:  MOVF   77,W
+06EA:  MOVWF  3A
+06EB:  DECFSZ 38,F
+06EC:  GOTO   672
+06ED:  BCF    0A.3
+06EE:  BCF    0A.4
+06EF:  GOTO   7A4 (RETURN)
+06F0:  MOVF   0B,W
+06F1:  MOVWF  2D
+06F2:  BCF    0B.7
+06F3:  BSF    03.5
+06F4:  BSF    03.6
+06F5:  BSF    0C.7
+06F6:  BSF    0C.0
+06F7:  NOP
+06F8:  NOP
+06F9:  BCF    03.5
+06FA:  BCF    03.6
+06FB:  BTFSC  2D.7
+06FC:  BSF    0B.7
+06FD:  BSF    03.6
+06FE:  MOVF   0C,W
+06FF:  ANDLW  7F
+0700:  BTFSC  03.2
+0701:  GOTO   746
+0702:  BCF    03.6
+0703:  MOVWF  2D
+0704:  BSF    03.6
+0705:  MOVF   0D,W
+0706:  BCF    03.6
+0707:  MOVWF  2E
+0708:  BSF    03.6
+0709:  MOVF   0F,W
+070A:  BCF    03.6
+070B:  MOVWF  2F
+070C:  MOVF   2D,W
+070D:  BTFSS  0C.4
+070E:  GOTO   70D
+070F:  MOVWF  19
+0710:  MOVF   2E,W
+0711:  BSF    03.6
+0712:  MOVWF  0D
+0713:  BCF    03.6
+0714:  MOVF   2F,W
+0715:  BSF    03.6
+0716:  MOVWF  0F
+0717:  BCF    03.6
+0718:  MOVF   0B,W
+0719:  MOVWF  30
+071A:  BCF    0B.7
+071B:  BSF    03.5
+071C:  BSF    03.6
+071D:  BSF    0C.7
+071E:  BSF    0C.0
+071F:  NOP
+0720:  NOP
+0721:  BCF    03.5
+0722:  BCF    03.6
+0723:  BTFSC  30.7
+0724:  BSF    0B.7
+0725:  BSF    03.6
+0726:  RLF    0C,W
+0727:  RLF    0E,W
+0728:  ANDLW  7F
+0729:  BTFSC  03.2
+072A:  GOTO   746
+072B:  BCF    03.6
+072C:  MOVWF  2D
+072D:  BSF    03.6
+072E:  MOVF   0D,W
+072F:  BCF    03.6
+0730:  MOVWF  2E
+0731:  BSF    03.6
+0732:  MOVF   0F,W
+0733:  BCF    03.6
+0734:  MOVWF  2F
+0735:  MOVF   2D,W
+0736:  BTFSS  0C.4
+0737:  GOTO   736
+0738:  MOVWF  19
+0739:  MOVF   2E,W
+073A:  BSF    03.6
+073B:  MOVWF  0D
+073C:  BCF    03.6
+073D:  MOVF   2F,W
+073E:  BSF    03.6
+073F:  MOVWF  0F
+0740:  INCF   0D,F
+0741:  BTFSC  03.2
+0742:  INCF   0F,F
+0743:  BCF    03.6
+0744:  GOTO   6F0
+0745:  BSF    03.6
+0746:  BCF    03.6
+0747:  BCF    0A.3
+0748:  BCF    0A.4
+0749:  GOTO   7BA (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #device *=16 
+.................... #device adc=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES HS                    	//High speed Osc (> 4mhz for PCM/PCH) (>10mhz for PCD) 
+.................... #FUSES PUT                   	//Power Up Timer 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES BORV21                	//Brownout reset at 2.1V 
+....................  
+.................... #use delay(clock=4000000,RESTART_WDT) 
+*
+0136:  MOVLW  3C
+0137:  MOVWF  04
+0138:  BCF    03.7
+0139:  MOVF   00,W
+013A:  BTFSC  03.2
+013B:  GOTO   14D
+013C:  MOVLW  01
+013D:  MOVWF  78
+013E:  MOVLW  BF
+013F:  MOVWF  77
+0140:  CLRWDT
+0141:  DECFSZ 77,F
+0142:  GOTO   140
+0143:  DECFSZ 78,F
+0144:  GOTO   13E
+0145:  MOVLW  4A
+0146:  MOVWF  77
+0147:  DECFSZ 77,F
+0148:  GOTO   147
+0149:  NOP
+014A:  CLRWDT
+014B:  DECFSZ 00,F
+014C:  GOTO   13C
+014D:  RETURN
+....................  
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1) 
+....................  
+....................  
+....................  
+.................... #define DS1820_DATAPIN PIN_B0 
+....................  
+.................... #include "types.h" 
+.................... /*** FILEHEADER **************************************************************** 
+....................  * 
+....................  *	FILENAME:    types.h 
+....................  *	DATE:        21.11.2004 
+....................  *	AUTHOR:		 Christian Stadler 
+....................  * 
+....................  *	DESCRIPTION: Definition of common types. 
+....................  * 
+....................  ******************************************************************************/ 
+....................  
+.................... /*** HISTORY OF CHANGE ********************************************************* 
+....................  * 
+....................  *	$Log: /pic/_inc/types.h $ 
+....................  *  
+....................  * 3     1.11.10 11:42 Stadler 
+....................  * - type definitons dependend on compiler 
+....................  *  
+....................  * 2     26.02.05 18:44 Stadler 
+....................  * added bool type 
+....................  *  
+....................  ******************************************************************************/ 
+....................  
+.................... #ifndef _TYPES_H 
+.................... #define _TYPES_H 
+....................  
+.................... /*---------------------------------------------------------------------------*/ 
+.................... /* Type definitions for Microchip C18 Compiler                               */ 
+.................... /*---------------------------------------------------------------------------*/ 
+.................... #if defined(__18CXX) 
+....................  
+.................... typedef unsigned char bool; 
+.................... typedef signed char sint8; 
+.................... typedef signed int sint16; 
+.................... typedef signed long sint32; 
+.................... typedef unsigned char  uint8; 
+.................... typedef unsigned int uint16; 
+.................... typedef unsigned long uint32; 
+....................  
+.................... #endif /* #if defined(__18CXX) */ 
+....................  
+....................  
+....................  
+.................... /*---------------------------------------------------------------------------*/ 
+.................... /* Type definitions for CCS C Compiler                                       */ 
+.................... /*---------------------------------------------------------------------------*/ 
+.................... #if (defined(__PCB__) || defined(__PCH__) || defined(__PCM__)) 
+....................  
+.................... typedef int1 bool; 
+.................... typedef signed int8 sint8; 
+.................... typedef signed int16 sint16; 
+.................... typedef signed int32 sint32; 
+.................... typedef unsigned int8  uint8; 
+.................... typedef unsigned int16 uint16; 
+.................... typedef unsigned int32 uint32; 
+....................  
+.................... #endif /* (defined(__PCB__) || defined(__PCH__) || defined(__PCM__)) */ 
+....................  
+.................... #endif /*_TYPES_H */ 
+....................  
+.................... #include "ds1820.h" 
+....................    /*** FILEHEADER **************************************************************** 
+....................  * 
+....................  *    FILENAME:    ds1820.h 
+....................  *    DATE:        25.02.2005 
+....................  *    AUTHOR:      Christian Stadler 
+....................  * 
+....................  *    DESCRIPTION: Driver for DS1820 1-Wire Temperature sensor (Dallas) 
+....................  * 
+....................  ******************************************************************************/ 
+....................  
+.................... /*** HISTORY OF CHANGE ********************************************************* 
+....................  * 
+....................  *    $Log: /pic/_drv/ds1820.h $ 
+....................  *  
+....................  * 9     13.11.10 20:02 Stadler 
+....................  * - changed interrupt lock and delay functions to #defines to remove 
+....................  * function call overhead 
+....................  *  
+....................  * 8     6.11.10 10:24 Stadler 
+....................  * - adjusted 1-wire timing 
+....................  *  
+....................  * 7     5.11.10 22:55 Stadler 
+....................  * - changed driver API 
+....................  *  
+....................  * 6     5.11.10 21:59 Stadler 
+....................  * - added DS18B20 support 
+....................  * - fixed problem with ROM search algorithm 
+....................  *  
+....................  * 5     2.11.10 20:25 Stadler 
+....................  * - changed function DS1820_FindFirstDev to DS1820_FindFirstDevice 
+....................  * - changed function DS1820_FindNextDev to DS1820_FindNextDevice 
+....................  * - updated code style 
+....................  *  
+....................  * 4     31.10.10 17:12 Stadler 
+....................  * - introduced DS1820_DelayUs 
+....................  *  
+....................  * 3     25.10.10 13:09 Stadler 
+....................  * - added interrupt lock 
+....................  *  
+....................  * 2     12.03.05 11:24 Stadler 
+....................  * - added EEPROM write function 
+....................  * - added "Search ROM Algorithm" to control multiple devices 
+....................  * 
+....................  * 1     26.02.05 18:18 Stadler 
+....................  * Driver for DS1820 1-Wire Temperature sensor (Dallas) 
+....................  * 
+....................  ******************************************************************************/ 
+....................  
+.................... #ifndef _DS1820_H 
+.................... #define _DS1820_H 
+....................  
+....................  
+.................... /* check configuration of driver */ 
+.................... #ifndef DS1820_DATAPIN 
+.................... #error DS1820 data pin not defined! 
+.................... #endif 
+....................  
+....................  
+.................... #define TEMP_RES              0x100 /* temperature resolution => 1/256°C = 0.0039°C */ 
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                         DS1820 Timing Parameters                           */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+.................... #define DS1820_RST_PULSE       480   /* master reset pulse time in [us] */ 
+.................... #define DS1820_MSTR_BITSTART   2     /* delay time for bit start by master */ 
+.................... #define DS1820_PRESENCE_WAIT   40    /* delay after master reset pulse in [us] */ 
+.................... #define DS1820_PRESENCE_FIN    480   /* dealy after reading of presence pulse [us] */ 
+.................... #define DS1820_BITREAD_DLY     5     /* bit read delay */ 
+.................... #define DS1820_BITWRITE_DLY    100   /* bit write delay */ 
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                            DS1820 Registers                                */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+.................... #define DS1820_REG_TEMPLSB    0 
+.................... #define DS1820_REG_TEMPMSB    1 
+.................... #define DS1820_REG_CNTREMAIN  6 
+.................... #define DS1820_REG_CNTPERSEC  7 
+.................... #define DS1820_SCRPADMEM_LEN  9     /* length of scratchpad memory */ 
+....................  
+.................... #define DS1820_ADDR_LEN       8 
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                            DS1820 Commands                                 */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+.................... #define DS1820_CMD_SEARCHROM     0xF0 
+.................... #define DS1820_CMD_READROM       0x33 
+.................... #define DS1820_CMD_MATCHROM      0x55 
+.................... #define DS1820_CMD_SKIPROM       0xCC 
+.................... #define DS1820_CMD_ALARMSEARCH   0xEC 
+.................... #define DS1820_CMD_CONVERTTEMP   0x44 
+.................... #define DS1820_CMD_WRITESCRPAD   0x4E 
+.................... #define DS1820_CMD_READSCRPAD    0xBE 
+.................... #define DS1820_CMD_COPYSCRPAD    0x48 
+.................... #define DS1820_CMD_RECALLEE      0xB8 
+....................  
+....................  
+.................... #define DS1820_FAMILY_CODE_DS18B20      0x28 
+.................... #define DS1820_FAMILY_CODE_DS18S20      0x10 
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                            static variables                                */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+.................... static bool bDoneFlag; 
+*
+076A:  BCF    03.6
+076B:  BCF    20.0
+.................... static uint8 nLastDiscrepancy_u8; 
+076C:  CLRF   21
+.................... static uint8 nRomAddr_au8[DS1820_ADDR_LEN]; 
+076D:  CLRF   22
+076E:  CLRF   23
+076F:  CLRF   24
+0770:  CLRF   25
+0771:  CLRF   26
+0772:  CLRF   27
+0773:  CLRF   28
+0774:  CLRF   29
+....................  
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                           Low-Level Functions                              */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_DelayUs 
+....................  * PURPOSE:    Delay for the given number of micro seconds. 
+....................  * 
+....................  * INPUT:      dly_us      number of micro seconds to delay 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... #define DS1820_DelayUs(dly_us)       delay_us(dly_us) 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_DelayMs 
+....................  * PURPOSE:    Delay for the given number of milliseconds. 
+....................  * 
+....................  * INPUT:      dly_ms      number of milliseconds to delay 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... #define DS1820_DelayMs(dly_ms)   delay_ms(dly_ms) 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_DisableInterrupts 
+....................  * PURPOSE:    Disable interrupts 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... #ifdef DS1820_INTERRUPT_LOCK 
+.................... #define DS1820_DisableInterrupts()  disable_interrupts(GLOBAL) 
+.................... #else 
+.................... #define DS1820_DisableInterrupts() 
+.................... #endif 
+....................  
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_EnableInterrupts 
+....................  * PURPOSE:    Enable interrupts 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... #ifdef DS1820_INTERRUPT_LOCK 
+.................... #define DS1820_EnableInterrupts()   enable_interrupts(GLOBAL) 
+.................... #else 
+.................... #define DS1820_EnableInterrupts() 
+.................... #endif 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_Reset 
+....................  * PURPOSE:    Initializes the DS1820 device. 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     - 
+....................  * RETURN:     FALSE if at least one device is on the 1-wire bus, TRUE otherwise 
+....................  ******************************************************************************/ 
+.................... bool DS1820_Reset(void) 
+.................... { 
+....................    bool bPresPulse; 
+....................  
+....................    DS1820_DisableInterrupts(); 
+....................     
+....................    /* reset pulse */ 
+....................    output_low(DS1820_DATAPIN); 
+*
+000F:  BSF    03.5
+0010:  BCF    06.0
+0011:  BCF    03.5
+0012:  BCF    06.0
+....................    DS1820_DelayUs(DS1820_RST_PULSE); 
+0013:  CLRWDT
+0014:  MOVLW  9F
+0015:  MOVWF  77
+0016:  DECFSZ 77,F
+0017:  GOTO   016
+0018:  NOP
+....................    output_high(DS1820_DATAPIN); 
+0019:  BSF    03.5
+001A:  BCF    06.0
+001B:  BCF    03.5
+001C:  BSF    06.0
+....................  
+....................    /* wait until pullup pull 1-wire bus to high */ 
+....................    DS1820_DelayUs(DS1820_PRESENCE_WAIT); 
+001D:  CLRWDT
+001E:  MOVLW  0C
+001F:  MOVWF  77
+0020:  DECFSZ 77,F
+0021:  GOTO   020
+0022:  GOTO   023
+....................  
+....................    /* get presence pulse */ 
+....................    bPresPulse = input(DS1820_DATAPIN); 
+0023:  BSF    03.5
+0024:  BSF    06.0
+0025:  BCF    03.5
+0026:  BCF    3B.0
+0027:  BTFSC  06.0
+0028:  BSF    3B.0
+....................  
+....................    DS1820_DelayUs(424); 
+0029:  CLRWDT
+002A:  MOVLW  8C
+002B:  MOVWF  77
+002C:  DECFSZ 77,F
+002D:  GOTO   02C
+002E:  GOTO   02F
+....................     
+....................    DS1820_EnableInterrupts(); 
+....................  
+....................    return bPresPulse; 
+002F:  MOVLW  00
+0030:  BTFSC  3B.0
+0031:  MOVLW  01
+0032:  MOVWF  78
+0033:  RETURN
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_ReadBit 
+....................  * PURPOSE:    Reads a single bit from the DS1820 device. 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     - 
+....................  * RETURN:     bool        value of the bit which as been read form the DS1820 
+....................  ******************************************************************************/ 
+.................... bool DS1820_ReadBit(void) 
+.................... { 
+....................    bool bBit; 
+....................  
+....................    DS1820_DisableInterrupts(); 
+....................     
+....................    output_low(DS1820_DATAPIN); 
+*
+0069:  BSF    03.5
+006A:  BCF    06.0
+006B:  BCF    03.5
+006C:  BCF    06.0
+....................    DS1820_DelayUs(DS1820_MSTR_BITSTART); 
+006D:  CLRWDT
+006E:  NOP
+....................    input(DS1820_DATAPIN); 
+006F:  BSF    03.5
+0070:  BSF    06.0
+....................    DS1820_DelayUs(DS1820_BITREAD_DLY); 
+0071:  CLRWDT
+0072:  GOTO   073
+0073:  GOTO   074
+....................  
+....................    bBit = input(DS1820_DATAPIN); 
+0074:  BSF    06.0
+0075:  BCF    03.5
+0076:  BCF    3F.0
+0077:  BTFSC  06.0
+0078:  BSF    3F.0
+....................     
+....................    DS1820_EnableInterrupts(); 
+....................  
+....................    return (bBit); 
+0079:  MOVLW  00
+007A:  BTFSC  3F.0
+007B:  MOVLW  01
+007C:  MOVWF  78
+007D:  RETURN
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_WriteBit 
+....................  * PURPOSE:    Writes a single bit to the DS1820 device. 
+....................  * 
+....................  * INPUT:      bBit        value of bit to be written 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... void DS1820_WriteBit(bool bBit) 
+.................... { 
+....................    DS1820_DisableInterrupts(); 
+....................     
+....................    output_low(DS1820_DATAPIN); 
+*
+0034:  BSF    03.5
+0035:  BCF    06.0
+0036:  BCF    03.5
+0037:  BCF    06.0
+....................    DS1820_DelayUs(DS1820_MSTR_BITSTART); 
+0038:  CLRWDT
+0039:  NOP
+....................  
+....................    if (bBit != FALSE) 
+003A:  MOVF   41,F
+003B:  BTFSC  03.2
+003C:  GOTO   041
+....................    { 
+....................       output_high(DS1820_DATAPIN); 
+003D:  BSF    03.5
+003E:  BCF    06.0
+003F:  BCF    03.5
+0040:  BSF    06.0
+....................    } 
+....................  
+....................    DS1820_DelayUs(DS1820_BITWRITE_DLY); 
+0041:  CLRWDT
+0042:  MOVLW  20
+0043:  MOVWF  77
+0044:  DECFSZ 77,F
+0045:  GOTO   044
+0046:  GOTO   047
+....................    output_high(DS1820_DATAPIN); 
+0047:  BSF    03.5
+0048:  BCF    06.0
+0049:  BCF    03.5
+004A:  BSF    06.0
+....................     
+....................    DS1820_EnableInterrupts(); 
+004B:  RETURN
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_ReadByte 
+....................  * PURPOSE:    Reads a single byte from the DS1820 device. 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     - 
+....................  * RETURN:     uint8          byte which has been read from the DS1820 
+....................  ******************************************************************************/ 
+.................... uint8 DS1820_ReadByte(void) 
+*
+0176:  CLRF   3E
+.................... { 
+....................    uint8 i; 
+....................    uint8 value = 0; 
+....................  
+....................    for (i=0 ; i < 8; i++) 
+0177:  CLRF   3D
+0178:  MOVF   3D,W
+0179:  SUBLW  07
+017A:  BTFSS  03.0
+017B:  GOTO   194
+....................    { 
+....................       if ( DS1820_ReadBit() ) 
+017C:  CALL   069
+017D:  MOVF   78,F
+017E:  BTFSC  03.2
+017F:  GOTO   18C
+....................       { 
+....................          value |= (1 << i); 
+0180:  MOVLW  01
+0181:  MOVWF  77
+0182:  MOVF   3D,W
+0183:  MOVWF  78
+0184:  BTFSC  03.2
+0185:  GOTO   18A
+0186:  BCF    03.0
+0187:  RLF    77,F
+0188:  DECFSZ 78,F
+0189:  GOTO   186
+018A:  MOVF   77,W
+018B:  IORWF  3E,F
+....................       } 
+....................       DS1820_DelayUs(120); 
+018C:  CLRWDT
+018D:  MOVLW  27
+018E:  MOVWF  77
+018F:  DECFSZ 77,F
+0190:  GOTO   18F
+0191:  NOP
+0192:  INCF   3D,F
+0193:  GOTO   178
+....................    } 
+....................    return(value); 
+0194:  MOVF   3E,W
+0195:  MOVWF  78
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_WriteByte 
+....................  * PURPOSE:    Writes a single byte to the DS1820 device. 
+....................  * 
+....................  * INPUT:      val_u8         byte to be written 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... void DS1820_WriteByte(uint8 val_u8) 
+.................... { 
+....................    uint8 i; 
+....................    uint8 temp; 
+....................  
+....................    for (i=0; i < 8; i++)      /* writes byte, one bit at a time */ 
+*
+004C:  CLRF   3F
+004D:  MOVF   3F,W
+004E:  SUBLW  07
+004F:  BTFSS  03.0
+0050:  GOTO   062
+....................    { 
+....................       temp = val_u8 >> i;     /* shifts val right 'i' spaces */ 
+0051:  MOVF   3E,W
+0052:  MOVWF  40
+0053:  MOVF   3F,W
+0054:  MOVWF  78
+0055:  BTFSC  03.2
+0056:  GOTO   05B
+0057:  BCF    03.0
+0058:  RRF    40,F
+0059:  DECFSZ 78,F
+005A:  GOTO   057
+....................       temp &= 0x01;           /* copy that bit to temp */ 
+005B:  MOVLW  01
+005C:  ANDWF  40,F
+....................       DS1820_WriteBit(temp);  /* write bit in temp into */ 
+005D:  MOVF   40,W
+005E:  MOVWF  41
+005F:  CALL   034
+0060:  INCF   3F,F
+0061:  GOTO   04D
+....................    } 
+....................  
+....................    DS1820_DelayUs(105); 
+0062:  CLRWDT
+0063:  MOVLW  22
+0064:  MOVWF  77
+0065:  DECFSZ 77,F
+0066:  GOTO   065
+0067:  NOP
+0068:  RETURN
+.................... } 
+....................  
+....................  
+....................  
+.................... /* -------------------------------------------------------------------------- */ 
+.................... /*                             API Interface                                  */ 
+.................... /* -------------------------------------------------------------------------- */ 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_AddrDevice 
+....................  * PURPOSE:    Addresses a single or all devices on the 1-wire bus. 
+....................  * 
+....................  * INPUT:      nAddrMethod       use DS1820_CMD_MATCHROM to select a single 
+....................  *                               device or DS1820_CMD_SKIPROM to select all 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... void DS1820_AddrDevice(uint8 nAddrMethod) 
+.................... { 
+....................    uint8 i; 
+....................     
+....................    if (nAddrMethod == DS1820_CMD_MATCHROM) 
+*
+011B:  MOVF   3B,W
+011C:  SUBLW  55
+011D:  BTFSS  03.2
+011E:  GOTO   132
+....................    { 
+....................       DS1820_WriteByte(DS1820_CMD_MATCHROM);     /* address single devices on bus */ 
+011F:  MOVLW  55
+0120:  MOVWF  3E
+0121:  CALL   04C
+....................       for (i = 0; i < DS1820_ADDR_LEN; i ++) 
+0122:  CLRF   3C
+0123:  MOVF   3C,W
+0124:  SUBLW  07
+0125:  BTFSS  03.0
+0126:  GOTO   131
+....................       { 
+....................          DS1820_WriteByte(nRomAddr_au8[i]); 
+0127:  MOVLW  22
+0128:  ADDWF  3C,W
+0129:  MOVWF  04
+012A:  BCF    03.7
+012B:  MOVF   00,W
+012C:  MOVWF  3D
+012D:  MOVWF  3E
+012E:  CALL   04C
+012F:  INCF   3C,F
+0130:  GOTO   123
+....................       } 
+....................    } 
+0131:  GOTO   135
+....................    else 
+....................    { 
+....................       DS1820_WriteByte(DS1820_CMD_SKIPROM);     /* address all devices on bus */ 
+0132:  MOVLW  CC
+0133:  MOVWF  3E
+0134:  CALL   04C
+....................    } 
+0135:  RETURN
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_FindNextDevice 
+....................  * PURPOSE:    Finds next device connected to the 1-wire bus. 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     nRomAddr_au8[]       ROM code of the next device 
+....................  * RETURN:     bool                 TRUE if there are more devices on the 1-wire 
+....................  *                                  bus, FALSE otherwise 
+....................  ******************************************************************************/ 
+.................... bool DS1820_FindNextDevice(void) 
+*
+007E:  MOVLW  01
+007F:  MOVWF  2F
+0080:  MOVWF  30
+0081:  CLRF   31
+0082:  BCF    32.2
+.................... { 
+....................     uint8 state_u8; 
+....................     uint8 byteidx_u8; 
+....................     uint8 mask_u8 = 1; 
+....................     uint8 bitpos_u8 = 1; 
+....................     uint8 nDiscrepancyMarker_u8 = 0; 
+....................     bool bit_b; 
+....................     bool bStatus; 
+....................     bool next_b = FALSE; 
+....................  
+....................     /* init ROM address */ 
+....................     for (byteidx_u8=0; byteidx_u8 < 8; byteidx_u8 ++) 
+0083:  CLRF   2E
+0084:  MOVF   2E,W
+0085:  SUBLW  07
+0086:  BTFSS  03.0
+0087:  GOTO   08F
+....................     { 
+....................         nRomAddr_au8[byteidx_u8] = 0x00; 
+0088:  MOVLW  22
+0089:  ADDWF  2E,W
+008A:  MOVWF  04
+008B:  BCF    03.7
+008C:  CLRF   00
+008D:  INCF   2E,F
+008E:  GOTO   084
+....................     } 
+....................  
+....................     bStatus = DS1820_Reset();        /* reset the 1-wire */ 
+008F:  CALL   00F
+0090:  BCF    32.1
+0091:  BTFSC  78.0
+0092:  BSF    32.1
+....................  
+....................     if (bStatus || bDoneFlag)        /* no device found */ 
+0093:  BTFSC  32.1
+0094:  GOTO   097
+0095:  BTFSS  20.0
+0096:  GOTO   09B
+....................     { 
+....................         nLastDiscrepancy_u8 = 0;     /* reset the search */ 
+0097:  CLRF   21
+....................         return FALSE; 
+0098:  MOVLW  00
+0099:  MOVWF  78
+009A:  GOTO   113
+....................     } 
+....................  
+....................     /* send search rom command */ 
+....................     DS1820_WriteByte(DS1820_CMD_SEARCHROM); 
+009B:  MOVLW  F0
+009C:  MOVWF  3E
+009D:  CALL   04C
+....................  
+....................     byteidx_u8 = 0; 
+009E:  CLRF   2E
+....................     do 
+....................     { 
+....................         state_u8 = 0; 
+009F:  CLRF   2D
+....................  
+....................         /* read bit */ 
+....................         if ( DS1820_ReadBit() != 0 ) 
+00A0:  CALL   069
+00A1:  MOVF   78,F
+00A2:  BTFSC  03.2
+00A3:  GOTO   0A6
+....................         { 
+....................             state_u8 = 2; 
+00A4:  MOVLW  02
+00A5:  MOVWF  2D
+....................         } 
+....................         DS1820_DelayUs(120); 
+00A6:  CLRWDT
+00A7:  MOVLW  27
+00A8:  MOVWF  77
+00A9:  DECFSZ 77,F
+00AA:  GOTO   0A9
+00AB:  NOP
+....................  
+....................         /* read bit complement */ 
+....................         if ( DS1820_ReadBit() != 0 ) 
+00AC:  CALL   069
+00AD:  MOVF   78,F
+00AE:  BTFSS  03.2
+....................         { 
+....................             state_u8 |= 1; 
+00AF:  BSF    2D.0
+....................         } 
+....................         DS1820_DelayUs(120); 
+00B0:  CLRWDT
+00B1:  MOVLW  27
+00B2:  MOVWF  77
+00B3:  DECFSZ 77,F
+00B4:  GOTO   0B3
+00B5:  NOP
+....................  
+....................         /* description for values of state_u8: */ 
+....................         /* 00    There are devices connected to the bus which have conflicting */ 
+....................         /*       bits in the current ROM code bit position. */ 
+....................         /* 01    All devices connected to the bus have a 0 in this bit position. */ 
+....................         /* 10    All devices connected to the bus have a 1 in this bit position. */ 
+....................         /* 11    There are no devices connected to the 1-wire bus. */ 
+....................  
+....................         /* if there are no devices on the bus */ 
+....................         if (state_u8 == 3) 
+00B6:  MOVF   2D,W
+00B7:  SUBLW  03
+00B8:  BTFSS  03.2
+00B9:  GOTO   0BC
+....................         { 
+....................             break; 
+00BA:  GOTO   102
+....................         } 
+00BB:  GOTO   0FE
+....................         else 
+....................         { 
+....................             /* devices have the same logical value at this position */ 
+....................             if (state_u8 > 0) 
+00BC:  MOVF   2D,F
+00BD:  BTFSC  03.2
+00BE:  GOTO   0C6
+....................             { 
+....................                 /* get bit value */ 
+....................                 bit_b = (bool)(state_u8 >> 1); 
+00BF:  BCF    32.0
+00C0:  BCF    03.0
+00C1:  RRF    2D,W
+00C2:  MOVWF  78
+00C3:  BTFSC  78.0
+00C4:  BSF    32.0
+....................             } 
+00C5:  GOTO   0DD
+....................             /* devices have confilcting bits in the current ROM code */ 
+....................             else 
+....................             { 
+....................                 /* if there was a conflict on the last iteration */ 
+....................                 if (bitpos_u8 < nLastDiscrepancy_u8) 
+00C6:  MOVF   21,W
+00C7:  SUBWF  30,W
+00C8:  BTFSC  03.0
+00C9:  GOTO   0D4
+....................                 { 
+....................                     /* take same bit as in last iteration */ 
+....................                     bit_b = ( (nRomAddr_au8[byteidx_u8] & mask_u8) > 0 ); 
+00CA:  BCF    32.0
+00CB:  MOVLW  22
+00CC:  ADDWF  2E,W
+00CD:  MOVWF  04
+00CE:  BCF    03.7
+00CF:  MOVF   00,W
+00D0:  ANDWF  2F,W
+00D1:  BTFSS  03.2
+00D2:  BSF    32.0
+....................                 } 
+00D3:  GOTO   0D9
+....................                 else 
+....................                 { 
+....................                     bit_b = (bitpos_u8 == nLastDiscrepancy_u8); 
+00D4:  BCF    32.0
+00D5:  MOVF   21,W
+00D6:  SUBWF  30,W
+00D7:  BTFSC  03.2
+00D8:  BSF    32.0
+....................                 } 
+....................  
+....................                 if (bit_b == 0) 
+00D9:  BTFSC  32.0
+00DA:  GOTO   0DD
+....................                 { 
+....................                     nDiscrepancyMarker_u8 = bitpos_u8; 
+00DB:  MOVF   30,W
+00DC:  MOVWF  31
+....................                 } 
+....................             } 
+....................  
+....................             /* store bit in ROM address */ 
+....................            if (bit_b != 0) 
+00DD:  BTFSS  32.0
+00DE:  GOTO   0E7
+....................            { 
+....................                nRomAddr_au8[byteidx_u8] |= mask_u8; 
+00DF:  MOVLW  22
+00E0:  ADDWF  2E,W
+00E1:  MOVWF  04
+00E2:  BCF    03.7
+00E3:  MOVF   00,W
+00E4:  IORWF  2F,W
+00E5:  MOVWF  00
+....................            } 
+00E6:  GOTO   0EF
+....................            else 
+....................            { 
+....................                nRomAddr_au8[byteidx_u8] &= ~mask_u8; 
+00E7:  MOVLW  22
+00E8:  ADDWF  2E,W
+00E9:  MOVWF  04
+00EA:  BCF    03.7
+00EB:  MOVF   2F,W
+00EC:  XORLW  FF
+00ED:  ANDWF  00,W
+00EE:  MOVWF  00
+....................            } 
+....................  
+....................            DS1820_WriteBit(bit_b); 
+00EF:  MOVLW  00
+00F0:  BTFSC  32.0
+00F1:  MOVLW  01
+00F2:  MOVWF  33
+00F3:  MOVWF  41
+00F4:  CALL   034
+....................  
+....................            /* increment bit position */ 
+....................            bitpos_u8 ++; 
+00F5:  INCF   30,F
+....................  
+....................            /* calculate next mask value */ 
+....................            mask_u8 = mask_u8 << 1; 
+00F6:  BCF    03.0
+00F7:  RLF    2F,F
+....................  
+....................            /* check if this byte has finished */ 
+....................            if (mask_u8 == 0) 
+00F8:  MOVF   2F,F
+00F9:  BTFSS  03.2
+00FA:  GOTO   0FE
+....................            { 
+....................                byteidx_u8 ++;  /* advance to next byte of ROM mask */ 
+00FB:  INCF   2E,F
+....................                mask_u8 = 1;    /* update mask */ 
+00FC:  MOVLW  01
+00FD:  MOVWF  2F
+....................            } 
+....................         } 
+....................     } while (byteidx_u8 < DS1820_ADDR_LEN); 
+00FE:  MOVF   2E,W
+00FF:  SUBLW  07
+0100:  BTFSC  03.0
+0101:  GOTO   09F
+....................  
+....................  
+....................     /* if search was unsuccessful then */ 
+....................     if (bitpos_u8 < 65) 
+0102:  MOVF   30,W
+0103:  SUBLW  40
+0104:  BTFSS  03.0
+0105:  GOTO   108
+....................     { 
+....................         /* reset the last discrepancy to 0 */ 
+....................         nLastDiscrepancy_u8 = 0; 
+0106:  CLRF   21
+....................     } 
+0107:  GOTO   10F
+....................     else 
+....................     { 
+....................         /* search was successful */ 
+....................         nLastDiscrepancy_u8 = nDiscrepancyMarker_u8; 
+0108:  MOVF   31,W
+0109:  MOVWF  21
+....................         bDoneFlag = (nLastDiscrepancy_u8 == 0); 
+010A:  BCF    20.0
+010B:  MOVF   21,F
+010C:  BTFSC  03.2
+010D:  BSF    20.0
+....................  
+....................         /* indicates search is not complete yet, more parts remain */ 
+....................         next_b = TRUE; 
+010E:  BSF    32.2
+....................     } 
+....................  
+....................     return next_b; 
+010F:  MOVLW  00
+0110:  BTFSC  32.2
+0111:  MOVLW  01
+0112:  MOVWF  78
+0113:  RETURN
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_FindFirstDevice 
+....................  * PURPOSE:    Starts the device search on the 1-wire bus. 
+....................  * 
+....................  * INPUT:      - 
+....................  * OUTPUT:     nRomAddr_au8[]       ROM code of the first device 
+....................  * RETURN:     bool                 TRUE if there are more devices on the 1-wire 
+....................  *                                  bus, FALSE otherwise 
+....................  ******************************************************************************/ 
+.................... bool DS1820_FindFirstDevice(void) 
+.................... { 
+....................     nLastDiscrepancy_u8 = 0; 
+0114:  CLRF   21
+....................     bDoneFlag = FALSE; 
+0115:  BCF    20.0
+....................  
+....................     return ( DS1820_FindNextDevice() ); 
+0116:  CALL   07E
+0117:  MOVF   78,W
+0118:  BCF    0A.3
+0119:  BCF    0A.4
+011A:  GOTO   77C (RETURN)
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_WriteEEPROM 
+....................  * PURPOSE:    Writes to the DS1820 EEPROM memory (2 bytes available). 
+....................  * 
+....................  * INPUT:      nTHigh         high byte of EEPROM 
+....................  *             nTLow          low byte of EEPROM 
+....................  * OUTPUT:     - 
+....................  * RETURN:     - 
+....................  ******************************************************************************/ 
+.................... void DS1820_WriteEEPROM(uint8 nTHigh, uint8 nTLow) 
+.................... { 
+....................     /* --- write to scratchpad ----------------------------------------------- */ 
+....................     DS1820_Reset(); 
+....................     DS1820_AddrDevice(DS1820_CMD_MATCHROM); 
+....................     DS1820_WriteByte(DS1820_CMD_WRITESCRPAD); /* start conversion */ 
+....................     DS1820_WriteByte(nTHigh); 
+....................     DS1820_WriteByte(nTLow); 
+....................  
+....................     DS1820_DelayUs(10); 
+....................  
+....................     DS1820_Reset(); 
+....................     DS1820_AddrDevice(DS1820_CMD_MATCHROM); 
+....................     DS1820_WriteByte(DS1820_CMD_COPYSCRPAD); /* start conversion */ 
+....................  
+....................     delay_ms(10); 
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_GetTempRaw 
+....................  * PURPOSE:    Get temperature raw value from single DS1820 device. 
+....................  * 
+....................  *             Scratchpad Memory Layout 
+....................  *             Byte  Register 
+....................  *             0     Temperature_LSB 
+....................  *             1     Temperature_MSB 
+....................  *             2     Temp Alarm High / User Byte 1 
+....................  *             3     Temp Alarm Low / User Byte 2 
+....................  *             4     Reserved 
+....................  *             5     Reserved 
+....................  *             6     Count_Remain 
+....................  *             7     Count_per_C 
+....................  *             8     CRC 
+....................  * 
+....................  *             Temperature calculation for DS18S20 (Family Code 0x10): 
+....................  *             ======================================================= 
+....................  *                                             (Count_per_C - Count_Remain) 
+....................  *             Temperature = temp_raw - 0.25 + ---------------------------- 
+....................  *                                                     Count_per_C 
+....................  * 
+....................  *             Where temp_raw is the value from the temp_MSB and temp_LSB with 
+....................  *             the least significant bit removed (the 0.5C bit). 
+....................  * 
+....................  * 
+....................  *             Temperature calculation for DS18B20 (Family Code 0x28): 
+....................  *             ======================================================= 
+....................  *                      bit7   bit6   bit5   bit4   bit3   bit2   bit1   bit0 
+....................  *             LSB      2^3    2^2    2^1    2^0    2^-1   2^-2   2^-3   2^-4 
+....................  *                      bit15  bit14  bit13  bit12  bit3   bit2   bit1   bit0 
+....................  *             MSB      S      S      S      S      S      2^6    2^5    2^4 
+....................  * 
+....................  *             The temperature data is stored as a 16-bit sign-extended two’s 
+....................  *             complement number in the temperature register. The sign bits (S) 
+....................  *             indicate if the temperature is positive or negative: for 
+....................  *             positive numbers S = 0 and for negative numbers S = 1. 
+....................  * 
+....................  * RETURN:     sint16         raw temperature value with a resolution 
+....................  *                            of 1/256°C 
+....................  ******************************************************************************/ 
+.................... sint16 DS1820_GetTempRaw(void) 
+.................... { 
+....................     uint8 i; 
+....................     uint16 temp_u16; 
+....................     uint16 highres_u16; 
+....................     uint8 scrpad[DS1820_SCRPADMEM_LEN]; 
+....................  
+....................     /* --- start temperature conversion -------------------------------------- */ 
+....................     DS1820_Reset(); 
+*
+014E:  CALL   00F
+....................     DS1820_AddrDevice(DS1820_CMD_MATCHROM);     /* address the device */ 
+014F:  MOVLW  55
+0150:  MOVWF  3B
+0151:  CALL   11B
+....................     output_high(DS1820_DATAPIN); 
+0152:  BSF    03.5
+0153:  BCF    06.0
+0154:  BCF    03.5
+0155:  BSF    06.0
+....................     DS1820_WriteByte(DS1820_CMD_CONVERTTEMP);   /* start conversion */ 
+0156:  MOVLW  44
+0157:  MOVWF  3E
+0158:  CALL   04C
+....................     //DS1820_DelayMs(DS1820_TEMPCONVERT_DLY);   /* wait for temperature conversion */ 
+....................     DS1820_DelayMs(750); 
+0159:  MOVLW  03
+015A:  MOVWF  3B
+015B:  MOVLW  FA
+015C:  MOVWF  3C
+015D:  CALL   136
+015E:  DECFSZ 3B,F
+015F:  GOTO   15B
+....................  
+....................  
+....................     /* --- read sratchpad ---------------------------------------------------- */ 
+....................     DS1820_Reset(); 
+0160:  CALL   00F
+....................     DS1820_AddrDevice(DS1820_CMD_MATCHROM);   /* address the device */ 
+0161:  MOVLW  55
+0162:  MOVWF  3B
+0163:  CALL   11B
+....................     DS1820_WriteByte(DS1820_CMD_READSCRPAD);  /* read scratch pad */ 
+0164:  MOVLW  BE
+0165:  MOVWF  3E
+0166:  CALL   04C
+....................  
+....................     /* read scratch pad data */ 
+....................     for (i=0; i < DS1820_SCRPADMEM_LEN; i++) 
+0167:  CLRF   2D
+0168:  MOVF   2D,W
+0169:  SUBLW  08
+016A:  BTFSS  03.0
+016B:  GOTO   19F
+....................     { 
+....................         scrpad[i] = DS1820_ReadByte(); 
+016C:  MOVLW  32
+016D:  ADDWF  2D,W
+016E:  MOVWF  78
+016F:  CLRF   7A
+0170:  BTFSC  03.0
+0171:  INCF   7A,F
+0172:  MOVF   78,W
+0173:  MOVWF  3B
+0174:  MOVF   7A,W
+0175:  MOVWF  3C
+*
+0196:  MOVF   3B,W
+0197:  MOVWF  04
+0198:  BCF    03.7
+0199:  BTFSC  3C.0
+019A:  BSF    03.7
+019B:  MOVF   78,W
+019C:  MOVWF  00
+019D:  INCF   2D,F
+019E:  GOTO   168
+....................     } 
+....................  
+....................  
+....................     /* --- calculate temperature --------------------------------------------- */ 
+....................     /* Formular for temperature calculation: */ 
+....................     /* Temp = Temp_read - 0.25 + ((Count_per_C - Count_Remain)/Count_per_C) */ 
+....................  
+....................     /* get raw value of temperature (0.5°C resolution) */ 
+....................     temp_u16 = 0; 
+019F:  CLRF   2F
+01A0:  CLRF   2E
+....................     temp_u16 = (uint16)((uint16)scrpad[DS1820_REG_TEMPMSB] << 8); 
+01A1:  CLRF   3C
+01A2:  MOVF   33,W
+01A3:  MOVWF  2F
+01A4:  CLRF   2E
+....................     temp_u16 |= (uint16)(scrpad[DS1820_REG_TEMPLSB]); 
+01A5:  CLRF   7A
+01A6:  MOVF   32,W
+01A7:  IORWF  2E,F
+01A8:  MOVF   7A,W
+01A9:  IORWF  2F,F
+....................  
+....................     if (nRomAddr_au8[0] == DS1820_FAMILY_CODE_DS18S20) 
+01AA:  MOVF   22,W
+01AB:  SUBLW  10
+01AC:  BTFSS  03.2
+01AD:  GOTO   200
+....................     { 
+....................         /* get temperature value in 1°C resolution */ 
+....................         temp_u16 >>= 1; 
+01AE:  BCF    03.0
+01AF:  RRF    2F,F
+01B0:  RRF    2E,F
+....................      
+....................         /* temperature resolution is TEMP_RES (0x100), so 1°C equals 0x100 */ 
+....................         /* => convert to temperature to 1/256°C resolution */ 
+....................         temp_u16 = ((uint16)temp_u16 << 8); 
+01B1:  MOVF   2E,W
+01B2:  MOVWF  2F
+01B3:  CLRF   2E
+....................      
+....................         /* now substract 0.25°C */ 
+....................         temp_u16 -= ((uint16)TEMP_RES >> 2); 
+01B4:  MOVLW  40
+01B5:  SUBWF  2E,F
+01B6:  MOVLW  00
+01B7:  BTFSS  03.0
+01B8:  MOVLW  01
+01B9:  SUBWF  2F,F
+....................      
+....................         /* now calculate high resolution */ 
+....................         highres_u16 = scrpad[DS1820_REG_CNTPERSEC] - scrpad[DS1820_REG_CNTREMAIN]; 
+01BA:  MOVF   38,W
+01BB:  SUBWF  39,W
+01BC:  MOVWF  30
+01BD:  CLRF   31
+....................         highres_u16 = ((uint16)highres_u16 << 8); 
+01BE:  MOVF   30,W
+01BF:  MOVWF  31
+01C0:  CLRF   30
+....................         if (scrpad[DS1820_REG_CNTPERSEC]) 
+01C1:  MOVF   39,F
+01C2:  BTFSC  03.2
+01C3:  GOTO   1F9
+....................         { 
+....................             highres_u16 = highres_u16 / (uint16)scrpad[DS1820_REG_CNTPERSEC]; 
+01C4:  CLRF   7A
+01C5:  MOVF   39,W
+01C6:  MOVWF  3B
+01C7:  MOVF   7A,W
+01C8:  MOVWF  3C
+01C9:  MOVF   31,W
+01CA:  MOVWF  3E
+01CB:  MOVF   30,W
+01CC:  MOVWF  3D
+01CD:  MOVF   3C,W
+01CE:  MOVWF  40
+01CF:  MOVF   3B,W
+01D0:  MOVWF  3F
+*
+01F5:  MOVF   79,W
+01F6:  MOVWF  31
+01F7:  MOVF   78,W
+01F8:  MOVWF  30
+....................         } 
+....................      
+....................         /* now calculate result */ 
+....................         highres_u16 = highres_u16 + temp_u16; 
+01F9:  MOVF   2E,W
+01FA:  ADDWF  30,F
+01FB:  MOVF   2F,W
+01FC:  BTFSC  03.0
+01FD:  INCFSZ 2F,W
+01FE:  ADDWF  31,F
+....................     } 
+01FF:  GOTO   20E
+....................     else 
+....................     { 
+....................         /* 12 bit temperature value has 0.0625°C resolution */ 
+....................         /* shift left by 4 to get 1/256°C resolution */ 
+....................         highres_u16 = temp_u16; 
+0200:  MOVF   2F,W
+0201:  MOVWF  31
+0202:  MOVF   2E,W
+0203:  MOVWF  30
+....................         highres_u16 <<= 4; 
+0204:  RLF    30,F
+0205:  RLF    31,F
+0206:  RLF    30,F
+0207:  RLF    31,F
+0208:  RLF    30,F
+0209:  RLF    31,F
+020A:  RLF    30,F
+020B:  RLF    31,F
+020C:  MOVLW  F0
+020D:  ANDWF  30,F
+....................     } 
+....................  
+....................     return (highres_u16); 
+020E:  MOVF   30,W
+020F:  MOVWF  78
+0210:  MOVF   31,W
+0211:  MOVWF  79
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_GetTempFloat 
+....................  * PURPOSE:    Converts internal temperature value to string (physical value). 
+....................  * 
+....................  * INPUT:      none 
+....................  * OUTPUT:     none 
+....................  * RETURN:     float          temperature value with as float value 
+....................  ******************************************************************************/ 
+.................... float DS1820_GetTempFloat(void) 
+.................... { 
+....................     return ((float)DS1820_GetTempRaw() / (float)TEMP_RES); 
+0212:  MOVF   79,W
+0213:  MOVWF  2E
+0214:  MOVF   78,W
+0215:  MOVWF  2D
+*
+023A:  MOVF   7A,W
+023B:  MOVWF  30
+023C:  MOVF   79,W
+023D:  MOVWF  2F
+023E:  MOVF   78,W
+023F:  MOVWF  2E
+0240:  MOVF   77,W
+0241:  MOVWF  2D
+0242:  MOVF   30,W
+0243:  MOVWF  34
+0244:  MOVF   2F,W
+0245:  MOVWF  33
+0246:  MOVF   2E,W
+0247:  MOVWF  32
+0248:  MOVF   2D,W
+0249:  MOVWF  31
+024A:  CLRF   38
+024B:  CLRF   37
+024C:  CLRF   36
+024D:  MOVLW  87
+024E:  MOVWF  35
+*
+0318:  BCF    0A.3
+0319:  BCF    0A.4
+031A:  GOTO   780 (RETURN)
+.................... } 
+....................  
+....................  
+.................... /******************************************************************************* 
+....................  * FUNCTION:   DS1820_GetTempString 
+....................  * PURPOSE:    Converts internal temperature value to string (physical value). 
+....................  * 
+....................  * INPUT:      tRaw_s16       internal temperature value 
+....................  * OUTPUT:     strTemp_pc     user string buffer to write temperature value 
+....................  * RETURN:     sint16         temperature value with an internal resolution 
+....................  *                            of TEMP_RES 
+....................  ******************************************************************************/ 
+.................... void DS1820_GetTempString(sint16 tRaw_s16, char *strTemp_pc) 
+.................... { 
+....................     sint16 tPhyLow_s16; 
+....................     sint8 tPhy_s8; 
+....................  
+....................     /* convert from raw value (1/256°C resolution) to physical value */ 
+....................     tPhy_s8 = (sint8)(tRaw_s16/TEMP_RES); 
+....................  
+....................     /* convert digits from raw value (1/256°C resolution) to physical value */ 
+....................     /*tPhyLow_u16 = tInt_s16 % TEMP_RES;*/ 
+....................     tPhyLow_s16 = tRaw_s16 & 0xFF;      /* this operation is the same as */ 
+....................                                         /* but saves flash memory tInt_s16 % TEMP_RES */ 
+....................     tPhyLow_s16 = tPhyLow_s16 * 100; 
+....................     tPhyLow_s16 = (uint16)tPhyLow_s16 / TEMP_RES; 
+....................  
+....................     /* write physical temperature value to string */ 
+....................     sprintf(strTemp_pc, "%d.%02d", tPhy_s8, (sint8)tPhyLow_s16); 
+.................... } 
+....................  
+.................... #endif /* _DS1820_H */ 
+....................  
+....................  
+....................  
+.................... void main() 
+*
+074A:  MOVF   03,W
+074B:  ANDLW  1F
+074C:  MOVWF  03
+074D:  BSF    03.5
+074E:  BSF    03.6
+074F:  BCF    07.3
+0750:  MOVLW  19
+0751:  BCF    03.6
+0752:  MOVWF  19
+0753:  MOVLW  A6
+0754:  MOVWF  18
+0755:  MOVLW  90
+0756:  BCF    03.5
+0757:  MOVWF  18
+0758:  CLRF   2B
+0759:  CLRF   2A
+075A:  BSF    03.5
+075B:  BSF    03.6
+075C:  MOVF   09,W
+075D:  ANDLW  C0
+075E:  MOVWF  09
+075F:  BCF    03.6
+0760:  BCF    1F.4
+0761:  BCF    1F.5
+0762:  MOVLW  00
+0763:  BSF    03.6
+0764:  MOVWF  08
+0765:  BCF    03.5
+0766:  CLRF   07
+0767:  CLRF   08
+0768:  CLRF   09
+0769:  BCF    03.7
+.................... { 
+....................     uint8 sensor_count;         /* sensor counter */ 
+....................  
+....................    setup_comparator(NC_NC_NC_NC);// This device COMP currently not supported by the PICWizard 
+*
+0775:  BSF    03.6
+0776:  CLRF   07
+0777:  CLRF   08
+0778:  CLRF   09
+....................  
+....................    sensor_count = 0; 
+0779:  BCF    03.6
+077A:  CLRF   2C
+....................  
+....................    while(TRUE) 
+....................    { 
+....................  
+....................       if (DS1820_FindFirstDevice()) { 
+077B:  GOTO   114
+077C:  MOVF   78,F
+077D:  BTFSC  03.2
+077E:  GOTO   7B3
+.................... 		  do 
+.................... 		  { 
+.................... 			printf("%i -- %05.1g\n\r", sensor_count, DS1820_GetTempFloat()); 
+077F:  GOTO   14E
+0780:  MOVF   7A,W
+0781:  MOVWF  30
+0782:  MOVF   79,W
+0783:  MOVWF  2F
+0784:  MOVF   78,W
+0785:  MOVWF  2E
+0786:  MOVF   77,W
+0787:  MOVWF  2D
+0788:  MOVF   2C,W
+0789:  MOVWF  31
+078A:  MOVLW  18
+078B:  MOVWF  32
+078C:  GOTO   330
+078D:  MOVLW  05
+078E:  BSF    03.6
+078F:  MOVWF  0D
+0790:  MOVLW  00
+0791:  MOVWF  0F
+0792:  BCF    03.0
+0793:  MOVLW  04
+0794:  BCF    03.6
+0795:  MOVWF  31
+0796:  GOTO   38D
+0797:  MOVLW  44
+0798:  MOVWF  04
+0799:  MOVF   30,W
+079A:  MOVWF  34
+079B:  MOVF   2F,W
+079C:  MOVWF  33
+079D:  MOVF   2E,W
+079E:  MOVWF  32
+079F:  MOVF   2D,W
+07A0:  MOVWF  31
+07A1:  MOVLW  01
+07A2:  MOVWF  35
+07A3:  GOTO   437
+07A4:  MOVLW  0A
+07A5:  BTFSS  0C.4
+07A6:  GOTO   7A5
+07A7:  MOVWF  19
+07A8:  MOVLW  0D
+07A9:  BTFSS  0C.4
+07AA:  GOTO   7A9
+07AB:  MOVWF  19
+.................... 			sensor_count ++; 
+07AC:  INCF   2C,F
+.................... 		  } 
+....................          while ( DS1820_FindNextDevice() ); 
+07AD:  CALL   07E
+07AE:  MOVF   78,F
+07AF:  BTFSS  03.2
+07B0:  GOTO   77F
+....................  
+.................... 		 sensor_count = 0; 
+07B1:  CLRF   2C
+....................  
+....................       } else { 
+07B2:  GOTO   7BA
+....................          printf("xx\n\r"); 
+07B3:  MOVLW  0C
+07B4:  BSF    03.6
+07B5:  MOVWF  0D
+07B6:  MOVLW  00
+07B7:  MOVWF  0F
+07B8:  BCF    03.6
+07B9:  GOTO   6F0
+....................       } 
+....................  
+....................  
+....................       delay_ms(1000); 
+07BA:  MOVLW  04
+07BB:  MOVWF  2D
+07BC:  MOVLW  FA
+07BD:  MOVWF  3C
+07BE:  CALL   136
+07BF:  DECFSZ 2D,F
+07C0:  GOTO   7BC
+07C1:  GOTO   77B
+....................  
+....................    } 
+....................  
+.................... } 
+07C2:  SLEEP
+
+Configuration Fuses:
+   Word  1: 2FE2   HS NOWDT PUT MCLR NOPROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3EFF   BORV21 NOWRT

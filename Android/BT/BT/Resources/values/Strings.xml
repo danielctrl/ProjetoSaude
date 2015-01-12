@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">BT</string>
+  <string name="TempLbl1">Temp 1:</string>
+  <string name="TempLbl2">Temp 2:</string>
+</resources>

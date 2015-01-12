@@ -1,0 +1,14 @@
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\bin\Debug\BT.dll
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\bin\Debug\BT.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\bin\Debug\BT.dll.mdb
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\bin\Debug\BT.BT.apk
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\bin\Debug\BT.BT-Signed.apk
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\BT.csprojResolveAssemblyReference.cache
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\BT.dll
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\BT.pdb
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\android\bin\BT.BT.apk
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\res\layout\main.xml
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\res\values\strings.xml
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\res\drawable\icon.png
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\R.cs.flag
+c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\uploadflags.txt

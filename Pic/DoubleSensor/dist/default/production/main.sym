@@ -1,0 +1,199 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020.0   bDoneFlag
+021     nLastDiscrepancy_u8
+022-029 nRomAddr_au8
+02A-02B @sprintf_string
+02C     MAIN.sensor_count
+02D     DS1820_FindNextDevice.state_u8
+02D     DS1820_GetTempRaw.i
+02D-02E @SITOF.P1
+02D     DS1820_GetTempFloat.@SCRATCH1
+02D     MAIN.@SCRATCH1
+02D     @PSTRINGC7_9600_62_63.@SCRATCH1
+02E-02F DS1820_GetTempRaw.temp_u16
+02E     DS1820_FindNextDevice.byteidx_u8
+02E     DS1820_GetTempFloat.@SCRATCH2
+02E     MAIN.@SCRATCH2
+02E     @PSTRINGC7_9600_62_63.@SCRATCH2
+02F     DS1820_FindNextDevice.mask_u8
+02F     DS1820_GetTempFloat.@SCRATCH3
+02F     MAIN.@SCRATCH3
+02F     @PSTRINGC7_9600_62_63.@SCRATCH3
+030-031 DS1820_GetTempRaw.highres_u16
+030     DS1820_FindNextDevice.bitpos_u8
+030     DS1820_GetTempFloat.@SCRATCH4
+030     MAIN.@SCRATCH4
+030     @PSTRINGC7_9600_62_63.@SCRATCH4
+031-034 @DIVFF.P1
+031     @PSTRINGCN7_9600_62_63.P2
+031     DS1820_FindNextDevice.nDiscrepancyMarker_u8
+031-034 @PRINTF_L32D_9600_62_63FPFPFR.P1
+031     @PRINTF_D_9600_62_63.P2
+032-03A DS1820_GetTempRaw.scrpad
+032     @PRINTF_D_9600_62_63.P1
+032.0   DS1820_FindNextDevice.bit_b
+032.1   DS1820_FindNextDevice.bStatus
+032.2   DS1820_FindNextDevice.next_b
+032     @PSTRINGCN7_9600_62_63.@SCRATCH1
+033     DS1820_FindNextDevice.@SCRATCH1
+033     @PRINTF_D_9600_62_63.@SCRATCH1
+033     @PSTRINGCN7_9600_62_63.@SCRATCH2
+034     DS1820_FindNextDevice.@SCRATCH2
+034     @PRINTF_D_9600_62_63.@SCRATCH2
+034     @PSTRINGCN7_9600_62_63.@SCRATCH3
+035-038 @DIVFF.P1
+035     @PRINTF_L32D_9600_62_63FPFPFR.P2
+035     DS1820_FindNextDevice.@SCRATCH3
+035     @PRINTF_D_9600_62_63.@SCRATCH3
+035     @PSTRINGCN7_9600_62_63.@SCRATCH4
+036     @PRINTF_D_9600_62_63.@SCRATCH4
+036     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH1
+037     @DIV88.P1
+037     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH2
+038     @DIV88.P1
+038     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH3
+039     @DIVFF.@SCRATCH1
+039     @DIV88.@SCRATCH1
+039     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH4
+03A     @DIVFF.@SCRATCH2
+03A     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH5
+03B.0   DS1820_Reset.bPresPulse
+03B     DS1820_AddrDevice.nAddrMethod
+03B     DS1820_GetTempRaw.@SCRATCH1
+03B     @DIVFF.@SCRATCH3
+03B     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH6
+03C     DS1820_AddrDevice.i
+03C     @delay_ms1.P1
+03C     DS1820_GetTempRaw.@SCRATCH2
+03C     @DIVFF.@SCRATCH4
+03C     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH7
+03D     DS1820_ReadByte.i
+03D-03E @DIV1616.P1
+03D     DS1820_AddrDevice.@SCRATCH1
+03D     @DIVFF.@SCRATCH5
+03D     @PRINTF_L32D_9600_62_63FPFPFR.@SCRATCH8
+03E     DS1820_ReadByte.value
+03E-041 @MULFF.P1
+03E-041 @FTOSD.P2
+03E     DS1820_WriteByte.val_u8
+03E-041 @DIV3232.P1
+03E-041 @ADDFF.P2
+03E     @DIVFF.@SCRATCH6
+03F-040 @DIV1616.P1
+03F.0   DS1820_ReadBit.bBit
+03F     DS1820_WriteByte.i
+040     DS1820_WriteByte.temp
+041     DS1820_WriteBit.bBit
+041     @DIV1616.@SCRATCH1
+042-045 @MULFF.P1
+042-045 @ADDFF.P2
+042-045 @DIV3232.P3
+042     @FTOSD.@SCRATCH1
+046     @MULFF.@SCRATCH1
+046     @ADDFF.@SCRATCH1
+046     @DIV3232.@SCRATCH1
+047     @MULFF.@SCRATCH2
+047     @ADDFF.@SCRATCH2
+047     @DIV3232.@SCRATCH2
+048     @MULFF.@SCRATCH3
+048     @ADDFF.@SCRATCH3
+048     @DIV3232.@SCRATCH3
+049     @MULFF.@SCRATCH4
+049     @ADDFF.@SCRATCH4
+049     @DIV3232.@SCRATCH4
+04A     @MULFF.@SCRATCH5
+04A     @ADDFF.@SCRATCH5
+04A     @DIV3232.@SCRATCH5
+04B     @ADDFF.@SCRATCH6
+04C     @ADDFF.@SCRATCH7
+04D     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const699.call
+00000C  @const719.call
+00000F  DS1820_Reset
+000034  DS1820_WriteBit
+00004C  DS1820_WriteByte
+000069  DS1820_ReadBit
+00007E  DS1820_FindNextDevice
+000114  DS1820_FindFirstDevice
+00011B  DS1820_AddrDevice
+000136  @delay_ms1
+00014E  DS1820_GetTempRaw
+00014E  DS1820_GetTempFloat
+000176  DS1820_ReadByte
+0001D1  @DIV1616
+000216  @SITOF
+00024F  @DIVFF
+00031B  @DIV88
+000330  @PRINTF_D_9600_62_63
+00038D  @PSTRINGCN7_9600_62_63
+0003E8  @DIV3232
+000437  @PRINTF_L32D_9600_62_63FPFPFR
+00044B  @MULFF
+0004E1  @ADDFF
+000631  @FTOSD
+0006F0  @PSTRINGC7_9600_62_63
+00074A  MAIN
+00074A  @cinit1
+000769  @cinit2
+
+Project Directory:
+    C:\Users\Daniel\Desktop\PIC\Projetos\DoubleSensor.X\
+
+Project Files:
+    main.c                                                  [18-Dec-14 23:21  CRC=C8CA3447]
+    main.h                                                  [18-Dec-14 22:34  CRC=F817D64F]
+    ..\..\..\..\..\..\PIC\PICC\devices\16F886.h             [08-Dec-14 17:21  CRC=9C0AF141]
+    types.h                                                 [01-Nov-10 10:41  CRC=B50767DC]
+    ds1820.h                                                [13-Nov-10 19:00  CRC=69CC06AA]
+
+Source signature=E58C7107
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=5F60
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F886
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+    Predefined symbols:
+       #define __16F886 TRUE
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   dist\default\production\main.xsym
+    Errors:      dist\default\production\main.err
+    Ext Symbols: dist\default\production\main.esym
+    INHX8:       dist\default\production\main.hex
+    Symbols:     dist\default\production\main.sym
+    List:        dist\default\production\main.lst
+    Debug/COFF:  dist\default\production\main.cof
+    Project:     main.ccspjt
+    Call Tree:   dist\default\production\main.tre
+    Statistics:  dist\default\production\main.STA
