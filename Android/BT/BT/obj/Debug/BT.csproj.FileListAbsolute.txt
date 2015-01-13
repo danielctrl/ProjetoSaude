@@ -12,3 +12,17 @@ c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\re
 c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\res\drawable\icon.png
 c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\R.cs.flag
 c:\users\daniel\documents\visual studio 2013\Projects\Android\BT\BT\obj\Debug\uploadflags.txt
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\BT.csprojResolveAssemblyReference.cache
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\BT.dll
+C:\GitHub\ProjetoSaude\Android\BT\BT\bin\Debug\BT.dll
+C:\GitHub\ProjetoSaude\Android\BT\BT\bin\Debug\BT.pdb
+C:\GitHub\ProjetoSaude\Android\BT\BT\bin\Debug\BT.dll.mdb
+C:\GitHub\ProjetoSaude\Android\BT\BT\bin\Debug\BT.BT.apk
+C:\GitHub\ProjetoSaude\Android\BT\BT\bin\Debug\BT.BT-Signed.apk
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\BT.pdb
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\android\bin\BT.BT.apk
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\res\layout\main.xml
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\res\values\strings.xml
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\res\drawable\icon.png
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\R.cs.flag
+C:\GitHub\ProjetoSaude\Android\BT\BT\obj\Debug\uploadflags.txt

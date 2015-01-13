@@ -63,11 +63,26 @@ namespace BT
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060006
+			public const int btnConnect = 2131099654;
+			
 			// aapt resource value: 0x7f060001
-			public const int btnConnect = 2131099649;
+			public const int lblTemp0 = 2131099649;
+			
+			// aapt resource value: 0x7f060004
+			public const int lblTemp1 = 2131099652;
 			
 			// aapt resource value: 0x7f060000
-			public const int txtTemp = 2131099648;
+			public const int linearLayout1 = 2131099648;
+			
+			// aapt resource value: 0x7f060003
+			public const int linearLayout2 = 2131099651;
+			
+			// aapt resource value: 0x7f060002
+			public const int txtTemp0 = 2131099650;
+			
+			// aapt resource value: 0x7f060005
+			public const int txtTemp1 = 2131099653;
 			
 			static Id()
 			{
@@ -98,11 +113,14 @@ namespace BT
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int TempLbl1 = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int TempLbl2 = 2130968578;
 			
 			static String()
 			{
