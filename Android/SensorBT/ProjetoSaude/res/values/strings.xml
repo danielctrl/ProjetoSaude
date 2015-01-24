@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ProjetoSaude</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Form Login -->
+    <string name="login_nomeEmpresa">nomeEmpresa</string>
+    <string name="login_versao_Sys">Versão: 1.0</string>
+    <string name="login_txUsuario">Usuario</string>
+    <string name="login_txSenha">Senha</string>
+    <string name="login_btLogin">Login</string>
+    
+    
+
+</resources>
+
