@@ -35,7 +35,7 @@ namespace MockSensor
         {
             double tempMax, tempMin;
 
-            if (variacao < 0)
+            if (rdn.Next(1) == 0)
             {
                 tempMax = sensor.temp;
                 tempMin = sensor.temp - variacao;

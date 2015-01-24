@@ -4,3 +4,9 @@ C:\Users\Daniel\documents\visual studio 2013\Projects\MockSensor\MockSensor\bin\
 C:\Users\Daniel\documents\visual studio 2013\Projects\MockSensor\MockSensor\obj\Debug\MockSensor.csprojResolveAssemblyReference.cache
 C:\Users\Daniel\documents\visual studio 2013\Projects\MockSensor\MockSensor\obj\Debug\MockSensor.exe
 C:\Users\Daniel\documents\visual studio 2013\Projects\MockSensor\MockSensor\obj\Debug\MockSensor.pdb
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\bin\Debug\MockSensor.exe.config
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\obj\Debug\MockSensor.exe
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\obj\Debug\MockSensor.pdb
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\bin\Debug\MockSensor.exe
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\bin\Debug\MockSensor.pdb
+C:\GitHub\ProjetoSaude\ConsoleApp\MockSensor\MockSensor\obj\Debug\MockSensor.csprojResolveAssemblyReference.cache
