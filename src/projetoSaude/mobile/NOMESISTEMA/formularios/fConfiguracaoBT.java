@@ -24,7 +24,6 @@ public class fConfiguracaoBT extends Padrao implements OnClickListener {
 	private Spinner spBT4;
 	private Spinner spBT5;
 	private Spinner spBT6;
-	private Spinner spBT7;
 	private TabHost tbGeral;
 	
 	List<String> spArray =  new ArrayList<String>();
@@ -46,6 +45,17 @@ public class fConfiguracaoBT extends Padrao implements OnClickListener {
 		
 		spBT1 = (Spinner) findViewById(R.id.Configuracao_spMACAdd1);
 		spBT2 = (Spinner) findViewById(R.id.Configuracao_spMACAdd2);
+		spBT3 = (Spinner) findViewById(R.id.Configuracao_spMACAdd3);
+		spBT4 = (Spinner) findViewById(R.id.Configuracao_spMACAdd4);
+		spBT5 = (Spinner) findViewById(R.id.Configuracao_spMACAdd5);
+		spBT6 = (Spinner) findViewById(R.id.Configuracao_spMACAdd6);
+		
+		spBT1.setVisibility(View.VISIBLE);
+		spBT2.setVisibility(View.INVISIBLE);
+		spBT3.setVisibility(View.INVISIBLE);
+		spBT4.setVisibility(View.INVISIBLE);
+		spBT5.setVisibility(View.INVISIBLE);
+		spBT6.setVisibility(View.INVISIBLE);
 			     	
 		spArray.add("1");
 		spArray.add("2");
