@@ -24,7 +24,7 @@
 
          <LinearLayout
              android:layout_width="fill_parent"
-             android:layout_height="88dp"
+             android:layout_height="wrap_content"
              android:layout_marginTop="20dp"
              android:orientation="horizontal"
              android:padding="10dip" >
@@ -55,6 +55,26 @@
 
          <Spinner
              android:id="@+id/Configuracao_spMACAdd2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         
+         <Spinner
+             android:id="@+id/Configuracao_spMACAdd3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         
+         <Spinner
+             android:id="@+id/Configuracao_spMACAdd4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         
+         <Spinner
+             android:id="@+id/Configuracao_spMACAdd5"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+         
+         <Spinner
+             android:id="@+id/Configuracao_spMACAdd6"
              android:layout_width="match_parent"
              android:layout_height="wrap_content" />
 
