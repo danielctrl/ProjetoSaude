@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
 
 public class Util {
 
@@ -51,5 +53,13 @@ public class Util {
 			});	
 		}
 		return builder;
+	}
+	
+	public static TabSpec CriarTab(TabHost pTabHost, int pIdView, String pNome) {
+		TabSpec tab = pTabHost.newTabSpec(pNome);
+		tab.setContent(pIdView);
+		tab.setIndicator(pNome);
+		
+		return tab;
 	}
 }

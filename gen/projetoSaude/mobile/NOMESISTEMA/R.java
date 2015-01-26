@@ -1103,6 +1103,9 @@ containing a value of this type.
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int configuracao_corpo=0x7f05003c;
+        public static final int configuracao_tab_bt=0x7f050044;
+        public static final int configuracao_tab_geral=0x7f050043;
+        public static final int configuracao_tab_rede=0x7f050045;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
@@ -1157,9 +1160,6 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
-        public static final int tab_configuracao_bt=0x7f050044;
-        public static final int tab_configuracao_geral=0x7f050043;
-        public static final int tab_configuracao_rede=0x7f050045;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1218,9 +1218,10 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_configuracao_bt=0x7f030018;
         public static final int activity_configuracao_geral=0x7f030019;
-        public static final int activity_login=0x7f03001a;
-        public static final int activity_principal=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_configuracao_rede=0x7f03001a;
+        public static final int activity_login=0x7f03001b;
+        public static final int activity_principal=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int menu_principal=0x7f0c0000;

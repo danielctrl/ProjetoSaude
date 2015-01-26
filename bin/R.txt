@@ -258,6 +258,9 @@ int id btConectar 0x7f050053
 int id checkbox 0x7f05002d
 int id collapseActionView 0x7f05000d
 int id configuracao_corpo 0x7f05003c
+int id configuracao_tab_bt 0x7f050044
+int id configuracao_tab_geral 0x7f050043
+int id configuracao_tab_rede 0x7f050045
 int id default_activity_button 0x7f050028
 int id dialog 0x7f05000e
 int id disableHome 0x7f050008
@@ -312,9 +315,6 @@ int id showTitle 0x7f050006
 int id split_action_bar 0x7f05001e
 int id submit_area 0x7f050039
 int id tabMode 0x7f050002
-int id tab_configuracao_bt 0x7f050044
-int id tab_configuracao_geral 0x7f050043
-int id tab_configuracao_rede 0x7f050045
 int id title 0x7f05002b
 int id top_action_bar 0x7f050020
 int id up 0x7f050021
@@ -347,9 +347,10 @@ int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_configuracao_bt 0x7f030018
 int layout activity_configuracao_geral 0x7f030019
-int layout activity_login 0x7f03001a
-int layout activity_principal 0x7f03001b
-int layout support_simple_spinner_dropdown_item 0x7f03001c
+int layout activity_configuracao_rede 0x7f03001a
+int layout activity_login 0x7f03001b
+int layout activity_principal 0x7f03001c
+int layout support_simple_spinner_dropdown_item 0x7f03001d
 int menu menu_principal 0x7f0c0000
 int string Configuracao_btOK 0x7f0a0014
 int string Configuracao_btSalvar 0x7f0a0013
