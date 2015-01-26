@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ProjetoSaude</string>
+    
+    <!-- Form Login -->
+    <string name="login_nomeEmpresa">nomeEmpresa</string>
+    <string name="login_versao_Sys">Versão: 1.0</string>
+    <string name="login_txUsuario">Usuario</string>
+    <string name="login_txSenha">Senha</string>
+    <string name="login_btLogin">Login</string>
+    
+    <!-- Form ConfiguraçãoBT -->
+    <string name="Configuracao_btSalvar">Salvar Configurações</string>
+    <string name="Configuracao_btOK">OK</string>
+	<string name="Configuracao_lbNumeroBT">Núm. Dispositivos: </string>
+
+    <!-- Form Principal -->
+    <string name="principal_btConectar">Conectar</string>
+    <string name="principal_lbDisp1">---.- ºC</string>
+    <string name="principal_lbDisp2">---.- ºC</string>
+    <string name="principal_lbDisp3">---.- ºC</string>
+    <string name="principal_lbDisp4">---.- ºC</string>
+    <string name="principal_lbDisp5">---.- ºC</string>
+    <string name="principal_lbDisp6">---.- ºC</string>
+    <string name="principal_configuracao">Configurações</string>
+</resources>
+

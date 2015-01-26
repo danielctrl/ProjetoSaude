@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:baselineAligned="false"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <TabHost
+        android:id="@+id/tab_configuracao_geral"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="77dp" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:layout_marginTop="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/tab_configuracao_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                    <include layout="@layout/activity_configuracao_bt" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab_configuracao_rede"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                    <include layout="@layout/activity_configuracao_bt" />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
