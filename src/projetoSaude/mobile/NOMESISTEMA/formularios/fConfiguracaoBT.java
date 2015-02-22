@@ -38,9 +38,6 @@ public class fConfiguracaoBT extends Padrao implements OnClickListener {
 		btGravar = (Button) findViewById(R.id.Configuracao_btGravar);    	
 		btGravar.setOnClickListener(this);
     	
-		btOK = (Button) findViewById(R.id.Configuracao_btOK);    	
-		btOK.setOnClickListener(this);
-		
 		spNumBT = (Spinner) findViewById(R.id.Configuracao_spNumeroBT);
 		
 		spBT1 = (Spinner) findViewById(R.id.Configuracao_spMACAdd1);
@@ -56,7 +53,7 @@ public class fConfiguracaoBT extends Padrao implements OnClickListener {
 		spBT4.setVisibility(View.INVISIBLE);
 		spBT5.setVisibility(View.INVISIBLE);
 		spBT6.setVisibility(View.INVISIBLE);
-			     	
+		
 		spArray.add("1");
 		spArray.add("2");
 		spArray.add("3");
@@ -64,12 +61,25 @@ public class fConfiguracaoBT extends Padrao implements OnClickListener {
 		spArray.add("5");
 		spArray.add("6");
 		
-		ArrayAdapter<String> oAdapter = new ArrayAdapter<String>(
-			    this, android.R.layout.simple_spinner_item, spArray);
+		Util.SetValorSpinner(spNumBT, "Numero", spArray);
 		
-		oAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		//ArrayAdapter<String> oAdapter = new ArrayAdapter<String>(
+			//    this, android.R.layout.simple_spinner_item, spArray);
 		
-		spNumBT.setAdapter(oAdapter);
+		//oAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		
+		//spNumBT.setAdapter(oAdapter);
+		
+		btOK = (Button) findViewById(R.id.Configuracao_btOK);    	
+		btOK.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	int wiNumDisp  = (Integer) Util.GetValorSpinner(spNumBT, "Numero");
+
+            	for (int i = 0; i == wiNumDisp; i++){
+            		
+            	}
+            }
+        });
 		
 		tbGeral = (TabHost) findViewById(R.id.configuracao_tab_geral);
 		

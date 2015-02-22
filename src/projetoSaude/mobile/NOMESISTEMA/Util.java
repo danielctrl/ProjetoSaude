@@ -1,11 +1,14 @@
 package projetoSaude.mobile.NOMESISTEMA;
 
+import java.util.HashMap;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -61,5 +64,28 @@ public class Util {
 		tab.setIndicator(pNome);
 		
 		return tab;
+	}
+	
+	public static Object GetValorSpinner(Spinner pSpinner, String pCampo) {
+		if (pSpinner.getSelectedItem() instanceof HashMap<?, ?>) {
+			@SuppressWarnings("unchecked")
+			HashMap<String, Object> woMap = (HashMap<String, Object>) pSpinner.getSelectedItem();
+			return woMap.get(pCampo);
+		} else {
+			return null;
+		}			
+	}
+	
+	public static void SetValorSpinner(Spinner pSpinner, String pCampo, Object pValor) {
+		if (pSpinner.getSelectedItem() instanceof HashMap<?, ?>) {
+			for (int i = 0; i <pSpinner.getAdapter().getCount(); i++) {
+				@SuppressWarnings("unchecked")
+				HashMap<String, Object> woMap = (HashMap<String, Object>) pSpinner.getAdapter().getItem(i);
+				if ( woMap.get(pCampo).toString().equals(String.valueOf(pValor))) {
+					pSpinner.setSelection(i);					
+					break;
+				}
+			}
+		}		
 	}
 }
