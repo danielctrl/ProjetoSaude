@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:id="@+id/menu_principal_configuracao"  android:title="@string/principal_configuracao"></item>
+
+</menu>
+<!-- From: file:/C:/GitHub/ProjetoSaude/Android/SensorBT/app/src/main/res/menu/menu_principal.xml -->

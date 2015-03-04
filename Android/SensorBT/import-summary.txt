@@ -1,0 +1,144 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitattributes
+* .idea\
+* .idea\.name
+* .idea\ProjetoSaude.iml
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\scopes\
+* .idea\scopes\scope_settings.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* Android\
+* Android\SensorBT\
+* Android\SensorBT\.idea\
+* Android\SensorBT\.idea\.name
+* Android\SensorBT\.idea\compiler.xml
+* Android\SensorBT\.idea\copyright\
+* Android\SensorBT\.idea\copyright\profiles_settings.xml
+* Android\SensorBT\.idea\encodings.xml
+* Android\SensorBT\.idea\misc.xml
+* Android\SensorBT\.idea\modules.xml
+* Android\SensorBT\.idea\scopes\
+* Android\SensorBT\.idea\scopes\scope_settings.xml
+* Android\SensorBT\.idea\vcs.xml
+* Android\SensorBT\.idea\workspace.xml
+* Android\SensorBT\app\
+* Android\SensorBT\app\build.gradle
+* Android\SensorBT\app\lint.xml
+* Android\SensorBT\app\src\
+* Android\SensorBT\app\src\main\
+* Android\SensorBT\app\src\main\AndroidManifest.xml
+* Android\SensorBT\app\src\main\java\
+* Android\SensorBT\app\src\main\java\projetoSaude\
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\Configuracao.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\Padrao.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\Util.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\classes\
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\classes\Bluetooth.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\formularios\
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\formularios\fConfiguracaoBT.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\formularios\fLogin.java
+* Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\formularios\fPrincipal.java
+* Android\SensorBT\app\src\main\res\
+* Android\SensorBT\app\src\main\res\drawable-hdpi\
+* Android\SensorBT\app\src\main\res\drawable-hdpi\ic_launcher.png
+* Android\SensorBT\app\src\main\res\drawable-mdpi\
+* Android\SensorBT\app\src\main\res\drawable-mdpi\ic_launcher.png
+* Android\SensorBT\app\src\main\res\drawable-xhdpi\
+* Android\SensorBT\app\src\main\res\drawable-xhdpi\ic_launcher.png
+* Android\SensorBT\app\src\main\res\drawable-xxhdpi\
+* Android\SensorBT\app\src\main\res\drawable-xxhdpi\ic_launcher.png
+* Android\SensorBT\app\src\main\res\layout\
+* Android\SensorBT\app\src\main\res\layout\activity_configuracao_bt.xml
+* Android\SensorBT\app\src\main\res\layout\activity_configuracao_geral.xml
+* Android\SensorBT\app\src\main\res\layout\activity_configuracao_rede.xml
+* Android\SensorBT\app\src\main\res\layout\activity_login.xml
+* Android\SensorBT\app\src\main\res\layout\activity_principal.xml
+* Android\SensorBT\app\src\main\res\menu\
+* Android\SensorBT\app\src\main\res\menu\menu_principal.xml
+* Android\SensorBT\app\src\main\res\values-v11\
+* Android\SensorBT\app\src\main\res\values-v11\styles.xml
+* Android\SensorBT\app\src\main\res\values-v14\
+* Android\SensorBT\app\src\main\res\values-v14\styles.xml
+* Android\SensorBT\app\src\main\res\values-w820dp\
+* Android\SensorBT\app\src\main\res\values-w820dp\dimens.xml
+* Android\SensorBT\app\src\main\res\values\
+* Android\SensorBT\app\src\main\res\values\dimens.xml
+* Android\SensorBT\app\src\main\res\values\strings.xml
+* Android\SensorBT\app\src\main\res\values\styles.xml
+* Android\SensorBT\build.gradle
+* Android\SensorBT\gradle\
+* Android\SensorBT\gradle\wrapper\
+* Android\SensorBT\gradle\wrapper\gradle-wrapper.jar
+* Android\SensorBT\gradle\wrapper\gradle-wrapper.properties
+* Android\SensorBT\gradlew
+* Android\SensorBT\gradlew.bat
+* Android\SensorBT\local.properties
+* Android\SensorBT\settings.gradle
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+appcompat-v7 => [com.android.support:appcompat-v7:18.0.0]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -1,0 +1,42 @@
+[PROJECT]
+Target=ds1820demo.HEX
+Development_Mode=
+Processor=0x8458
+ToolSuite=CCS
+Processor_Text=PIC18F458
+
+[Directories]
+Include=E:\electronic\PICC\devices\;E:\electronic\PICC\drivers\
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=F:\projects\work\pic\ds1820demo\ds1820demo.c
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+
+[ds1820demo.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=ds1820demo.c
+
+[Windows]
+0=0000 ds1820demo.c 0 0 796 451 3 0
+
+[Opened Files]
+1=ds1820demo.c
+2=ds1820demo.h
+3=..\_drv\ds1820.h
+4=
+5=
+[Units]
+Count=1
+1=ds1820demo.c (main)

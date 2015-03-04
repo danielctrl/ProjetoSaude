@@ -1,0 +1,25 @@
+[PROJECT]
+Target=C:\Users\david\Dropbox\Electrónica\16f886_btterm\main.hex
+Development_Mode=
+Processor_Text=PIC16F886
+ToolSuite=CCS
+Processor=0x886F
+[C:\Users\david\Dropbox\Electrónica\16f886_btterm\main]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\Users\david\Dropbox\Electrónica\16f886_btterm\main.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Units]
+Link=0
+Count=1
+1=C:\Users\david\Dropbox\Electrónica\16f886_btterm\main
+[Opened Files]
+1=..\16f886_btterm\main.c
+2=main.h
+3=

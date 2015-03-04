@@ -1,0 +1,3 @@
+C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\classes\debug
+C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-8a02d1c15b823ba7128668214b8b528e1b0b49e5.jar
+C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1a85fa94e64a8c242f5f56597a431f1d8088cd29.jar
