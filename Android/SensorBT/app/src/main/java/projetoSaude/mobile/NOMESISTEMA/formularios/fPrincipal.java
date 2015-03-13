@@ -1,11 +1,14 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import jxl.write.WriteException;
 import projetoSaude.mobile.NOMESISTEMA.Padrao;
 import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -28,7 +31,7 @@ import android.widget.Toast;
 public class fPrincipal extends Padrao {
 	
 	/**
-	 * Region Variáveis Bluetooth
+	 * Region Variaveis Bluetooth
 	 */
 	// Tipos de mensagens enviadas pelo Bluetooth
     public static final int MESSAGE_STATE_CHANGE = 1;
@@ -45,11 +48,11 @@ public class fPrincipal extends Padrao {
     public static final String TOAST = "toast";
     private final Handler hHandler = new Handler();
     private String sNomeDispConectado = null;
-    // Objeto para os serviços RFCOMM
+    // Objeto para os servicos RFCOMM
     private Bluetooth mRfcommClient = null;
     
     /**
-	 * Region Variáveis Sistema 
+	 * Region Variaveis Sistema
 	 */
     protected PowerManager.WakeLock mWakeLock;
     // Labels
@@ -59,7 +62,7 @@ public class fPrincipal extends Padrao {
     private TextView lbDisp4;
     private TextView lbDisp5;
     private TextView lbDisp6;
-    // Botões
+    // Botoes
     private Button btConectar;
     // Timer
     private Timer tTimerAtual = new Timer();
@@ -67,7 +70,7 @@ public class fPrincipal extends Padrao {
     
     
     /**
-	 * Region Métodos & Funções do Sistema 
+	 * Region Metodos & Funcoes do Sistema
 	 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,13 +78,13 @@ public class fPrincipal extends Padrao {
         setContentView(R.layout.activity_principal);
         
         baBluetooth = BluetoothAdapter.getDefaultAdapter();
-        // if null = Bluetooth não disponível
+        // if null = Bluetooth nao disponivel
         if (baBluetooth == null) {
-            Toast.makeText(this, "Bluetooth não disponivel", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Bluetooth nao disponivel", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
-        // Não permite que o celular desligue
+        // Nao permite que o celular desligue
         PowerManager pM = (PowerManager) getSystemService(Context.POWER_SERVICE);
         this.mWakeLock = pM.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "My Tag"); 
         this.mWakeLock.acquire();
@@ -131,7 +134,7 @@ public class fPrincipal extends Padrao {
 
 					}
 				});
-		woBuilder.setNegativeButton("Não",
+		woBuilder.setNegativeButton("Nao",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						dialog.cancel();
@@ -193,7 +196,7 @@ public class fPrincipal extends Padrao {
                     break;
                 //case Bluetooth.STATE_LISTEN:
                 case Bluetooth.STATE_NONE:
-                	btConectar.setText("Não conectado");
+                	btConectar.setText("Nao conectado");
                     break;
                 }
                 break;
@@ -211,8 +214,19 @@ public class fPrincipal extends Padrao {
 
                 	readMessage=readMessage.substring(0,data_length );
                 	String sEnt=new String(readMessage.substring(5,10));
-                	sEnt+=" ºC";
+                	sEnt+=" C";
                 	lbDisp1.setText(sEnt);
+
+
+                    try {
+
+                        GravaDados.gravaDadosExcel(sEnt);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (WriteException e) {
+                        e.printStackTrace();
+                    }
                 } 
                 break;
             case MESSAGE_DEVICE_NAME:

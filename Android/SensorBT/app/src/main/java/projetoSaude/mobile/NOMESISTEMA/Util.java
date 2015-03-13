@@ -14,7 +14,7 @@ import android.widget.TabHost.TabSpec;
 
 public class Util {
 
-	public static final String sTituloJanela = "Atenção";
+	public static final String sTituloJanela = "Atencao";
 	
 	public static String MFVersaoSistema(PackageManager pPackageManager)  {
 		try {
@@ -32,7 +32,7 @@ public class Util {
 				String wsMsg = pMsg.substring(0, wiIndex);
 				wsMsg = wsMsg.replace(":", "");
 				wsMsg = wsMsg.toUpperCase().replace("NO SUCH COLUMN","A coluna");
-				wsMsg = wsMsg + " não foi encontrada. O Banco de dados está desatualizado, solicite uma carga mais nova.";
+				wsMsg = wsMsg + " nao foi encontrada. O Banco de dados estao desatualizado, solicite uma carga mais nova.";
 				pMsg = wsMsg;
 			}
 		}

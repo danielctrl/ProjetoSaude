@@ -62,14 +62,14 @@ public class fLogin extends Padrao implements OnClickListener{
 		}	
 		if (txUsuario.getText().toString().equals("")) {
 			txUsuario.requestFocus();
-			Toast.makeText(this, "Informe o usuário.", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Informe o usuario.", Toast.LENGTH_LONG).show();
 			
 		}
 		
 		if ((txSenha.getText().toString().equals("1")) && (txUsuario.getText().toString().equals("1"))) {
 			return true;
 		}else{
-			Toast.makeText(this, "Usuario ou Senha inválidos.", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "Usuario ou Senha invalidos.", Toast.LENGTH_LONG).show();
 			return false;
 		}
 	}
