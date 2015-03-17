@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\GitHub\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\jxl.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
+        <dex dex="C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-2062ad4991d21bc0499d483b1ae38b9c9ff58f3f.jar" />
+    </item>
+    <item
         jar="C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
