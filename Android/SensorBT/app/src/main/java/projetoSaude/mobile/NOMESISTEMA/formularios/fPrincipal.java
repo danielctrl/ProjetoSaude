@@ -217,7 +217,6 @@ public class fPrincipal extends Padrao {
                 	sEnt+=" C";
                 	lbDisp1.setText(sEnt);
 
-
                     try {
 
                         GravaDados.gravaDadosExcel(sEnt);

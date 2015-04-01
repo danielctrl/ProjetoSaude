@@ -1,4 +1,4 @@
-C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\classes\debug
-C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-8a02d1c15b823ba7128668214b8b528e1b0b49e5.jar
-C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1a85fa94e64a8c242f5f56597a431f1d8088cd29.jar
-C:\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-2062ad4991d21bc0499d483b1ae38b9c9ff58f3f.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\classes\debug
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-f46906dda33691736302a8d6a6805b75dd47b4d0.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1d2a75bbb4e791895197f297553c5419c57ece78.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-9513d048108f01340743d8d9caf1aa0287a3ee76.jar

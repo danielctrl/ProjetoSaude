@@ -36,42 +36,46 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from AndroidManifest.xml:13:5
 	android:name
 		ADDED from AndroidManifest.xml:13:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:14:5
+	android:name
+		ADDED from AndroidManifest.xml:14:22
 application
-ADDED from AndroidManifest.xml:15:5
+ADDED from AndroidManifest.xml:16:5
 MERGED from com.android.support:appcompat-v7:18.0.0:19:5
 	android:label
-		ADDED from AndroidManifest.xml:18:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:16:9
-	android:icon
-		ADDED from AndroidManifest.xml:17:9
-	android:theme
 		ADDED from AndroidManifest.xml:19:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:17:9
+	android:icon
+		ADDED from AndroidManifest.xml:18:9
+	android:theme
+		ADDED from AndroidManifest.xml:20:9
 activity#projetoSaude.mobile.NOMESISTEMA.formularios.fLogin
-ADDED from AndroidManifest.xml:20:9
+ADDED from AndroidManifest.xml:21:9
 	android:label
+		ADDED from AndroidManifest.xml:23:13
+	android:name
 		ADDED from AndroidManifest.xml:22:13
-	android:name
-		ADDED from AndroidManifest.xml:21:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:23:13
+ADDED from AndroidManifest.xml:24:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:24:17
+ADDED from AndroidManifest.xml:25:17
 	android:name
-		ADDED from AndroidManifest.xml:24:25
+		ADDED from AndroidManifest.xml:25:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:26:17
+ADDED from AndroidManifest.xml:27:17
 	android:name
-		ADDED from AndroidManifest.xml:26:27
+		ADDED from AndroidManifest.xml:27:27
 activity#projetoSaude.mobile.NOMESISTEMA.formularios.fPrincipal
-ADDED from AndroidManifest.xml:29:9
-	android:label
-		ADDED from AndroidManifest.xml:29:89
-	android:name
-		ADDED from AndroidManifest.xml:29:19
-activity#projetoSaude.mobile.NOMESISTEMA.formularios.fConfiguracaoBT
 ADDED from AndroidManifest.xml:30:9
 	android:label
-		ADDED from AndroidManifest.xml:30:94
+		ADDED from AndroidManifest.xml:30:89
 	android:name
 		ADDED from AndroidManifest.xml:30:19
+activity#projetoSaude.mobile.NOMESISTEMA.formularios.fConfiguracaoBT
+ADDED from AndroidManifest.xml:31:9
+	android:label
+		ADDED from AndroidManifest.xml:31:94
+	android:name
+		ADDED from AndroidManifest.xml:31:19
