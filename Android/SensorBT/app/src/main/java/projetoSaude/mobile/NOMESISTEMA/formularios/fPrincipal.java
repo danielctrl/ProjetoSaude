@@ -214,12 +214,13 @@ public class fPrincipal extends Padrao {
 
                 	readMessage=readMessage.substring(0,data_length );
                 	String sEnt=new String(readMessage.substring(5,10));
+                    String sSensor=new String(readMessage.substring(0,1));
                 	sEnt+=" C";
                 	lbDisp1.setText(sEnt);
 
                     try {
 
-                        GravaDados.gravaDadosExcel(sEnt);
+                        GravaDados.gravaDadosExcel(sEnt, sSensor);
 
                     } catch (IOException e) {
                         e.printStackTrace();
