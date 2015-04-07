@@ -160,6 +160,7 @@ public class fPrincipal extends Padrao {
         
     	
     	lbDisp1 = (TextView) findViewById(R.id.lbDisp1);
+        lbDisp2 = (TextView) findViewById(R.id.lbDisp2);
     	btConectar = (Button) findViewById(R.id.btConectar);
     	btConectar.setOnClickListener(new OnClickListener() {
 			@Override
@@ -216,9 +217,14 @@ public class fPrincipal extends Padrao {
                 	String sEnt=new String(readMessage.substring(5,10));
                     String sSensor=new String(readMessage.substring(0,1));
                 	sEnt+=" C";
-                	lbDisp1.setText(sEnt);
 
-                    try {
+                   try {
+
+                       if (sSensor.equals("0")) {
+                           lbDisp1.setText(sEnt);
+                       }else{
+                           lbDisp2.setText(sEnt);
+                       }
 
                         GravaDados.gravaDadosExcel(sEnt, sSensor);
 
