@@ -42,8 +42,8 @@
       <file leaf-file-name="GravaDados.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1428">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1496">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,29 +52,15 @@
       <file leaf-file-name="fPrincipal.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="2953" max-vertical-offset="3859">
-              <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Handler.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Handler.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Looper.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Looper.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="612">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-              <folding />
+            <state vertical-scroll-proportion="0.25295508" vertical-offset="1355" max-vertical-offset="3417">
+              <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+              <folding>
+                <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+                <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+                <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+                <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+                <element signature="e#5516#5517#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -673,58 +659,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetoSaude" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SensorBT" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SensorBT" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SensorBT" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Production">
           <PATH>
@@ -749,6 +683,20 @@
           </PATH>
         </subPane>
         <subPane subId="Tests" />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjetoSaude" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -820,6 +768,84 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NOMESISTEMA" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NOMESISTEMA" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjetoSaudeLib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -994,7 +1020,7 @@
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -1069,23 +1095,23 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33560476" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22163388" sideWeight="0.50110865" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22163388" sideWeight="0.50332594" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32783884" sideWeight="0.49919742" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.49848714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26746166" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26746166" sideWeight="0.6535552" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23168655" sideWeight="0.3419062" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22163388" sideWeight="0.49889135" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22163388" sideWeight="0.49667406" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23168655" sideWeight="0.6580938" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23168655" sideWeight="0.6580938" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1113,29 +1139,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
+          <line>167</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="33" />
+      <option name="time" value="41" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="1530">
@@ -1170,7 +1188,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="4471">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,7 +1210,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3757" max-vertical-offset="4471">
           <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,7 +1232,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3774" max-vertical-offset="4488">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1218,7 +1254,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3774" max-vertical-offset="4488">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1234,7 +1276,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3774" max-vertical-offset="4488">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1250,7 +1298,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3689" max-vertical-offset="4488">
           <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,7 +1320,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="4488">
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1289,7 +1349,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="4488">
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1312,7 +1378,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="4488">
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,7 +1407,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="4488">
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,7 +1436,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3876" max-vertical-offset="4488">
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1491,19 +1575,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/view/View.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33170733" vertical-offset="12563" max-vertical-offset="16252">
+          <caret line="748" column="19" selection-start-line="748" selection-start-column="19" selection-end-line="748" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-21/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2931442" vertical-offset="286666" max-vertical-offset="347888">
+          <caret line="17297" column="6" selection-start-line="17297" selection-start-column="6" selection-end-line="17297" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="376" max-vertical-offset="1428">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1496">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2953" max-vertical-offset="3859">
-          <caret line="223" column="0" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.25295508" vertical-offset="1355" max-vertical-offset="3417">
+          <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+          <folding>
+            <element signature="method#onCreateOptionsMenu#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#onStart#0;class#fPrincipal#0" expanded="false" />
+            <element signature="e#5516#5517#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

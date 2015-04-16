@@ -165,7 +165,13 @@ public class fPrincipal extends Padrao {
     	btConectar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				BTConnect();
+				if (btConectar.getText().equals("Conectar") || btConectar.getText().equals("Nao conectado")){
+                    BTConnect(0);
+                }else if (btConectar.getText().equals("Desconectar")){
+                    GravaDados.fechaExcel();
+                    BTConnect(1);
+                }
+
 			}
 		});
 
@@ -174,11 +180,20 @@ public class fPrincipal extends Padrao {
         
     }
 
-	private void BTConnect(){
-		// MAC do bluetooth
-		String address = "20:14:08:14:22:91";
-		BluetoothDevice device = baBluetooth.getRemoteDevice(address);
-		mRfcommClient.connect(device);
+	private void BTConnect(int operacao){
+		if (operacao == (0)) {
+            // MAC do bluetooth
+            String address = "20:14:08:14:22:91";
+
+            baBluetooth.cancelDiscovery();
+
+            BluetoothDevice device = baBluetooth.getRemoteDevice(address);
+
+            mRfcommClient.connect(device);
+        }else{
+            mRfcommClient.stop();
+        }
+
 	}
 	
 	// Handler que recibe los mensajes de BluetoothRfcommClient

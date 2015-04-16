@@ -16,28 +16,32 @@ public final class GravaDados {
     private static WritableWorkbook workbook = null;
     private static WritableSheet sheet = null;
     private static int contadorLinha = 1;
+    private static int minutes = 0;
 
     public static void gravaDadosExcel(String temp, String sensorID) throws IOException, WriteException {
         if (contadorLinha  == 1) {
             geraExcel();
         }
-        if (contadorLinha == 60){
+        if (contadorLinha == 3600){
             fechaExcel();
             geraExcel();
         }
 
         Date now = new Date();
 
-        Label labelSensor = new Label(0, contadorLinha, sensorID);
-        sheet.addCell(labelSensor);
+        if (now.getMinutes() >= minutes + 1 || contadorLinha == 1) {
+            Label labelSensor = new Label(0, contadorLinha, sensorID);
+            sheet.addCell(labelSensor);
 
-        Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
-        sheet.addCell(labelHr);
+            Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
+            sheet.addCell(labelHr);
 
-        Label labelTemp = new Label(2, contadorLinha, temp);
-        sheet.addCell(labelTemp);
+            Label labelTemp = new Label(2, contadorLinha, temp);
+            sheet.addCell(labelTemp);
 
-        contadorLinha++;
+            contadorLinha++;
+            minutes = now.getMinutes();
+        }
 
     }
 
