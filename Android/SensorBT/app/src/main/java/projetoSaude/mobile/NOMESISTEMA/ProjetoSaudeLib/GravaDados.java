@@ -17,19 +17,36 @@ public final class GravaDados {
     private static WritableSheet sheet = null;
     private static int contadorLinha = 1;
     private static int minutes = 0;
+    private static double min = 0.0;
+    private static double max = 0.0;
 
     public static void gravaDadosExcel(String temp, String sensorID) throws IOException, WriteException {
+        Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
+
         if (contadorLinha  == 1) {
             geraExcel();
+
+            max = dTemp;
+            min = dTemp;
+
+            contadorLinha ++;
         }
-        if (contadorLinha == 3600){
+        //if (contadorLinha == 3600){
+        if (contadorLinha == 60){
+            Label labelMin = new Label(0, contadorLinha + 1, String.valueOf(min));
+            sheet.addCell(labelMin);
+
+            Label labelMax = new Label(2, contadorLinha + 1, String.valueOf(max));
+            sheet.addCell(labelMax);
             fechaExcel();
             geraExcel();
         }
 
         Date now = new Date();
 
-        if (now.getMinutes() >= minutes + 1 || contadorLinha == 1) {
+        if (now.getMinutes() >= minutes + 1) {
+
+
             Label labelSensor = new Label(0, contadorLinha, sensorID);
             sheet.addCell(labelSensor);
 
@@ -38,6 +55,12 @@ public final class GravaDados {
 
             Label labelTemp = new Label(2, contadorLinha, temp);
             sheet.addCell(labelTemp);
+
+            if (dTemp > max){
+                max = dTemp;
+            }else if (dTemp < min ){
+                min = dTemp;
+            }
 
             contadorLinha++;
             minutes = now.getMinutes();
