@@ -22,4 +22,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:18.0.0'
     compile 'com.android.support:support-v4:18.0.0'
     compile files('src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/jxl.jar')
+    compile files('src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/acra-4.6.2.jar')
 }

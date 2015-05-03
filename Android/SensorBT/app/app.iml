@@ -85,6 +85,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-v4-18.0.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-18.0.0" level="project" />
+    <orderEntry type="library" exported="" name="acra-4.6.2" level="project" />
     <orderEntry type="library" exported="" name="jxl" level="project" />
   </component>
 </module>
