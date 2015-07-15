@@ -5,11 +5,11 @@ import android.os.Environment;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-import java.util.Locale;
 
 import jxl.*;
 import jxl.write.*;
 import jxl.write.WritableSheet;
+import projetoSaude.mobile.NOMESISTEMA.Util;
 
 public final class GravaDados {
 
@@ -21,51 +21,55 @@ public final class GravaDados {
     private static double max = 0.0;
 
     public static void gravaDadosExcel(String temp, String sensorID) throws IOException, WriteException {
-        Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
+        try {
 
-        if (contadorLinha  == 1) {
-            geraExcel();
+            Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
 
-            max = dTemp;
-            min = dTemp;
+            if (contadorLinha  == 1) {
+                geraExcel();
 
-            contadorLinha ++;
-        }
-        //if (contadorLinha == 3600){
-        if (contadorLinha == 60){
-            Label labelMin = new Label(0, contadorLinha + 1, String.valueOf(min));
-            sheet.addCell(labelMin);
-
-            Label labelMax = new Label(2, contadorLinha + 1, String.valueOf(max));
-            sheet.addCell(labelMax);
-            fechaExcel();
-            geraExcel();
-        }
-
-        Date now = new Date();
-
-        if (now.getMinutes() >= minutes + 1) {
-
-
-            Label labelSensor = new Label(0, contadorLinha, sensorID);
-            sheet.addCell(labelSensor);
-
-            Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
-            sheet.addCell(labelHr);
-
-            Label labelTemp = new Label(2, contadorLinha, temp);
-            sheet.addCell(labelTemp);
-
-            if (dTemp > max){
                 max = dTemp;
-            }else if (dTemp < min ){
                 min = dTemp;
+
+                contadorLinha ++;
+            }
+            //if (contadorLinha == 3600){
+            if (contadorLinha == 60){
+                Label labelMin = new Label(0, contadorLinha + 1, String.valueOf(min));
+                sheet.addCell(labelMin);
+
+                Label labelMax = new Label(2, contadorLinha + 1, String.valueOf(max));
+                sheet.addCell(labelMax);
+                fechaExcel();
+                geraExcel();
             }
 
-            contadorLinha++;
-            minutes = now.getMinutes();
-        }
+            Date now = new Date();
 
+            if (now.getMinutes() >= minutes + 1) {
+
+
+                Label labelSensor = new Label(0, contadorLinha, sensorID);
+                sheet.addCell(labelSensor);
+
+                Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
+                sheet.addCell(labelHr);
+
+                Label labelTemp = new Label(2, contadorLinha, temp);
+                sheet.addCell(labelTemp);
+
+                if (dTemp > max){
+                    max = dTemp;
+                }else if (dTemp < min ){
+                    min = dTemp;
+                }
+
+                contadorLinha++;
+                minutes = now.getMinutes();
+            }
+        }catch(Exception e){
+            Util.ErrorLog(e);
+        }
     }
 
     public static void fechaExcel()
@@ -75,8 +79,10 @@ public final class GravaDados {
             workbook.close();
 
         } catch (IOException e) {
+            Util.ErrorLog(e);
             e.printStackTrace();
         } catch (WriteException e) {
+            Util.ErrorLog(e);
             e.printStackTrace();
         }
 
@@ -85,6 +91,7 @@ public final class GravaDados {
 
     public static void geraExcel()
     {
+
         Date now = new Date();
 
         File folder = new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/");
@@ -106,9 +113,9 @@ public final class GravaDados {
                 sheet = workbook.createSheet("Coleta de dados", 0);
 
             }
-        } catch (IOException e) {
-            e.getCause();
-            e.printStackTrace();
+        } catch (Exception e) {
+            Util.ErrorLog(e);
+            e.getMessage();
         }
     }
 }

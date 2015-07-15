@@ -22,7 +22,8 @@ public class fLogin extends Padrao implements OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(projetoSaude.mobile.NOMESISTEMA.R.layout.activity_login);
-        MFConfigCampos();
+		//Método que inicializa os itens da tela inicial
+        ConfigCampos();
     }
 	
 	public void onClick(View v) {
@@ -30,6 +31,7 @@ public class fLogin extends Padrao implements OnClickListener{
 			switch (v.getId()) {
 				case projetoSaude.mobile.NOMESISTEMA.R.id.login_btLogin:
 					if (Login()) {
+						//Chama a Activity principal do sistema
 						Intent i = new Intent(getApplicationContext(), fPrincipal.class);
 						startActivity(i);
 						finish();
@@ -39,11 +41,12 @@ public class fLogin extends Padrao implements OnClickListener{
 					break;
 			}	
 		} catch (Exception e) {
+            Util.ErrorLog(e);
 			Util.MsgErro(this, e.getMessage(), true).show();
 		}		
 	}
 		
-	private void MFConfigCampos() {
+	private void ConfigCampos() {
     	btLogin = (Button) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_btLogin);    	
     	btLogin.setOnClickListener(this);
     	
@@ -51,7 +54,7 @@ public class fLogin extends Padrao implements OnClickListener{
     	txSenha = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txSenha);
         lbVersao = (TextView) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_lbVersao);
     	
-		lbVersao.setText("NOME SISTEMA - V. " + Util.MFVersaoSistema(getPackageManager()) + " (BD " + Configuracao.CNT_VERSAO_BD + ")");	     	
+		lbVersao.setText("NOME SISTEMA - V. " + Util.VersaoSistema(getPackageManager()) + " (BD " + Configuracao.CNT_VERSAO_BD + ")");
     }
 	
 	private boolean Login() throws Exception {
@@ -65,7 +68,6 @@ public class fLogin extends Padrao implements OnClickListener{
 			Toast.makeText(this, "Informe o usuario.", Toast.LENGTH_LONG).show();
 			
 		}
-		
 		if ((txSenha.getText().toString().equals("1")) && (txUsuario.getText().toString().equals("1"))) {
 			return true;
 		}else{

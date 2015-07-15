@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
+import projetoSaude.mobile.NOMESISTEMA.Util;
 import projetoSaude.mobile.NOMESISTEMA.formularios.fPrincipal;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -186,7 +187,7 @@ public class Bluetooth {
 	            try {
 	                tmp = device.createRfcommSocketToServiceRecord(MY_UUID);
 	            } catch (IOException e) {
-	                //
+                    Util.ErrorLog(e);
 	            }
 	            mmSocket = tmp;
 	        }
@@ -201,12 +202,13 @@ public class Bluetooth {
 	                // This is a blocking call and will only return on a  successful connection or an exception
 	                mmSocket.connect();
 	            } catch (IOException e) {
+                    Util.ErrorLog(e);
 	                connectionFailed();
 	                // Close the socket
 	                try {
 	                    mmSocket.close();
 	                } catch (IOException e2) {
-	                    //
+                        Util.ErrorLog(e);
 	                }
 	                // Start the service over to restart listening mode
 	                Bluetooth.this.start();
@@ -224,7 +226,7 @@ public class Bluetooth {
 	            try {
 	                mmSocket.close();
 	            } catch (IOException e) {
-	                //
+                    Util.ErrorLog(e);
 	            }
 	        }
 	    }
@@ -247,6 +249,7 @@ public class Bluetooth {
 	                tmpIn = socket.getInputStream();
 	                tmpOut = socket.getOutputStream();
 	            } catch (IOException e) {
+                    Util.ErrorLog(e);
 	            }
 
 	            mmInStream = tmpIn;
@@ -282,7 +285,7 @@ public class Bluetooth {
 	                            .sendToTarget();
 	                	
 	                } catch (IOException e) {
-	                    //
+                        Util.ErrorLog(e);
 	                    connectionLost();
 	                    break;
 	                }
@@ -299,7 +302,7 @@ public class Bluetooth {
 	                mHandler.obtainMessage(fPrincipal.MESSAGE_WRITE, -1, -1, buffer)
 	                        .sendToTarget();
 	            } catch (IOException e) {
-	                //
+                    Util.ErrorLog(e);
 	            }
 	        }
 
@@ -307,9 +310,8 @@ public class Bluetooth {
 	            try {
 	                mmSocket.close();
 	            } catch (IOException e) {
-	                //
+                    Util.ErrorLog(e);
 	            }
 	        }
-	    }	
-		
+	    }
 	}

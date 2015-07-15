@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\jxl.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
-        <dex dex="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-9513d048108f01340743d8d9caf1aa0287a3ee76.jar" />
-    </item>
-    <item
         jar="C:\Users\Andre\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -16,11 +9,25 @@
         <dex dex="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1d2a75bbb4e791895197f297553c5419c57ece78.jar" />
     </item>
     <item
+        jar="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\acra-4.6.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b99297996579b72496c9f81b0c12d8404c74e618">
+        <dex dex="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\acra-4.6.2-bb0faaca79b8e7c3cbcf54ca41f7ea3e1d1e2e44.jar" />
+    </item>
+    <item
         jar="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
         <dex dex="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-f46906dda33691736302a8d6a6805b75dd47b4d0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\jxl.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
+        <dex dex="C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-9513d048108f01340743d8d9caf1aa0287a3ee76.jar" />
     </item>
 
 </items>

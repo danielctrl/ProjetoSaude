@@ -12,9 +12,11 @@ import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -28,8 +30,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Exception's Handler
+import projetoSaude.mobile.NOMESISTEMA.Util;
+
 public class fPrincipal extends Padrao {
-	
 	/**
 	 * Region Variaveis Bluetooth
 	 */
@@ -42,15 +46,15 @@ public class fPrincipal extends Padrao {
     private static final int REQUEST_ENABLE_BT = 2;
     
     // Bluetooth adapter
-    private BluetoothAdapter baBluetooth = null;
+    private BluetoothAdapter mBluetooth = null;
     
     public static final String DEVICE_NAME = "device_name";
     public static final String TOAST = "toast";
     private final Handler hHandler = new Handler();
-    private String sNomeDispConectado = null;
+    private String mNomeDispConectado = null;
     // Objeto para os servicos RFCOMM
     private Bluetooth mRfcommClient = null;
-    
+
     /**
 	 * Region Variaveis Sistema
 	 */
@@ -65,31 +69,71 @@ public class fPrincipal extends Padrao {
     // Botoes
     private Button btConectar;
     // Timer
-    private Timer tTimerAtual = new Timer();
-    private TimerTask tTask;
-    
-    
+    private Timer mTimerAtual = new Timer();
+    private TimerTask mTask;
+    // String
+    private String action;
+    // Boolean
+    private boolean isUserInteraction = false;
+
     /**
-	 * Region Metodos & Funcoes do Sistema
+	 * Region Metodos & Funções do Sistema
 	 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
         
-        baBluetooth = BluetoothAdapter.getDefaultAdapter();
+        mBluetooth = BluetoothAdapter.getDefaultAdapter();
         // if null = Bluetooth nao disponivel
-        if (baBluetooth == null) {
-            Toast.makeText(this, "Bluetooth nao disponivel", Toast.LENGTH_LONG).show();
+        if (mBluetooth == null) {
+            Toast.makeText(this, "Bluetooth não disponível", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
-        // Nao permite que o celular desligue
+        // Nao permite que o celular desligue a tela
         PowerManager pM = (PowerManager) getSystemService(Context.POWER_SERVICE);
         this.mWakeLock = pM.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "My Tag"); 
         this.mWakeLock.acquire();
+
+        IntentFilter filter1 = new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED);
+        IntentFilter filter2 = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED);
+        IntentFilter filter3 = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
+
+        this.registerReceiver(mReceiver, filter1);
+        this.registerReceiver(mReceiver, filter2);
+        this.registerReceiver(mReceiver, filter3);
+        //Ativa o timer que checa se ainda existe conexão Bluetooth
         ativaTimer();
     }
+
+    //O BroadcastReceiver fica recebendo as mensagens that listens for bluetooth broadcasts
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive (Context context, Intent intent){
+            action = intent.getAction();
+            BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+
+//            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+//                //Device found
+//                int a = 1;
+//            } else if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
+//                //Device is now connected
+//                int a = 1;
+//            } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
+//                //Done searching
+//                int a = 1;
+//            } else if (BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED.equals(action)) {
+//                //Device is about to disconnect
+//                int a = 1;
+//            } else
+                if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
+                //Device has disconnected
+                if (!isUserInteraction)
+                    BTConnect(0);
+            }
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {		
@@ -114,6 +158,7 @@ public class fPrincipal extends Padrao {
 			}
 	    	return true;
     	} catch (Exception e) {
+            Util.ErrorLog(e);
             projetoSaude.mobile.NOMESISTEMA.Util.MsgErro(this, e.getMessage(), true).show();
             return false;
        } 	
@@ -131,14 +176,12 @@ public class fPrincipal extends Padrao {
 						intent.addCategory(Intent.CATEGORY_HOME);
 						intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 						startActivity(intent);
-
 					}
 				});
 		woBuilder.setNegativeButton("Nao",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						dialog.cancel();
-
 					}
 				});
 		AlertDialog alert = woBuilder.create();
@@ -148,7 +191,7 @@ public class fPrincipal extends Padrao {
     @Override
     public void onStart() {
         super.onStart();
-        if (!baBluetooth.isEnabled()) {
+        if (!mBluetooth.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         } else {
@@ -157,41 +200,43 @@ public class fPrincipal extends Padrao {
     }
     
     private void setupIHM() {
-        
-    	
+
     	lbDisp1 = (TextView) findViewById(R.id.lbDisp1);
         lbDisp2 = (TextView) findViewById(R.id.lbDisp2);
     	btConectar = (Button) findViewById(R.id.btConectar);
     	btConectar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				if (btConectar.getText().equals("Conectar") || btConectar.getText().equals("Nao conectado")){
+				if (btConectar.getText().equals("Conectar") || btConectar.getText().equals("Não conectado")){
                     BTConnect(0);
                 }else if (btConectar.getText().equals("Desconectar")){
                     GravaDados.fechaExcel();
+                    isUserInteraction = true;
                     BTConnect(1);
                 }
 
 			}
 		});
 
-        // Initialize the BluetoothRfcommClient to perform bluetooth connections
+        // Inicializa o mRfcommClient para fazer a conexão com o Bluetooth
         mRfcommClient = new Bluetooth(this, mHandler);
         
     }
 
 	private void BTConnect(int operacao){
+        // MAC do bluetooth
+        String address = "20:14:08:14:22:91";
+        BluetoothDevice device = mBluetooth.getRemoteDevice(address);
+
 		if (operacao == (0)) {
-            // MAC do bluetooth
-            String address = "20:14:08:14:22:91";
-
-            baBluetooth.cancelDiscovery();
-
-            BluetoothDevice device = baBluetooth.getRemoteDevice(address);
-
+            mBluetooth.cancelDiscovery();
             mRfcommClient.connect(device);
+            isUserInteraction = false;
         }else{
-            mRfcommClient.stop();
+            if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
+                mRfcommClient.stop();
+            }else
+                BTConnect(0);
         }
 
 	}
@@ -244,17 +289,19 @@ public class fPrincipal extends Padrao {
                         GravaDados.gravaDadosExcel(sEnt, sSensor);
 
                     } catch (IOException e) {
-                        e.printStackTrace();
+                       Util.ErrorLog(e);
+                       e.printStackTrace();
                     } catch (WriteException e) {
-                        e.printStackTrace();
+                       Util.ErrorLog(e);
+                       e.printStackTrace();
                     }
                 } 
                 break;
             case MESSAGE_DEVICE_NAME:
-                // Guarda el normbre del dispositivo al que nos hemos conectado
-            	sNomeDispConectado = msg.getData().getString(DEVICE_NAME);
-                Toast.makeText(getApplicationContext(), "Connected to "
-                               + sNomeDispConectado, Toast.LENGTH_SHORT).show();
+                // Guarda o nome do dispositivo que foi conectado
+            	mNomeDispConectado = msg.getData().getString(DEVICE_NAME);
+                Toast.makeText(getApplicationContext(), "Conectado em "
+                               + mNomeDispConectado, Toast.LENGTH_SHORT).show();
                 break;
             case MESSAGE_TOAST:
                 Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
@@ -264,16 +311,23 @@ public class fPrincipal extends Padrao {
         }
     };
     
-    private void ativaTimer(){
-        tTask = new TimerTask() {
+    private void ativaTimer() {
+        mTask = new TimerTask() {
             public void run() {
-                    hHandler.post(new Runnable() {
-                            public void run() {
-                                
-                            }
-                   });
-            }};
-           
-            tTimerAtual.schedule(tTask, 30000, 30000); 
+                hHandler.post(new Runnable() {
+                    public void run() {
+                        if (!isUserInteraction)
+                            checkBluetooth();
+                    }
+                });
+            }
+        };
+
+        mTimerAtual.schedule(mTask, 300, 30000);
+    }
+    //Método que valida se o Bluetooth está conectado, caso negativo, o sistema refaz a conexão
+    private void checkBluetooth(){
+        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action))
+            BTConnect(0);
     }
 }

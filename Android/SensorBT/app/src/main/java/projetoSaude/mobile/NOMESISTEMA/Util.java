@@ -5,24 +5,36 @@ import java.util.HashMap;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
+//Exception's Handler
+import java.text.SimpleDateFormat;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import android.os.Environment;
+import android.util.Log;
+
 public class Util {
 
-	public static final String sTituloJanela = "Atencao";
+	public static final String mTituloJanela = "Atenção";
+    private static final String DIRECTORY_SEPARATOR = System.getProperty("file.separator");
 	
-	public static String MFVersaoSistema(PackageManager pPackageManager)  {
-		try {
-			PackageInfo woPacote = pPackageManager.getPackageInfo("ceosoftware.mobile.cspedidosandroid", 0);
-			return woPacote.versionName;
-		} catch (NameNotFoundException e) {
-			return "";
-		}
+	public static String VersaoSistema(PackageManager pPackageManager)  {
+//		try {
+//			PackageInfo woPacote = pPackageManager.getPackageInfo("ceosoftware.mobile.cspedidosandroid", 0);
+//			return woPacote.versionName;
+//          return "";
+//		} catch (NameNotFoundException e) {
+//            Util.ErrorLog(e);
+//			return "";
+//		}
+        return "";
 	}
 	
 	public static AlertDialog.Builder MsgErro(Context pContext, String pMsg, boolean pIncluirBotaoOk) {
@@ -32,7 +44,7 @@ public class Util {
 				String wsMsg = pMsg.substring(0, wiIndex);
 				wsMsg = wsMsg.replace(":", "");
 				wsMsg = wsMsg.toUpperCase().replace("NO SUCH COLUMN","A coluna");
-				wsMsg = wsMsg + " nao foi encontrada. O Banco de dados estao desatualizado, solicite uma carga mais nova.";
+				wsMsg = wsMsg + " não foi encontrada. O Banco de dados está desatualizado, solicite uma carga mais nova.";
 				pMsg = wsMsg;
 			}
 		}
@@ -45,7 +57,7 @@ public class Util {
 	
 	public static AlertDialog.Builder CriarDialog(Context pContext, String pMsg, boolean pIncluirBotaoOk) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(pContext);
-		builder.setTitle(sTituloJanela);
+		builder.setTitle(mTituloJanela);
 		builder.setMessage(pMsg);
 		builder.setCancelable(false);
 		if (pIncluirBotaoOk) {
@@ -88,4 +100,30 @@ public class Util {
 			}
 		}		
 	}
+
+    public static void ErrorLog(Exception exception) {
+        String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(System
+                .currentTimeMillis());
+        File dirFile = new File(Environment.getExternalStorageDirectory()
+                + DIRECTORY_SEPARATOR + "ProjetoSaude" + DIRECTORY_SEPARATOR
+                + "logs" + DIRECTORY_SEPARATOR);
+        dirFile.mkdirs();
+        File file = new File(dirFile, "ErrorLog" + timestamp + ".txt");
+        FileOutputStream fileOutputStream = null;
+        try {
+            String stackString = Log.getStackTraceString(exception) +  exception.getMessage();
+            if (stackString.length() > 0) {
+                file.createNewFile();
+                fileOutputStream = new FileOutputStream(file);
+                fileOutputStream.write(stackString.getBytes());
+                fileOutputStream.flush();
+                fileOutputStream.close();
+            }
+        } catch (FileNotFoundException fileNotFoundException) {
+            Log.e("TAG", "File not found!", fileNotFoundException);
+        } catch (IOException ioException) {
+            Log.e("TAG", "Unable to write to file!", ioException);
+        }
+        return;
+    }
 }
