@@ -1,6 +1,7 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
 import java.io.IOException;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -75,6 +76,7 @@ public class fPrincipal extends Padrao {
     private String action;
     // Boolean
     private boolean isUserInteraction = false;
+    private boolean isMock = false;
 
     /**
 	 * Region Metodos & Funções do Sistema
@@ -227,16 +229,24 @@ public class fPrincipal extends Padrao {
         // MAC do bluetooth
         String address = "20:14:08:14:22:91";
         BluetoothDevice device = mBluetooth.getRemoteDevice(address);
-
-		if (operacao == (0)) {
-            mBluetooth.cancelDiscovery();
-            mRfcommClient.connect(device);
-            isUserInteraction = false;
-        }else{
-            if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-                mRfcommClient.stop();
-            }else
+        if (isMock ) {
+            if (operacao == (0)) {
+                geraDadosMock();
+            } else {
                 BTConnect(0);
+            }
+        }else {
+
+            if (operacao == (0)) {
+                mBluetooth.cancelDiscovery();
+                mRfcommClient.connect(device);
+                isUserInteraction = false;
+            } else {
+                if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
+                    mRfcommClient.stop();
+                } else
+                    BTConnect(0);
+            }
         }
 
 	}
@@ -329,5 +339,43 @@ public class fPrincipal extends Padrao {
     private void checkBluetooth(){
         if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action))
             BTConnect(0);
+    }
+
+    private void geraDadosMock() {
+
+        String readMessage = geraDados();
+
+        String sEnt= readMessage;
+        String sSensor= "0";
+        sEnt+=" C";
+
+        try {
+
+            if (sSensor.equals("0")) {
+                lbDisp1.setText(sEnt);
+            }else{
+                lbDisp2.setText(sEnt);
+            }
+
+            GravaDados.gravaDadosExcel(sEnt, sSensor);
+
+        } catch (IOException e) {
+            Util.ErrorLog(e);
+            e.printStackTrace();
+        } catch (WriteException e) {
+            Util.ErrorLog(e);
+            e.printStackTrace();
+        }
+
+    }
+
+    private String geraDados(){
+        double min = 105.0;
+        double max = -99.7;
+
+        Random r = new Random();
+        double value = r.nextDouble() * (max-min)+min;
+
+        return Double.toString(value);
     }
 }
