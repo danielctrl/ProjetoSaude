@@ -22,7 +22,7 @@ public class fLogin extends Padrao implements OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(projetoSaude.mobile.NOMESISTEMA.R.layout.activity_login);
-		//Método que inicializa os itens da tela inicial
+		//Metodo que inicializa os itens da tela inicial
         ConfigCampos();
     }
 	

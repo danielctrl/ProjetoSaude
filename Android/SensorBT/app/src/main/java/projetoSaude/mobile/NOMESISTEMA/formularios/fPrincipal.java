@@ -1,7 +1,6 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
 import java.io.IOException;
-import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -30,6 +29,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.MockSensor;
 
 //Exception's Handler
 import projetoSaude.mobile.NOMESISTEMA.Util;
@@ -108,7 +109,7 @@ public class fPrincipal extends Padrao {
         this.registerReceiver(mReceiver, filter2);
         this.registerReceiver(mReceiver, filter3);
         //Ativa o timer que checa se ainda existe conexão Bluetooth
-        ativaTimer();
+//        ativaTimer();
     }
 
     //O BroadcastReceiver fica recebendo as mensagens that listens for bluetooth broadcasts
@@ -232,8 +233,11 @@ public class fPrincipal extends Padrao {
         String address = "20:14:08:14:22:91";
         BluetoothDevice device = mBluetooth.getRemoteDevice(address);
         if (isMock ) {
+            MockSensor ms = new MockSensor();
             if (operacao == (0)) {
-                geraDadosMock();
+                for (int n = 0; n <= 120; n++) {
+                    geraDadosMock(ms);
+                }
             } else {
                 BTConnect(0);
             }
@@ -298,15 +302,18 @@ public class fPrincipal extends Padrao {
                            lbDisp2.setText(sEnt);
                        }
 
-                        GravaDados.gravaDadosExcel(sEnt, sSensor);
+//                        GravaDados.gravaDadosExcel(sEnt, sSensor);
 
-                    } catch (IOException e) {
-                       Util.ErrorLog(e);
-                       e.printStackTrace();
-                    } catch (WriteException e) {
-                       Util.ErrorLog(e);
-                       e.printStackTrace();
-                    }
+                    } catch(Exception e){
+
+                   }
+//                   catch (IOException e) {
+//                       Util.ErrorLog(e);
+//                       e.printStackTrace();
+//                   } catch (WriteException e) {
+//                       Util.ErrorLog(e);
+//                       e.printStackTrace();
+//                   }
                 } 
                 break;
             case MESSAGE_DEVICE_NAME:
@@ -343,13 +350,10 @@ public class fPrincipal extends Padrao {
             BTConnect(0);
     }
 
-    private void geraDadosMock() {
+    private void geraDadosMock(MockSensor ms) {
 
-        String readMessage = geraDados();
-
-        String sEnt= readMessage;
-        String sSensor= "0";
-        sEnt+=" C";
+        String sEnt=  ms.geraTemp(0.3).replace(",", ".");
+        String sSensor = ms.getSensor();
 
         try {
 
@@ -359,7 +363,7 @@ public class fPrincipal extends Padrao {
                 lbDisp2.setText(sEnt);
             }
 
-            GravaDados.gravaDadosExcel(sEnt, sSensor);
+            GravaDados.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 
         } catch (IOException e) {
             Util.ErrorLog(e);
@@ -371,13 +375,4 @@ public class fPrincipal extends Padrao {
 
     }
 
-    private String geraDados(){
-        double min = 105.0;
-        double max = -99.7;
-
-        Random r = new Random();
-        double value = r.nextDouble() * (max-min)+min;
-
-        return Double.toString(value);
-    }
 }

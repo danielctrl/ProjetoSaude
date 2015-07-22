@@ -20,10 +20,10 @@ public final class GravaDados {
     private static double min = 0.0;
     private static double max = 0.0;
 
-    public static void gravaDadosExcel(String temp, String sensorID) throws IOException, WriteException {
+    public static void gravaDadosExcel(Double dTemp, String sensorID) throws IOException, WriteException {
         try {
 
-            Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
+//            Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
 
             if (contadorLinha  == 1) {
                 geraExcel();
@@ -34,7 +34,7 @@ public final class GravaDados {
                 contadorLinha ++;
             }
             //if (contadorLinha == 3600){
-            if (contadorLinha == 60){
+            if (contadorLinha == 3){
                 Label labelMin = new Label(0, contadorLinha + 1, String.valueOf(min));
                 sheet.addCell(labelMin);
 
@@ -55,7 +55,7 @@ public final class GravaDados {
                 Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
                 sheet.addCell(labelHr);
 
-                Label labelTemp = new Label(2, contadorLinha, temp);
+                Label labelTemp = new Label(2, contadorLinha, Double.toString(dTemp));
                 sheet.addCell(labelTemp);
 
                 if (dTemp > max){
@@ -102,11 +102,11 @@ public final class GravaDados {
             }else{
                 workbook = Workbook.createWorkbook(new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/" +
                         "ProjetoSaude" +
-                        now.getYear() +
-                        now.getMonth() +
+                        now.getYear() + "_" +
+                        now.getMonth() + "_" +
                         now.getDay() + "-" +
-                        now.getHours() +
-                        now.getMinutes() +
+                        now.getHours() + "_" +
+                        now.getMinutes() + "_" +
                         now.getSeconds() +
                         ".xls"));
 
