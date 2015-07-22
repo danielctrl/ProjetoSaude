@@ -85,7 +85,9 @@ public class fPrincipal extends Padrao {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        
+
+        isMock = true;
+
         mBluetooth = BluetoothAdapter.getDefaultAdapter();
         // if null = Bluetooth nao disponivel
         if (mBluetooth == null) {
