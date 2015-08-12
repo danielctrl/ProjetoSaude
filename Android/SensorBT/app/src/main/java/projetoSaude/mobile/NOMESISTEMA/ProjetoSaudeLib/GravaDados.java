@@ -5,117 +5,100 @@ import android.os.Environment;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-
 import jxl.*;
 import jxl.write.*;
-import jxl.write.WritableSheet;
-import projetoSaude.mobile.NOMESISTEMA.Util;
+import jxl.write.Number;
 
-public final class GravaDados {
+/**
+ * Created by Andre on 11/08/2015.
+ */
+public class GravaDados {
 
-    private static WritableWorkbook workbook = null;
-    private static WritableSheet sheet = null;
-    private static int contadorLinha = 1;
-    private static int minutes = 0;
-    private static double min = 0.0;
-    private static double max = 0.0;
+    public WritableWorkbook mWorkbook;
+    private WritableSheet mSheet;
+    private int mCount = 0;
 
-    public static void gravaDadosExcel(Double dTemp, String sensorID) throws IOException, WriteException {
-        try {
+    public void gravaDadosExcel(Double temp, String sensor) {
 
-//            Double dTemp = Double.parseDouble(new String(temp.substring(0,5)));
+        if (mWorkbook == null) {
+            CreateWorkbook();
+        }
 
-            if (contadorLinha  == 1) {
-                geraExcel();
+        if (mCount >= 10){
+            writesExcel(temp, sensor);
+            mCount = 0;
+        }
 
-                max = dTemp;
-                min = dTemp;
+        mCount++;
 
-                contadorLinha ++;
-            }
-            //if (contadorLinha == 3600){
-            if (contadorLinha == 3){
-                Label labelMin = new Label(0, contadorLinha + 1, String.valueOf(min));
-                sheet.addCell(labelMin);
-
-                Label labelMax = new Label(2, contadorLinha + 1, String.valueOf(max));
-                sheet.addCell(labelMax);
-                fechaExcel();
-                geraExcel();
-            }
-
-            Date now = new Date();
-
-            if (now.getMinutes() >= minutes + 1) {
-
-
-                Label labelSensor = new Label(0, contadorLinha, sensorID);
-                sheet.addCell(labelSensor);
-
-                Label labelHr = new Label(1, contadorLinha, now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds());
-                sheet.addCell(labelHr);
-
-                Label labelTemp = new Label(2, contadorLinha, Double.toString(dTemp));
-                sheet.addCell(labelTemp);
-
-                if (dTemp > max){
-                    max = dTemp;
-                }else if (dTemp < min ){
-                    min = dTemp;
-                }
-
-                contadorLinha++;
-                minutes = now.getMinutes();
-            }
-        }catch(Exception e){
-            Util.ErrorLog(e);
+        if (mSheet.getRows() >= 200) {
+            mCount = 0;
+            CloseWorkbook();
         }
     }
 
-    public static void fechaExcel()
-    {
-        try {
-            workbook.write();
-            workbook.close();
+    private void writesExcel(Double temp, String sensor) {
+        Date mDate = new Date();
 
-        } catch (IOException e) {
-            Util.ErrorLog(e);
-            e.printStackTrace();
+        int mRow = mSheet.getRows();
+
+        try {
+            Label mLabelSensor = new Label(0, mRow, sensor);
+
+            Label mLabelTime = new Label(1, mRow, mDate.getHours() + ":" + mDate.getMinutes() + ":" + mDate.getSeconds());
+
+            Number mNumTemp = new Number(2, mRow, temp);
+
+            mSheet.addCell(mLabelSensor);
+            mSheet.addCell(mLabelTime);
+            mSheet.addCell(mNumTemp);
+
         } catch (WriteException e) {
-            Util.ErrorLog(e);
             e.printStackTrace();
         }
-
-        contadorLinha = 1;
     }
 
-    public static void geraExcel()
-    {
-
+    private void CreateWorkbook() {
         Date now = new Date();
 
         File folder = new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/");
 
+        if (!folder.exists()) {
+            folder.mkdirs();
+        }
+
         try {
-            if (!folder.exists()) {
-                folder.mkdirs();
-            }else{
-                workbook = Workbook.createWorkbook(new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/" +
-                        "ProjetoSaude" +
-                        now.getYear() + "_" +
-                        now.getMonth() + "_" +
-                        now.getDay() + "-" +
-                        now.getHours() + "_" +
-                        now.getMinutes() + "_" +
-                        now.getSeconds() +
-                        ".xls"));
+            mWorkbook = Workbook.createWorkbook(new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/" +
+                    "ProjetoSaude" +
+                    now.getYear() + "_" +
+                    now.getMonth() + "_" +
+                    now.getDay() + "-" +
+                    now.getHours() + "_" +
+                    now.getMinutes() + "_" +
+                    now.getSeconds() +
+                    ".xls"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        mSheet = mWorkbook.createSheet("Coleta de dados", 0);
+    }
 
-                sheet = workbook.createSheet("Coleta de dados", 0);
+    public void CloseWorkbook() {
+        try {
 
+            if (mWorkbook != null) {
+                mWorkbook.write();
+                mWorkbook.close();
             }
-        } catch (Exception e) {
-            Util.ErrorLog(e);
-            e.getMessage();
+
+            mWorkbook = null;
+            mSheet = null;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (WriteException e) {
+            e.printStackTrace();
         }
     }
 }
+

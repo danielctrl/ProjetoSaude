@@ -81,12 +81,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="GravaDados2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding>
+                <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+                <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GravaDados.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8125">
-              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-              <folding />
+            <state vertical-scroll-proportion="0.41609588">
+              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +113,6 @@
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#982#983#0" expanded="true" />
-                <element signature="e#1029#1030#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,28 +122,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fLogin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bluetooth.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/classes/Bluetooth.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-              <folding />
+              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,11 +134,12 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+              <caret line="300" column="32" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8789#11453#0" expanded="true" />
-                <element signature="e#11452#11453#0" expanded="true" />
+                <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+                <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+                <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1226,9 +1222,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/Util.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/mockSensor.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fLogin.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/MockSensor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fLogin.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java" />
       </list>
     </option>
@@ -1240,7 +1238,7 @@
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
-    <option name="height" value="1050" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1419,7 +1417,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1436,15 +1434,18 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0422163050" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="001905606dcf8e" />
     <property name="FullScreen" value="false" />
-    <property name="DEBUGGABLE_DEVICE" value="motorola-xt1058-0422163050" />
+    <property name="DEBUGGABLE_DEVICE" value="samsung-gt_i9100-001905606dcf8e" />
     <property name="DEBUGGABLE_PROCESS" value="projetoSaude.mobile.NOMESISTEMA" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1688,28 +1689,28 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39404353" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29161882" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19854015" sideWeight="0.34182304" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17761394" sideWeight="0.5051095" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33218786" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110948905" sideWeight="0.6535552" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.107334524" sideWeight="0.6535552" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17593583" sideWeight="0.49343064" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554746" sideWeight="0.49848714" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29160306" sideWeight="0.49343064" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3237925" sideWeight="0.49848714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1726,14 +1727,14 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17761394" sideWeight="0.5051095" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19854015" sideWeight="0.34182304" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19854015" sideWeight="0.34182304" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17761394" sideWeight="0.5051095" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17726293" sideWeight="0.49343064" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554746" sideWeight="0.49848714" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17540108" sideWeight="0.49343064" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3249139" sideWeight="0.49848714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1743,13 +1744,13 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33722627" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39404353" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39380023" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.110948905" sideWeight="0.6535552" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33218786" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11021814" sideWeight="0.6535552" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1768,40 +1769,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
-          <line>121</line>
+          <url>jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/view/View.class</url>
+          <line>237</line>
           <properties />
-          <option name="timeStamp" value="102" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
-          <line>146</line>
-          <properties />
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
-          <line>136</line>
-          <properties />
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
-          <line>233</line>
-          <properties />
-          <option name="timeStamp" value="119" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java</url>
-          <line>288</line>
-          <properties />
-          <option name="timeStamp" value="123" />
+          <option name="timeStamp" value="144" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="137" />
+      <option name="time" value="186" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1809,40 +1786,24 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1852,17 +1813,21 @@
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1872,17 +1837,21 @@
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1892,17 +1861,21 @@
           <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1912,8 +1885,9 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1925,11 +1899,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1939,8 +1916,9 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1952,11 +1930,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1966,8 +1947,9 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1979,11 +1961,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1993,8 +1978,9 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2006,11 +1992,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2020,8 +2009,9 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2096,14 +2086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42276424">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fConfiguracaoBT.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13051823">
@@ -2146,47 +2128,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42894056">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/widget/TextView.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6">
           <caret line="413" column="22" selection-start-line="413" selection-start-column="22" selection-end-line="413" selection-end-column="22" />
-          <folding>
-            <element signature="e#11172#11173#0" expanded="true" />
-            <element signature="e#11223#11224#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/MessageQueue.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35031846">
+        <state vertical-scroll-proportion="-6.96">
           <caret line="220" column="19" selection-start-line="220" selection-start-column="19" selection-end-line="220" selection-end-column="19" />
-          <folding>
-            <element signature="e#9459#9460#0" expanded="true" />
-            <element signature="e#9510#9511#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fLogin.java">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.24">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/Looper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/jxl.jar!/jxl/write/biff/WritableWorkbookImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.6">
+          <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/MockSensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-          <folding />
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2198,22 +2189,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/classes/Bluetooth.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding>
+            <element signature="method#fechaExcel#0;class#GravaDados2#0" expanded="false" />
+            <element signature="method#geraExcel#0;class#GravaDados2#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/classes/Bluetooth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19391635">
+          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/MockSensor.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61787075">
+          <caret line="27" column="76" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2221,28 +2229,23 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/formularios/fPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
+          <caret line="300" column="32" selection-start-line="300" selection-start-column="29" selection-end-line="300" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8789#11453#0" expanded="true" />
-            <element signature="e#11452#11453#0" expanded="true" />
+            <element signature="method#onOptionsItemSelected#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#fPrincipal#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#fPrincipal#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-14/android.jar!/android/os/MessageQueue.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/ProjetoSaudeLib/GravaDados.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8125">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding />
+        <state vertical-scroll-proportion="0.41609588">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

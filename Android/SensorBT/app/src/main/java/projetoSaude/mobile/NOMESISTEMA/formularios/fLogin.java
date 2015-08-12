@@ -17,13 +17,18 @@ public class fLogin extends Padrao implements OnClickListener{
 	private EditText txUsuario;
 	private EditText txSenha;
 	private TextView lbVersao;
-	
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(projetoSaude.mobile.NOMESISTEMA.R.layout.activity_login);
 		//Metodo que inicializa os itens da tela inicial
         ConfigCampos();
+
+		Intent i = new Intent(getApplicationContext(), fPrincipal.class);
+		startActivity(i);
+		finish();
     }
 	
 	public void onClick(View v) {

@@ -6,9 +6,10 @@ import java.util.TimerTask;
 
 import jxl.write.WriteException;
 import projetoSaude.mobile.NOMESISTEMA.Padrao;
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
 import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
-import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados2;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -75,9 +76,9 @@ public class fPrincipal extends Padrao {
     private TimerTask mTask;
     // String
     private String action;
-    // Boolean
-    private boolean isUserInteraction = false;
     private boolean isMock = false;
+    //Béjeto
+    private GravaDados mGravar;
 
     /**
 	 * Region Metodos & Funções do Sistema
@@ -87,7 +88,9 @@ public class fPrincipal extends Padrao {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        isMock = true;
+        mGravar = new GravaDados();
+
+        isMock = false;
 
         mBluetooth = BluetoothAdapter.getDefaultAdapter();
         // if null = Bluetooth nao disponivel
@@ -116,27 +119,13 @@ public class fPrincipal extends Padrao {
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive (Context context, Intent intent){
-            action = intent.getAction();
-            BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+        action = intent.getAction();
+        BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
 
-//            if (BluetoothDevice.ACTION_FOUND.equals(action)) {
-//                //Device found
-//                int a = 1;
-//            } else if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-//                //Device is now connected
-//                int a = 1;
-//            } else if (BluetoothAdapter.ACTION_DISCOVERY_FINISHED.equals(action)) {
-//                //Done searching
-//                int a = 1;
-//            } else if (BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED.equals(action)) {
-//                //Device is about to disconnect
-//                int a = 1;
-//            } else
-                if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
-                //Device has disconnected
-                if (!isUserInteraction)
-                    BTConnect(0);
-            }
+            if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
+            //Device has disconnected
+            connectBT();
+        }
         }
     };
 
@@ -213,11 +202,9 @@ public class fPrincipal extends Padrao {
 			@Override
 			public void onClick(View arg0) {
 				if (btConectar.getText().equals("Conectar") || btConectar.getText().equals("Não conectado")){
-                    BTConnect(0);
+                    connectBT();
                 }else if (btConectar.getText().equals("Desconectar")){
-                    GravaDados.fechaExcel();
-                    isUserInteraction = true;
-                    BTConnect(1);
+                    disconnectBT();
                 }
 
 			}
@@ -228,36 +215,50 @@ public class fPrincipal extends Padrao {
         
     }
 
-	private void BTConnect(int operacao){
-        // MAC do bluetooth
-        String address = "20:14:08:14:22:91";
+//	private void BTConnect(int operacao){
+//        // MAC do bluetooth
+//        //String address = "20:14:08:14:22:91";
+//        String address = "98:D3:31:60:09:0B";
+//        BluetoothDevice device = mBluetooth.getRemoteDevice(address);
+//        if (isMock ) {
+//            MockSensor ms = new MockSensor();
+//            if (operacao == (0)) {
+//                for (int n = 0; n <= 120; n++) {
+//                    geraDadosMock(ms);
+//                }
+//            } else {
+//                BTConnect(0);
+//            }
+//        }else {
+//
+//            if (operacao == (0)) {
+//                mBluetooth.cancelDiscovery();
+//                mRfcommClient.connect(device);
+//            } else {
+//                if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
+//                    mGravar.CloseWorkbook();
+//                    mRfcommClient.stop();
+//                } else
+//                    BTConnect(0);
+//            }
+//        }
+//	}
+
+    private void connectBT(){
+        String address = "98:D3:31:60:09:0B";
+
         BluetoothDevice device = mBluetooth.getRemoteDevice(address);
-        if (isMock ) {
-            MockSensor ms = new MockSensor();
-            if (operacao == (0)) {
-                for (int n = 0; n <= 120; n++) {
-                    geraDadosMock(ms);
-                }
-            } else {
-                BTConnect(0);
-            }
-        }else {
 
-            if (operacao == (0)) {
-                mBluetooth.cancelDiscovery();
-                mRfcommClient.connect(device);
-                isUserInteraction = false;
-            } else {
-                if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-                    mRfcommClient.stop();
-                } else
-                    BTConnect(0);
-            }
-        }
+        mBluetooth.cancelDiscovery();
+        mRfcommClient.connect(device);
+    }
 
-	}
-	
-	// Handler que recibe los mensajes de BluetoothRfcommClient
+    private void disconnectBT(){
+        mGravar.CloseWorkbook();
+        mRfcommClient.stop();
+    }
+
+    // Handler que recibe los mensajes de BluetoothRfcommClient
     private final Handler mHandler = new Handler() {
     	
         @Override
@@ -292,7 +293,7 @@ public class fPrincipal extends Padrao {
                 	readMessage=readMessage.substring(0,data_length );
                 	String sEnt=new String(readMessage.substring(5,10));
                     String sSensor=new String(readMessage.substring(0,1));
-                	sEnt+=" C";
+                	//sEnt+=" C";
 
                    try {
 
@@ -302,18 +303,11 @@ public class fPrincipal extends Padrao {
                            lbDisp2.setText(sEnt);
                        }
 
-//                        GravaDados.gravaDadosExcel(sEnt, sSensor);
+                       mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 
                     } catch(Exception e){
 
                    }
-//                   catch (IOException e) {
-//                       Util.ErrorLog(e);
-//                       e.printStackTrace();
-//                   } catch (WriteException e) {
-//                       Util.ErrorLog(e);
-//                       e.printStackTrace();
-//                   }
                 } 
                 break;
             case MESSAGE_DEVICE_NAME:
@@ -335,8 +329,7 @@ public class fPrincipal extends Padrao {
             public void run() {
                 hHandler.post(new Runnable() {
                     public void run() {
-                        if (!isUserInteraction)
-                            checkBluetooth();
+                        checkBluetooth();
                     }
                 });
             }
@@ -347,7 +340,7 @@ public class fPrincipal extends Padrao {
     //Método que valida se o Bluetooth está conectado, caso negativo, o sistema refaz a conexão
     private void checkBluetooth(){
         if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action))
-            BTConnect(0);
+            connectBT();
     }
 
     private void geraDadosMock(MockSensor ms) {
@@ -363,7 +356,7 @@ public class fPrincipal extends Padrao {
                 lbDisp2.setText(sEnt);
             }
 
-            GravaDados.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
+            GravaDados2.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 
         } catch (IOException e) {
             Util.ErrorLog(e);
