@@ -29,7 +29,9 @@
             </intent-filter>
         </activity>
         <activity android:name="projetoSaude.mobile.NOMESISTEMA.formularios.fPrincipal" android:label="Principal" ></activity>
-        <activity android:name="projetoSaude.mobile.NOMESISTEMA.formularios.fConfiguracaoBT" android:label="Configurações" ></activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2132ee38e2184b646dfc2cbd3048a4d5d8917d96" />
     </application>
 
 </manifest>

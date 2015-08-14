@@ -1,15 +1,12 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
-import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import jxl.write.WriteException;
 import projetoSaude.mobile.NOMESISTEMA.Padrao;
 import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
 import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
-import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados2;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -22,9 +19,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -32,9 +26,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.MockSensor;
+import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
 
 //Exception's Handler
-import projetoSaude.mobile.NOMESISTEMA.Util;
+
 
 public class fPrincipal extends Padrao {
 	/**
@@ -63,21 +58,22 @@ public class fPrincipal extends Padrao {
 	 */
     protected PowerManager.WakeLock mWakeLock;
     // Labels
-    private TextView lbDisp1;
-    private TextView lbDisp2;
-    private TextView lbDisp3;
-    private TextView lbDisp4;
-    private TextView lbDisp5;
-    private TextView lbDisp6;
+    private TextView tvDisp1;
+    private TextView tvDisp2;
+    private TextView tvDisp3;
+    private TextView tvDisp4;
+    private TextView tvDisp5;
+    private TextView tvDisp6;
     // Botoes
     private Button btConectar;
     // Timer
     private Timer mTimerAtual = new Timer();
     private TimerTask mTask;
     // String
-    private String action;
-    private boolean isMock = false;
-    //Béjeto
+    private String mAction;
+    public boolean mIsMock = false;
+    private String mConnStatus = "";
+    // Béjeto
     private GravaDados mGravar;
 
     /**
@@ -90,7 +86,7 @@ public class fPrincipal extends Padrao {
 
         mGravar = new GravaDados();
 
-        isMock = false;
+        mIsMock = false;
 
         mBluetooth = BluetoothAdapter.getDefaultAdapter();
         // if null = Bluetooth nao disponivel
@@ -111,52 +107,20 @@ public class fPrincipal extends Padrao {
         this.registerReceiver(mReceiver, filter1);
         this.registerReceiver(mReceiver, filter2);
         this.registerReceiver(mReceiver, filter3);
-        //Ativa o timer que checa se ainda existe conexão Bluetooth
-//        ativaTimer();
     }
 
-    //O BroadcastReceiver fica recebendo as mensagens that listens for bluetooth broadcasts
+    //O BroadcastReceiver fica recebendo as mensagens de broadcast do bluetooth
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive (Context context, Intent intent){
-        action = intent.getAction();
-        BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+        mAction = intent.getAction();
 
-            if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action)) {
+        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(mAction)) {
             //Device has disconnected
             connectBT();
         }
         }
     };
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {		
-    	super.onCreateOptionsMenu(menu);
-		
-    	MenuInflater oInflater = getMenuInflater();
-    	oInflater.inflate(R.menu.menu_principal, menu);
-		return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-    	try {
-	    	switch (item.getItemId()) {
-			case R.id.menu_principal_configuracao:
-				Intent i = new Intent(getApplicationContext(), fConfiguracaoBT.class);
-	        	startActivity(i);
-				break;
-	
-			default:
-				return super.onOptionsItemSelected(item);
-			}
-	    	return true;
-    	} catch (Exception e) {
-            Util.ErrorLog(e);
-            projetoSaude.mobile.NOMESISTEMA.Util.MsgErro(this, e.getMessage(), true).show();
-            return false;
-       } 	
-    }
     
     @Override
 	public void onBackPressed() {
@@ -172,7 +136,7 @@ public class fPrincipal extends Padrao {
 						startActivity(intent);
 					}
 				});
-		woBuilder.setNegativeButton("Nao",
+		woBuilder.setNegativeButton("Não",
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						dialog.cancel();
@@ -195,19 +159,23 @@ public class fPrincipal extends Padrao {
     
     private void setupIHM() {
 
-    	lbDisp1 = (TextView) findViewById(R.id.lbDisp1);
-        lbDisp2 = (TextView) findViewById(R.id.lbDisp2);
+    	tvDisp1 = (TextView) findViewById(R.id.lbDisp1);
+        tvDisp2 = (TextView) findViewById(R.id.lbDisp2);
     	btConectar = (Button) findViewById(R.id.btConectar);
-    	btConectar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View arg0) {
-				if (btConectar.getText().equals("Conectar") || btConectar.getText().equals("Não conectado")){
-                    connectBT();
-                }else if (btConectar.getText().equals("Desconectar")){
-                    disconnectBT();
-                }
 
-			}
+        btConectar.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+            mConnStatus = btConectar.getText().toString().toUpperCase();
+                switch (ConnStatus.valueOf(mConnStatus)) {
+                    case CONECTAR:
+                        connectBT();
+                    case CONECTANDO:
+                    case DESCONECTADO:
+                        disconnectBT();
+                }
+            }
 		});
 
         // Inicializa o mRfcommClient para fazer a conexão com o Bluetooth
@@ -215,42 +183,20 @@ public class fPrincipal extends Padrao {
         
     }
 
-//	private void BTConnect(int operacao){
-//        // MAC do bluetooth
-//        //String address = "20:14:08:14:22:91";
-//        String address = "98:D3:31:60:09:0B";
-//        BluetoothDevice device = mBluetooth.getRemoteDevice(address);
-//        if (isMock ) {
-//            MockSensor ms = new MockSensor();
-//            if (operacao == (0)) {
-//                for (int n = 0; n <= 120; n++) {
-//                    geraDadosMock(ms);
-//                }
-//            } else {
-//                BTConnect(0);
-//            }
-//        }else {
-//
-//            if (operacao == (0)) {
-//                mBluetooth.cancelDiscovery();
-//                mRfcommClient.connect(device);
-//            } else {
-//                if (BluetoothDevice.ACTION_ACL_CONNECTED.equals(action)) {
-//                    mGravar.CloseWorkbook();
-//                    mRfcommClient.stop();
-//                } else
-//                    BTConnect(0);
-//            }
-//        }
-//	}
-
     private void connectBT(){
         String address = "98:D3:31:60:09:0B";
 
         BluetoothDevice device = mBluetooth.getRemoteDevice(address);
 
-        mBluetooth.cancelDiscovery();
-        mRfcommClient.connect(device);
+        if (mIsMock) {
+            MockSensor mMock = new MockSensor();
+            for (int n = 0; n <= 120; n++) {
+                geraDadosMock(mMock);
+            }
+        }else {
+            mBluetooth.cancelDiscovery();
+            mRfcommClient.connect(device);
+        }
     }
 
     private void disconnectBT(){
@@ -258,7 +204,7 @@ public class fPrincipal extends Padrao {
         mRfcommClient.stop();
     }
 
-    // Handler que recibe los mensajes de BluetoothRfcommClient
+    // Handler que recebe as mensagens do BluetoothRfcommClient
     private final Handler mHandler = new Handler() {
     	
         @Override
@@ -274,7 +220,7 @@ public class fPrincipal extends Padrao {
                     break;
                 //case Bluetooth.STATE_LISTEN:
                 case Bluetooth.STATE_NONE:
-                	btConectar.setText("Nao conectado");
+                	btConectar.setText("Conectar");
                     break;
                 }
                 break;
@@ -298,9 +244,9 @@ public class fPrincipal extends Padrao {
                    try {
 
                        if (sSensor.equals("0")) {
-                           lbDisp1.setText(sEnt);
+                           tvDisp1.setText(sEnt);
                        }else{
-                           lbDisp2.setText(sEnt);
+                           tvDisp2.setText(sEnt);
                        }
 
                        mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
@@ -337,34 +283,25 @@ public class fPrincipal extends Padrao {
 
         mTimerAtual.schedule(mTask, 300, 30000);
     }
+
     //Método que valida se o Bluetooth está conectado, caso negativo, o sistema refaz a conexão
     private void checkBluetooth(){
-        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(action))
+        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(mAction))
             connectBT();
     }
 
-    private void geraDadosMock(MockSensor ms) {
+    private void geraDadosMock(MockSensor mMock) {
 
-        String sEnt=  ms.geraTemp(0.3).replace(",", ".");
-        String sSensor = ms.getSensor();
+        String sEnt=  mMock.geraTemp(0.3).replace(",", ".");
+        String sSensor = mMock.getSensor();
 
-        try {
-
-            if (sSensor.equals("0")) {
-                lbDisp1.setText(sEnt);
-            }else{
-                lbDisp2.setText(sEnt);
-            }
-
-            GravaDados2.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
-
-        } catch (IOException e) {
-            Util.ErrorLog(e);
-            e.printStackTrace();
-        } catch (WriteException e) {
-            Util.ErrorLog(e);
-            e.printStackTrace();
+        if (sSensor.equals("0")) {
+            tvDisp1.setText(sEnt);
+        }else{
+            tvDisp2.setText(sEnt);
         }
+
+        mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 
     }
 

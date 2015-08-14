@@ -1,5 +1,7 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import projetoSaude.mobile.NOMESISTEMA.Configuracao;
 import projetoSaude.mobile.NOMESISTEMA.Padrao;
 import projetoSaude.mobile.NOMESISTEMA.Util;
@@ -14,13 +16,14 @@ import android.widget.Toast;
 
 public class fLogin extends Padrao implements OnClickListener{
 	private Button btLogin;
-	private EditText txUsuario;
-	private EditText txSenha;
-	private TextView lbVersao;
+	private EditText etUsuario;
+	private EditText etSenha;
+	private TextView tvVersao;
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
 
         setContentView(projetoSaude.mobile.NOMESISTEMA.R.layout.activity_login);
 		//Metodo que inicializa os itens da tela inicial
@@ -55,25 +58,25 @@ public class fLogin extends Padrao implements OnClickListener{
     	btLogin = (Button) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_btLogin);    	
     	btLogin.setOnClickListener(this);
     	
-    	txUsuario = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txUsuario);
-    	txSenha = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txSenha);
-        lbVersao = (TextView) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_lbVersao);
+    	etUsuario = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txUsuario);
+    	etSenha = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txSenha);
+        tvVersao = (TextView) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_lbVersao);
     	
-		lbVersao.setText("NOME SISTEMA - V. " + Util.VersaoSistema(getPackageManager()) + " (BD " + Configuracao.CNT_VERSAO_BD + ")");
+		tvVersao.setText("NOME SISTEMA - V. " + Util.VersaoSistema(getPackageManager()) + " (BD " + Configuracao.CNT_VERSAO_BD + ")");
     }
 	
 	private boolean Login() throws Exception {
-		if (txSenha.getText().toString().equals("")) {
-			txSenha.requestFocus();
+		if (etSenha.getText().toString().equals("")) {
+			etSenha.requestFocus();
 			Toast.makeText(this, "Informe a senha.", Toast.LENGTH_LONG).show();
 			return false;
 		}	
-		if (txUsuario.getText().toString().equals("")) {
-			txUsuario.requestFocus();
+		if (etUsuario.getText().toString().equals("")) {
+			etUsuario.requestFocus();
 			Toast.makeText(this, "Informe o usuario.", Toast.LENGTH_LONG).show();
 			
 		}
-		if ((txSenha.getText().toString().equals("1")) && (txUsuario.getText().toString().equals("1"))) {
+		if ((etSenha.getText().toString().equals("1")) && (etUsuario.getText().toString().equals("1"))) {
 			return true;
 		}else{
 			Toast.makeText(this, "Usuario ou Senha invalidos.", Toast.LENGTH_LONG).show();
