@@ -1,5 +1,6 @@
 package projetoSaude.mobile.NOMESISTEMA.formularios;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,9 +20,18 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.PowerManager;
+import android.support.v4.widget.DrawerLayout;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,21 +52,15 @@ public class fPrincipal extends Padrao {
     public static final int MESSAGE_DEVICE_NAME = 4;
     public static final int MESSAGE_TOAST = 5;
     private static final int REQUEST_ENABLE_BT = 2;
-    
-    // Bluetooth adapter
+    //Adapter
     private BluetoothAdapter mBluetooth = null;
-    
+    //Strings
     public static final String DEVICE_NAME = "device_name";
     public static final String TOAST = "toast";
-    private final Handler hHandler = new Handler();
     private String mNomeDispConectado = null;
-    // Objeto para os servicos RFCOMM
-    private Bluetooth mRfcommClient = null;
-
-    /**
-	 * Region Variaveis Sistema
-	 */
-    protected PowerManager.WakeLock mWakeLock;
+    private String mAction;
+    public boolean mIsMock = false;
+    private String mConnStatus = "";
     // Labels
     private TextView tvDisp1;
     private TextView tvDisp2;
@@ -66,15 +70,19 @@ public class fPrincipal extends Padrao {
     private TextView tvDisp6;
     // Botoes
     private Button btConectar;
-    // Timer
-    private Timer mTimerAtual = new Timer();
-    private TimerTask mTask;
-    // String
-    private String mAction;
-    public boolean mIsMock = false;
-    private String mConnStatus = "";
-    // Béjeto
+    // Objetos
     private GravaDados mGravar;
+    // Objeto para os servicos RFCOMM
+    private Bluetooth mRfcommClient = null;
+    private final Handler hHandler = new Handler();
+    private TimerTask mTask;
+    private Timer mTimerAtual = new Timer();
+    protected PowerManager.WakeLock mWakeLock;
+
+    ListView mDrawerList;
+    RelativeLayout mDrawerPane;
+    private DrawerLayout mDrawerLayout;
+    ArrayList<NavItem> mNavItems = new ArrayList<NavItem>();
 
     /**
 	 * Region Metodos & Funções do Sistema
@@ -83,6 +91,28 @@ public class fPrincipal extends Padrao {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
+        //Preparando o menu
+        mNavItems.add(new NavItem("Home", ""));
+        mNavItems.add(new NavItem("Configurações", ""));
+        mNavItems.add(new NavItem("Sobre", ""));
+
+        // DrawerLayout
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+
+        //Populando o Navigtion Drawer com as opções
+        mDrawerPane = (RelativeLayout) findViewById(R.id.drawerPane);
+        mDrawerList = (ListView) findViewById(R.id.navList);
+        DrawerListAdapter adapter = new DrawerListAdapter(this, mNavItems);
+        mDrawerList.setAdapter(adapter);
+
+        // Drawer Item click listeners
+        mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                selectItemFromDrawer(position);
+            }
+        });
 
         mGravar = new GravaDados();
 
@@ -167,7 +197,7 @@ public class fPrincipal extends Padrao {
 
             @Override
             public void onClick(View arg0) {
-            mConnStatus = btConectar.getText().toString().toUpperCase();
+                mConnStatus = btConectar.getText().toString().toUpperCase();
                 switch (ConnStatus.valueOf(mConnStatus)) {
                     case CONECTAR:
                         connectBT();
@@ -176,7 +206,7 @@ public class fPrincipal extends Padrao {
                         disconnectBT();
                 }
             }
-		});
+        });
 
         // Inicializa o mRfcommClient para fazer a conexão com o Bluetooth
         mRfcommClient = new Bluetooth(this, mHandler);
@@ -303,6 +333,94 @@ public class fPrincipal extends Padrao {
 
         mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 
+    }
+
+    private void selectItemFromDrawer(int position) {
+        //Call Desired Activity
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    //SubClasse com as características dos itens
+    class NavItem {
+        String mTitle;
+        String mSubtitle;
+        // int mIcon;
+
+            //public NavItem(String title, String subtitle, int icon) {
+        public NavItem(String title, String subtitle) {
+            mTitle = title;
+            mSubtitle = subtitle;
+        //  mIcon = icon;
+        }
+    }
+
+    class DrawerListAdapter extends BaseAdapter {
+
+        Context mContext;
+        ArrayList<NavItem> mNavItems;
+
+        public DrawerListAdapter(Context context, ArrayList<NavItem> navItems) {
+            mContext = context;
+            mNavItems = navItems;
+        }
+
+        @Override
+        public int getCount() {
+            return mNavItems.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return mNavItems.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view;
+
+            if (convertView == null) {
+                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(R.layout.drawer_item, null);
+            }
+            else {
+                view = convertView;
+            }
+
+            TextView titleView = (TextView) view.findViewById(R.id.title);
+            TextView subtitleView = (TextView) view.findViewById(R.id.subTitle);
+//            ImageView iconView = (ImageView) view.findViewById(R.id.icon);
+
+            titleView.setText( mNavItems.get(position).mTitle );
+            subtitleView.setText( mNavItems.get(position).mSubtitle );
+//            iconView.setImageResource(mNavItems.get(position).mIcon);
+
+            return view;
+        }
     }
 
 }

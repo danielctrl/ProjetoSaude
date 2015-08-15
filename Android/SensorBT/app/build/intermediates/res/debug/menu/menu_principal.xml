@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    
-    <item android:id="@+id/menu_principal_configuracao"  android:title="@string/principal_configuracao"></item>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</menu>
-<!-- From: file:/C:/Users/Andre/Documents/GitHub/ProjetoSaude/Android/SensorBT/app/src/main/res/menu/menu_principal.xml -->
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+</menu><!-- From: file:/C:/Users/Andre/Documents/GitHub/ProjetoSaude/Android/SensorBT/app/src/main/res/menu/menu_principal.xml -->

@@ -781,10 +781,12 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09002f;
         public static final int action_mode_bar_stub=0x7f09002e;
         public static final int action_mode_close_button=0x7f090022;
+        public static final int action_settings=0x7f090064;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090011;
+        public static final int avatar=0x7f09005f;
         public static final int beginning=0x7f09000d;
-        public static final int btConectar=0x7f09005d;
+        public static final int btConectar=0x7f09005c;
         public static final int checkbox=0x7f09002b;
         public static final int collapseActionView=0x7f090012;
         public static final int configuracao_corpo=0x7f090042;
@@ -792,8 +794,11 @@ containing a value of this type.
         public static final int configuracao_tab_geral=0x7f09004d;
         public static final int configuracao_tab_rede=0x7f09004f;
         public static final int default_activity_button=0x7f090026;
+        public static final int desc=0x7f090061;
         public static final int dialog=0x7f090016;
         public static final int disableHome=0x7f090007;
+        public static final int drawerLayout=0x7f090057;
+        public static final int drawerPane=0x7f09005d;
         public static final int dropdown=0x7f090017;
         public static final int edit_query=0x7f090036;
         public static final int end=0x7f09000e;
@@ -804,12 +809,9 @@ containing a value of this type.
         public static final int icon=0x7f090028;
         public static final int ifRoom=0x7f090013;
         public static final int image=0x7f090025;
-        public static final int lbDisp1=0x7f090057;
-        public static final int lbDisp2=0x7f090058;
-        public static final int lbDisp3=0x7f090059;
-        public static final int lbDisp4=0x7f09005a;
-        public static final int lbDisp5=0x7f09005b;
-        public static final int lbDisp6=0x7f09005c;
+        public static final int lbDisp1=0x7f090059;
+        public static final int lbDisp2=0x7f09005a;
+        public static final int lbDisp3=0x7f09005b;
         public static final int lbNumeroBT=0x7f090043;
         public static final int left_icon=0x7f090031;
         public static final int listMode=0x7f090004;
@@ -821,11 +823,13 @@ containing a value of this type.
         public static final int login_topo=0x7f090050;
         public static final int login_txSenha=0x7f090055;
         public static final int login_txUsuario=0x7f090054;
-        public static final int menu_principal_configuracao=0x7f09005e;
+        public static final int mainContent=0x7f090058;
         public static final int middle=0x7f09000f;
+        public static final int navList=0x7f090062;
         public static final int never=0x7f090014;
         public static final int none=0x7f090010;
         public static final int normal=0x7f090005;
+        public static final int profileBox=0x7f09005e;
         public static final int progress_circular=0x7f090034;
         public static final int progress_horizontal=0x7f090035;
         public static final int radio=0x7f09002d;
@@ -846,6 +850,7 @@ containing a value of this type.
         public static final int showHome=0x7f09000a;
         public static final int showTitle=0x7f09000b;
         public static final int split_action_bar=0x7f09001c;
+        public static final int subTitle=0x7f090063;
         public static final int submit_area=0x7f09003f;
         public static final int tabMode=0x7f090006;
         public static final int title=0x7f090029;
@@ -853,6 +858,7 @@ containing a value of this type.
         public static final int top_action_bar=0x7f09001e;
         public static final int up=0x7f09001f;
         public static final int useLogo=0x7f09000c;
+        public static final int userName=0x7f090060;
         public static final int withText=0x7f090015;
     }
     public static final class integer {
@@ -888,7 +894,8 @@ containing a value of this type.
         public static final int activity_configuracao_rede=0x7f03001a;
         public static final int activity_login=0x7f03001b;
         public static final int activity_principal=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int drawer_item=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int menu_principal=0x7f0c0000;
@@ -910,7 +917,8 @@ containing a value of this type.
         public static final int abc_searchview_description_voice=0x7f05000e;
         public static final int abc_shareactionprovider_share_with=0x7f05000f;
         public static final int abc_shareactionprovider_share_with_application=0x7f050010;
-        public static final int app_name=0x7f050011;
+        public static final int action_settings=0x7f050011;
+        public static final int app_name=0x7f050012;
         /** 
   This file is automatically generated by Crashlytics to uniquely 
   identify individual builds of your Android application.
@@ -919,13 +927,12 @@ containing a value of this type.
 
          */
         public static final int com_crashlytics_android_build_id=0x7f050000;
-        public static final int login_btLogin=0x7f050012;
-        public static final int login_nomeEmpresa=0x7f050013;
-        public static final int login_txSenha=0x7f050014;
-        public static final int login_txUsuario=0x7f050015;
-        public static final int login_versao_Sys=0x7f050016;
-        public static final int principal_btConectar=0x7f050017;
-        public static final int principal_configuracao=0x7f050018;
+        public static final int login_btLogin=0x7f050013;
+        public static final int login_nomeEmpresa=0x7f050014;
+        public static final int login_txSenha=0x7f050015;
+        public static final int login_txUsuario=0x7f050016;
+        public static final int login_versao_Sys=0x7f050017;
+        public static final int principal_btConectar=0x7f050018;
         public static final int principal_lbDisp1=0x7f050019;
         public static final int principal_lbDisp2=0x7f05001a;
         public static final int principal_lbDisp3=0x7f05001b;

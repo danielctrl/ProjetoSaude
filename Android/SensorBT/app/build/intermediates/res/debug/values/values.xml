@@ -139,6 +139,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <!-- From: file:/C:/Users/Andre/Documents/GitHub/ProjetoSaude/Android/SensorBT/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="action_settings">Configurações</string>
     <string name="app_name">ProjetoSaude</string>
     <string name="login_btLogin">Login</string>
     <string name="login_nomeEmpresa">nomeEmpresa</string>
@@ -146,7 +147,6 @@
     <string name="login_txUsuario">Usuario</string>
     <string name="login_versao_Sys">Versão: 1.0</string>
     <string name="principal_btConectar">Conectar</string>
-    <string name="principal_configuracao">Configurações</string>
     <string name="principal_lbDisp1">---.- ºC</string>
     <string name="principal_lbDisp2">---.- ºC</string>
     <string name="principal_lbDisp3">---.- ºC</string>

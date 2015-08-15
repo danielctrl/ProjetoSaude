@@ -1,5 +1,10 @@
 C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\classes\debug
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-2a86aae519b5fa63a3ae779c5928389c2575fc34.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-40bf629b493526cb945e351cdff996bc7a9bf17e.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-380ef04916b1bef06ae01304f19fee4fb04c0c9a.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-9cbad014c7ab1e59e044a9dc59f3b0bceb31997d.jar
 C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\acra-4.6.2-bb0faaca79b8e7c3cbcf54ca41f7ea3e1d1e2e44.jar
+C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-9a1d5fad01956cb25059b0a90ac7355c92ca40e1.jar
 C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-f46906dda33691736302a8d6a6805b75dd47b4d0.jar
 C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1d2a75bbb4e791895197f297553c5419c57ece78.jar
 C:\Users\Andre\Documents\GitHub\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-9513d048108f01340743d8d9caf1aa0287a3ee76.jar

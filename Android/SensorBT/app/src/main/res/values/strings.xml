@@ -23,6 +23,6 @@
     <string name="principal_lbDisp4">---.- ºC</string>
     <string name="principal_lbDisp5">---.- ºC</string>
     <string name="principal_lbDisp6">---.- ºC</string>
-    <string name="principal_configuracao">Configurações</string>
+    <string name="action_settings">Configurações</string>
 </resources>
 
