@@ -22,12 +22,11 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="25dp" >
             <TextView
                 android:id="@+id/lbDisp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="false"
                 android:text="@string/principal_lbDisp1"
                 android:textSize="20dp"
                 tools:context=".MainActivity" />
@@ -37,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="25dp" >
             <TextView
                 android:id="@+id/lbDisp2"
                 android:layout_width="wrap_content"
@@ -52,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="25dp" >
             <TextView
                 android:id="@+id/lbDisp3"
                 android:layout_width="wrap_content"
@@ -68,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:padding="10dip" >
+        android:padding="25dp" >
 
         <Button
             android:id="@+id/btConectar"
