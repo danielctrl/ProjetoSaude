@@ -1,10 +1,8 @@
-package projetoSaude.mobile.NOMESISTEMA.formularios;
+package projetoSaude.mobile.NOMESISTEMA;
 
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
-import projetoSaude.mobile.NOMESISTEMA.Configuracao;
-import projetoSaude.mobile.NOMESISTEMA.Padrao;
-import projetoSaude.mobile.NOMESISTEMA.Util;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class fLogin extends Padrao implements OnClickListener{
+public class LoginActivity extends Default implements OnClickListener{
 	private Button btLogin;
 	private EditText etUsuario;
 	private EditText etSenha;
@@ -29,7 +27,7 @@ public class fLogin extends Padrao implements OnClickListener{
 		//Metodo que inicializa os itens da tela inicial
         ConfigCampos();
 
-		Intent i = new Intent(getApplicationContext(), fPrincipal.class);
+		Intent i = new Intent(getApplicationContext(), MainActivity.class);
 		startActivity(i);
 		finish();
     }
@@ -40,7 +38,7 @@ public class fLogin extends Padrao implements OnClickListener{
 				case projetoSaude.mobile.NOMESISTEMA.R.id.login_btLogin:
 					if (Login()) {
 						//Chama a Activity principal do sistema
-						Intent i = new Intent(getApplicationContext(), fPrincipal.class);
+						Intent i = new Intent(getApplicationContext(), MainActivity.class);
 						startActivity(i);
 						finish();
 					}
@@ -62,7 +60,7 @@ public class fLogin extends Padrao implements OnClickListener{
     	etSenha = (EditText) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_txSenha);
         tvVersao = (TextView) findViewById(projetoSaude.mobile.NOMESISTEMA.R.id.login_lbVersao);
     	
-		tvVersao.setText("NOME SISTEMA - V. " + Util.VersaoSistema(getPackageManager()) + " (BD " + Configuracao.CNT_VERSAO_BD + ")");
+		tvVersao.setText("NOME SISTEMA - V. " + Util.VersaoSistema(getPackageManager()) + " (BD " + SettingsActivity.CNT_VERSAO_BD + ")");
     }
 	
 	private boolean Login() throws Exception {

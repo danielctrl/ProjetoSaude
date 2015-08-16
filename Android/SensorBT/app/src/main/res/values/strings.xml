@@ -2,27 +2,46 @@
 <resources>
 
     <string name="app_name">ProjetoSaude</string>
+    <string name="mac_address">98:D3:31:60:09:0B</string>
     
     <!-- Form Login -->
-    <string name="login_nomeEmpresa">nomeEmpresa</string>
-    <string name="login_versao_Sys">Versão: 1.0</string>
-    <string name="login_txUsuario">Usuario</string>
-    <string name="login_txSenha">Senha</string>
-    <string name="login_btLogin">Login</string>
+    <string name="login_tv_name_enterprise">nomeEmpresa</string>
+    <string name="login_tv_version">Versão: 1.0</string>
+    <string name="login_et_user">Usuario</string>
+    <string name="login_et_password">Senha</string>
+    <string name="login_button_login">Login</string>
     
     <!-- Form ConfiguraçãoBT -->
-    <string name="Configuracao_btSalvar">Salvar Configurações</string>
-    <string name="Configuracao_btOK">OK</string>
-	<string name="Configuracao_lbNumeroBT">Núm. Dispositivos: </string>
+    <string name="settings_button_save">Salvar Configurações</string>
+    <string name="settings_button_OK">OK</string>
+	<string name="settings_tv_num_dev">Núm. Dispositivos: </string>
 
     <!-- Form Principal -->
-    <string name="principal_btConectar">Conectar</string>
-    <string name="principal_lbDisp1">---.- ºC</string>
-    <string name="principal_lbDisp2">---.- ºC</string>
-    <string name="principal_lbDisp3">---.- ºC</string>
-    <string name="principal_lbDisp4">---.- ºC</string>
-    <string name="principal_lbDisp5">---.- ºC</string>
-    <string name="principal_lbDisp6">---.- ºC</string>
+    <string name="main_button">Conectar</string>
+    <string name="main_tv_dev_1">---.- º</string>
+    <string name="main_tv_dev_2">---.- º</string>
+    <string name="main_tv_dev_3">---.- º</string>
+    <string name="main_tv_dev_4">---.- º</string>
+    <string name="main_tv_dev_5">---.- º</string>
+    <string name="main_tv_dev_6">---.- º</string>
+    <string name="main_exit_app">Deseja realmente sair do sistema?</string>
+    <string name="main_option_yes">Sim</string>
+    <string name="main_option_no">Não</string>
+    <string name="main_bluetooth_error">Bluetooth não disponível</string>
+    <string name="main_disconnect">Desconectar</string>
+    <string name="main_connecting">Conectando</string>
+    <string name="main_connect">Conectar</string>
+    <string name="main_connected_into">Conectado em</string>
+
+    <!-- Menu superior -->
     <string name="action_settings">Configurações</string>
+
+    <!-- Side Menu -->
+    <string name="ic_home">Home</string>
+    <string name="sub_ic_home">Seguir para a tela principal</string>
+    <string name="ic_preferences">Configurações</string>
+    <string name="sub_ic_preferences">Altere as configurações do sistema</string>
+    <string name="ic_about">Sobre</string>
+    <string name="sub_ic_about">Conheça mais sobre o sistema</string>
 </resources>
 

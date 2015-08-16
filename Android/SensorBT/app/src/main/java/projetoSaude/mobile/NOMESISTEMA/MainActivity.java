@@ -1,10 +1,10 @@
-package projetoSaude.mobile.NOMESISTEMA.formularios;
+package projetoSaude.mobile.NOMESISTEMA;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import projetoSaude.mobile.NOMESISTEMA.Padrao;
+import projetoSaude.mobile.NOMESISTEMA.Default;
 import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
 import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
@@ -41,7 +41,7 @@ import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
 //Exception's Handler
 
 
-public class fPrincipal extends Padrao {
+public class MainActivity extends Default {
 	/**
 	 * Region Variaveis Bluetooth
 	 */
@@ -93,9 +93,9 @@ public class fPrincipal extends Padrao {
         setContentView(R.layout.activity_principal);
 
         //Preparando o menu
-        mNavItems.add(new NavItem("Home", ""));
-        mNavItems.add(new NavItem("Configurações", ""));
-        mNavItems.add(new NavItem("Sobre", ""));
+        mNavItems.add(new NavItem(getString(R.string.ic_home), getString(R.string.sub_ic_home)));
+        mNavItems.add(new NavItem(getString(R.string.ic_preferences), getString(R.string.sub_ic_preferences)));
+        mNavItems.add(new NavItem(getString(R.string.ic_about), getString(R.string.sub_ic_about)));
 
         // DrawerLayout
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -121,7 +121,7 @@ public class fPrincipal extends Padrao {
         mBluetooth = BluetoothAdapter.getDefaultAdapter();
         // if null = Bluetooth nao disponivel
         if (mBluetooth == null) {
-            Toast.makeText(this, "Bluetooth não disponível", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, getString(R.string.main_bluetooth_error), Toast.LENGTH_LONG).show();
             finish();
             return;
         }
@@ -155,9 +155,9 @@ public class fPrincipal extends Padrao {
     @Override
 	public void onBackPressed() {
 		AlertDialog.Builder woBuilder = new AlertDialog.Builder(this);
-		woBuilder.setMessage("Deseja realmente sair do sistema?");
+		woBuilder.setMessage(getString(R.string.main_exit_app));
 		woBuilder.setCancelable(false);
-		woBuilder.setPositiveButton("Sim",
+		woBuilder.setPositiveButton(getString(R.string.main_option_yes),
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						Intent intent = new Intent(Intent.ACTION_MAIN);
@@ -166,7 +166,7 @@ public class fPrincipal extends Padrao {
 						startActivity(intent);
 					}
 				});
-		woBuilder.setNegativeButton("Não",
+		woBuilder.setNegativeButton(getString(R.string.main_option_no),
 				new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int id) {
 						dialog.cancel();
@@ -214,7 +214,7 @@ public class fPrincipal extends Padrao {
     }
 
     private void connectBT(){
-        String address = "98:D3:31:60:09:0B";
+        String address = getString(R.string.mac_address);
 
         BluetoothDevice device = mBluetooth.getRemoteDevice(address);
 
@@ -243,14 +243,14 @@ public class fPrincipal extends Padrao {
             case MESSAGE_STATE_CHANGE:
                 switch (msg.arg1) {
                 case Bluetooth.STATE_CONNECTED:
-                	btConectar.setText("Desconectar");
+                	btConectar.setText(R.string.main_disconnect);
                     break;
                 case Bluetooth.STATE_CONNECTING:
-                	btConectar.setText("Conectando");
+                	btConectar.setText(R.string.main_connecting);
                     break;
                 //case Bluetooth.STATE_LISTEN:
                 case Bluetooth.STATE_NONE:
-                	btConectar.setText("Conectar");
+                	btConectar.setText(R.string.main_connect);
                     break;
                 }
                 break;
@@ -289,7 +289,7 @@ public class fPrincipal extends Padrao {
             case MESSAGE_DEVICE_NAME:
                 // Guarda o nome do dispositivo que foi conectado
             	mNomeDispConectado = msg.getData().getString(DEVICE_NAME);
-                Toast.makeText(getApplicationContext(), "Conectado em "
+                Toast.makeText(getApplicationContext(), getString(R.string.main_connected_into)
                                + mNomeDispConectado, Toast.LENGTH_SHORT).show();
                 break;
             case MESSAGE_TOAST:
@@ -354,12 +354,13 @@ public class fPrincipal extends Padrao {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
+
     //SubClasse com as características dos itens
     class NavItem {
         String mTitle;

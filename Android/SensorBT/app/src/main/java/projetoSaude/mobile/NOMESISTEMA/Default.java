@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-public class Padrao extends Activity {
+public class Default extends Activity {
 
 	public static String CNT_NOME_EXIBIR = "CNT_NOME_EXIBIR";
 	

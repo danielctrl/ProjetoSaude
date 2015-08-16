@@ -20,7 +20,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="projetoSaude.mobile.NOMESISTEMA.formularios.fLogin"
+            android:name=".LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="projetoSaude.mobile.NOMESISTEMA.formularios.fPrincipal" android:label="Principal" ></activity>
+        <activity android:name=".MainActivity" android:label="Principal" ></activity>
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="2132ee38e2184b646dfc2cbd3048a4d5d8917d96" />

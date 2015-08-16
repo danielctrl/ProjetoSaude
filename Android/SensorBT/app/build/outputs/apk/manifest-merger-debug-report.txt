@@ -79,7 +79,7 @@ MERGED from io.fabric.sdk.android:fabric:1.3.5:25:5
 		ADDED from AndroidManifest.xml:19:9
 	android:theme
 		ADDED from AndroidManifest.xml:21:9
-activity#projetoSaude.mobile.NOMESISTEMA.formularios.fLogin
+activity#projetoSaude.mobile.NOMESISTEMA.LoginActivity
 ADDED from AndroidManifest.xml:22:9
 	android:label
 		ADDED from AndroidManifest.xml:24:13
@@ -95,10 +95,10 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:28:17
 	android:name
 		ADDED from AndroidManifest.xml:28:27
-activity#projetoSaude.mobile.NOMESISTEMA.formularios.fPrincipal
+activity#projetoSaude.mobile.NOMESISTEMA.MainActivity
 ADDED from AndroidManifest.xml:31:9
 	android:label
-		ADDED from AndroidManifest.xml:31:89
+		ADDED from AndroidManifest.xml:31:48
 	android:name
 		ADDED from AndroidManifest.xml:31:19
 meta-data#io.fabric.ApiKey

@@ -33,7 +33,7 @@
              android:id="@+id/lbNumeroBT"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="@string/Configuracao_lbNumeroBT" />
+             android:text="@string/settings_tv_num_dev" />
 
          <Spinner
              android:id="@+id/Configuracao_spNumeroBT"
@@ -45,7 +45,7 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_marginTop="5dp"
-             android:text="@string/Configuracao_btOK" />
+             android:text="@string/settings_button_OK" />
          </LinearLayout>
          
          <Spinner
@@ -83,7 +83,7 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_marginTop="5dp"
-             android:text="@string/Configuracao_btSalvar" />
+             android:text="@string/settings_button_save" />
      </LinearLayout>
      <!-- Corpo fim -->
 

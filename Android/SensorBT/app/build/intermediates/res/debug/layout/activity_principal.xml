@@ -27,7 +27,7 @@
                 android:id="@+id/lbDisp1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/principal_lbDisp1"
+                android:text="@string/main_tv_dev_1"
                 android:textSize="20dp"
                 tools:context=".MainActivity" />
         </LinearLayout>
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/principal_lbDisp2"
+                android:text="@string/main_tv_dev_2"
                 android:textSize="20dp"
                 tools:context=".MainActivity" />
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:text="@string/principal_lbDisp3"
+                android:text="@string/main_tv_dev_3"
                 android:textSize="20dp"
                 tools:context=".MainActivity" />
         </LinearLayout>
@@ -73,7 +73,7 @@
             android:id="@+id/btConectar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/principal_btConectar"
+            android:text="@string/main_button"
             android:layout_gravity="bottom"/>
     </LinearLayout>
 
@@ -137,9 +137,6 @@
             android:layout_below="@+id/profileBox"
             android:choiceMode="singleChoice"
             android:background="#fff" />
-
-
-
     </RelativeLayout>
 
 
