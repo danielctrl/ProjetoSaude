@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import projetoSaude.mobile.NOMESISTEMA.Default;
 import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
-import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;

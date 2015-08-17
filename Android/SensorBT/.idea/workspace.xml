@@ -84,39 +84,38 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23168655">
-              <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.8841567">
+              <caret line="130" column="86" selection-start-line="130" selection-start-column="86" selection-end-line="130" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2823#2832#0" expanded="true" />
-                <element signature="e#3121#3148#0" expanded="true" />
-                <element signature="e#3150#3181#0" expanded="true" />
-                <element signature="e#3219#3253#0" expanded="true" />
-                <element signature="e#3255#3293#0" expanded="true" />
-                <element signature="e#3331#3359#0" expanded="true" />
-                <element signature="e#3361#3393#0" expanded="true" />
-                <element signature="e#3879#4107#0" expanded="true" />
-                <element signature="e#4106#4107#0" expanded="true" />
-                <element signature="e#4346#4386#0" expanded="true" />
-                <element signature="e#5737#5770#0" expanded="true" />
-                <element signature="e#5837#5872#0" expanded="true" />
-                <element signature="e#6207#6241#0" expanded="true" />
-                <element signature="e#6247#6381#0" expanded="true" />
-                <element signature="e#6380#6381#0" expanded="true" />
-                <element signature="e#7039#7496#0" expanded="true" />
-                <element signature="e#7495#7496#0" expanded="true" />
-                <element signature="e#7701#7732#0" expanded="true" />
+                <element signature="e#2733#2742#0" expanded="true" />
+                <element signature="e#3031#3058#0" expanded="true" />
+                <element signature="e#3060#3091#0" expanded="true" />
+                <element signature="e#3129#3163#0" expanded="true" />
+                <element signature="e#3165#3203#0" expanded="true" />
+                <element signature="e#3241#3269#0" expanded="true" />
+                <element signature="e#3271#3303#0" expanded="true" />
+                <element signature="e#3789#4017#0" expanded="true" />
+                <element signature="e#4016#4017#0" expanded="true" />
+                <element signature="e#4256#4296#0" expanded="true" />
+                <element signature="e#5647#5680#0" expanded="true" />
+                <element signature="e#5747#5782#0" expanded="true" />
+                <element signature="e#6117#6151#0" expanded="true" />
+                <element signature="e#6157#6291#0" expanded="true" />
+                <element signature="e#6290#6291#0" expanded="true" />
+                <element signature="e#6949#7406#0" expanded="true" />
+                <element signature="e#7405#7406#0" expanded="true" />
+                <element signature="e#7611#7642#0" expanded="true" />
                 <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-                <element signature="e#8577#8601#0" expanded="true" />
-                <element signature="e#8716#8740#0" expanded="true" />
-                <element signature="e#8896#8917#0" expanded="true" />
-                <element signature="e#10359#10398#0" expanded="true" />
+                <element signature="e#8487#8511#0" expanded="true" />
+                <element signature="e#8626#8650#0" expanded="true" />
+                <element signature="e#8806#8827#0" expanded="true" />
+                <element signature="e#10269#10308#0" expanded="true" />
                 <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
                 <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -125,60 +124,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.058824">
-              <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-              <folding>
-                <element signature="e#870#904#0" expanded="true" />
-                <element signature="e#1186#1212#0" expanded="true" />
-                <element signature="e#1894#1917#0" expanded="true" />
-                <element signature="e#2188#2215#0" expanded="true" />
-                <element signature="e#2546#2574#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_configuracao_bt.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_configuracao_bt.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.176471">
-              <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
-              <folding>
-                <element signature="e#1152#1181#0" expanded="true" />
-                <element signature="e#1598#1626#0" expanded="true" />
-                <element signature="e#2990#3020#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="drawer_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_item.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.264706">
-              <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+            <state vertical-scroll-proportion="-15.64">
+              <caret line="44" column="69" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu_principal.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_principal.xml">
+      <file leaf-file-name="activity_configuracao_geral.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_configuracao_geral.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="5.2352943">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -190,23 +153,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-34.0">
+            <state vertical-scroll-proportion="-22.5">
               <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-              <folding>
-                <element signature="e#1109#1132#0" expanded="true" />
-                <element signature="e#1698#1721#0" expanded="true" />
-                <element signature="e#2287#2310#0" expanded="true" />
-                <element signature="e#2804#2825#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.76">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -1395,10 +1343,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/enumerated/TempType.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_configuracao_bt.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-en/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -1543,7 +1492,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="values-en" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SensorBT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1854,7 +1863,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1862,7 +1871,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33983928" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2881745" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2881745" sideWeight="0.6575067" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1920,38 +1929,37 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -1965,119 +1973,34 @@
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
-            <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
-            <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
-            <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
-            <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2091,35 +2014,34 @@
           <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2133,84 +2055,34 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
-            <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
-            <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
-            <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2231,35 +2103,34 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2280,35 +2151,34 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2329,35 +2199,82 @@
           <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="228" column="21" selection-start-line="228" selection-start-column="21" selection-end-line="228" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
+            <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
+            <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
@@ -2552,25 +2469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.264706">
-          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_principal.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08688245">
@@ -2595,34 +2493,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.0">
-          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-          <folding>
-            <element signature="e#1109#1132#0" expanded="true" />
-            <element signature="e#1698#1721#0" expanded="true" />
-            <element signature="e#2287#2310#0" expanded="true" />
-            <element signature="e#2804#2825#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.76">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -2632,7 +2506,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.176471">
+        <state vertical-scroll-proportion="0.6311031">
           <caret line="85" column="59" selection-start-line="85" selection-start-column="59" selection-end-line="85" selection-end-column="59" />
           <folding>
             <element signature="e#1152#1181#0" expanded="true" />
@@ -2642,58 +2516,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75406873">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_principal.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1737649">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_configuracao_geral.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.2352943">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.058824">
+        <state vertical-scroll-proportion="0.56962025">
           <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-          <folding>
-            <element signature="e#870#904#0" expanded="true" />
-            <element signature="e#1186#1212#0" expanded="true" />
-            <element signature="e#1894#1917#0" expanded="true" />
-            <element signature="e#2188#2215#0" expanded="true" />
-            <element signature="e#2546#2574#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_principal.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-en/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7633452">
+          <caret line="44" column="61" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.64">
+          <caret line="44" column="69" selection-start-line="44" selection-start-column="69" selection-end-line="44" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23168655">
-          <caret line="152" column="6" selection-start-line="152" selection-start-column="6" selection-end-line="152" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.8841567">
+          <caret line="130" column="86" selection-start-line="130" selection-start-column="86" selection-end-line="130" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2823#2832#0" expanded="true" />
-            <element signature="e#3121#3148#0" expanded="true" />
-            <element signature="e#3150#3181#0" expanded="true" />
-            <element signature="e#3219#3253#0" expanded="true" />
-            <element signature="e#3255#3293#0" expanded="true" />
-            <element signature="e#3331#3359#0" expanded="true" />
-            <element signature="e#3361#3393#0" expanded="true" />
-            <element signature="e#3879#4107#0" expanded="true" />
-            <element signature="e#4106#4107#0" expanded="true" />
-            <element signature="e#4346#4386#0" expanded="true" />
-            <element signature="e#5737#5770#0" expanded="true" />
-            <element signature="e#5837#5872#0" expanded="true" />
-            <element signature="e#6207#6241#0" expanded="true" />
-            <element signature="e#6247#6381#0" expanded="true" />
-            <element signature="e#6380#6381#0" expanded="true" />
-            <element signature="e#7039#7496#0" expanded="true" />
-            <element signature="e#7495#7496#0" expanded="true" />
-            <element signature="e#7701#7732#0" expanded="true" />
+            <element signature="e#2733#2742#0" expanded="true" />
+            <element signature="e#3031#3058#0" expanded="true" />
+            <element signature="e#3060#3091#0" expanded="true" />
+            <element signature="e#3129#3163#0" expanded="true" />
+            <element signature="e#3165#3203#0" expanded="true" />
+            <element signature="e#3241#3269#0" expanded="true" />
+            <element signature="e#3271#3303#0" expanded="true" />
+            <element signature="e#3789#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4256#4296#0" expanded="true" />
+            <element signature="e#5647#5680#0" expanded="true" />
+            <element signature="e#5747#5782#0" expanded="true" />
+            <element signature="e#6117#6151#0" expanded="true" />
+            <element signature="e#6157#6291#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6949#7406#0" expanded="true" />
+            <element signature="e#7405#7406#0" expanded="true" />
+            <element signature="e#7611#7642#0" expanded="true" />
             <element signature="method#disconnectBT#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8577#8601#0" expanded="true" />
-            <element signature="e#8716#8740#0" expanded="true" />
-            <element signature="e#8896#8917#0" expanded="true" />
-            <element signature="e#10359#10398#0" expanded="true" />
+            <element signature="e#8487#8511#0" expanded="true" />
+            <element signature="e#8626#8650#0" expanded="true" />
+            <element signature="e#8806#8827#0" expanded="true" />
+            <element signature="e#10269#10308#0" expanded="true" />
             <element signature="method#ativaTimer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#checkBluetooth#0;class#MainActivity#0" expanded="false" />
             <element signature="method#geraDadosMock#0;class#MainActivity#0" expanded="false" />
             <element signature="method#selectItemFromDrawer#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onCreateOptionsMenu#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MainActivity#0" expanded="false" />
             <element signature="class#NavItem#0;class#MainActivity#0" expanded="false" />
             <element signature="class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
             <element signature="method#getView#0;class#DrawerListAdapter#0;class#MainActivity#0" expanded="false" />
