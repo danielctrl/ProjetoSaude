@@ -200,8 +200,10 @@ public class MainActivity extends Default {
                     case CONECTAR:
                         connectBT();
                     case CONECTANDO:
+                        break;
                     case DESCONECTADO:
                         disconnectBT();
+                        break;
                 }
             }
         });

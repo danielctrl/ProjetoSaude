@@ -4,6 +4,7 @@ import android.os.Environment;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import jxl.*;
 import jxl.write.*;
@@ -59,8 +60,8 @@ public class GravaDados {
     }
 
     private void CreateWorkbook() {
-        Date now = new Date();
-
+        //Date now = new Date();
+        Calendar now = Calendar.getInstance();
         File folder = new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/");
 
         if (!folder.exists()) {
@@ -70,12 +71,12 @@ public class GravaDados {
         try {
             mWorkbook = Workbook.createWorkbook(new File(Environment.getExternalStorageDirectory() + "/ProjetoSaude/" +
                     "ProjetoSaude" +
-                    now.getYear() + "_" +
-                    now.getMonth() + "_" +
-                    now.getDay() + "-" +
-                    now.getHours() + "_" +
-                    now.getMinutes() + "_" +
-                    now.getSeconds() +
+                    now.get(Calendar.YEAR) + "_" +
+                    now.get(Calendar.MONTH) + 1 + "_" +
+                    now.get(Calendar.DAY_OF_MONTH) + "-" +
+                    now.get(Calendar.HOUR_OF_DAY) + "_" +
+                    now.get(Calendar.MINUTE) + "_" +
+                    now.get(Calendar.SECOND) +
                     ".xls"));
         } catch (IOException e) {
             e.printStackTrace();
