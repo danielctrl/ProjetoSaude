@@ -10,9 +10,6 @@ import android.content.IntentFilter;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Timer;
@@ -20,7 +17,6 @@ import java.util.TimerTask;
 
 import projetoSaude.mobile.NOMESISTEMA.R;
 import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
-import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
 
 
 /**
@@ -36,7 +32,7 @@ public class BackgroundService extends Service {
     private static final int REQUEST_ENABLE_BT = 2;
     public static final String DEVICE_NAME = "device_name";
     public static final String TOAST = "toast";
-
+    private String mNomeDispConectado = null;
     public static final String BROADCAST_ACTION = "projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLi";
 
     private GravaDados mGravar;
@@ -174,18 +170,25 @@ public class BackgroundService extends Service {
 
         @Override
         public void handleMessage(Message msg) {
+            Intent intentConnection = new Intent(BROADCAST_ACTION);
             switch (msg.what) {
                 case MESSAGE_STATE_CHANGE:
                     switch (msg.arg1) {
                         case Bluetooth.STATE_CONNECTED:
-                            btConectar.setText(R.string.main_disconnect);
+//                            btConectar.setText(R.string.main_disconnect);
+                            intentConnection.putExtra("connection", R.string.main_disconnect);
+                            sendBroadcast(intentConnection);
                             break;
                         case Bluetooth.STATE_CONNECTING:
-                            btConectar.setText(R.string.main_connecting);
+//                            btConectar.setText(R.string.main_connecting);
+                            intentConnection.putExtra("connection", R.string.main_connecting);
+                            sendBroadcast(intentConnection);
                             break;
                         //case Bluetooth.STATE_LISTEN:
                         case Bluetooth.STATE_NONE:
-                            btConectar.setText(R.string.main_connect);
+//                            btConectar.setText(R.string.main_connect);
+                            intentConnection.putExtra("connection", R.string.main_connect);
+                            sendBroadcast(intentConnection);
                             break;
                     }
                     break;
@@ -207,12 +210,14 @@ public class BackgroundService extends Service {
                         //sEnt+=" C";
 
                         try {
+                            Intent intentTemp = new Intent(BROADCAST_ACTION);
 
                             if (sSensor.equals("0")) {
-                                tvDisp1.setText(sEnt);
+                                intentTemp.putExtra("temp", sEnt);
                             }else{
-                                tvDisp2.setText(sEnt);
+                                intentTemp.putExtra("temp", sEnt);
                             }
+                            sendBroadcast(intentTemp);
 
                             mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
 

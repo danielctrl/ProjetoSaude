@@ -149,12 +149,14 @@ public class MainActivity extends Default {
             @Override
             public void onReceive(Context context, Intent intent) {
                 //Update Your UI here..
-                String msg = intent.getStringExtra("msg");
-                texto.setText(msg);
+                String connection = intent.getStringExtra("connection");
+                String sEnt = intent.getStringExtra("temp");
+                btConectar.setText(connection);
+                tvDisp1.setText(sEnt);
             }
         };
 
-        registerReceiver(broadcastReceiver, new IntentFilter(ServTest.BROADCAST_ACTION));
+        registerReceiver(broadcastReceiver, new IntentFilter(BackgroundService.BROADCAST_ACTION));
     }
 
     //O BroadcastReceiver fica recebendo as mensagens de broadcast do bluetooth
