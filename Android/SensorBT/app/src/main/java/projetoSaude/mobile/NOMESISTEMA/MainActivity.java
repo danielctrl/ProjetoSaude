@@ -32,7 +32,6 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.MockSensor;
 import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
@@ -41,27 +40,10 @@ import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
 
 
 public class MainActivity extends Default {
-	/**
-	 * Region Variaveis Bluetooth
-	 */
-	// Tipos de mensagens enviadas pelo Bluetooth
-    public static final int MESSAGE_STATE_CHANGE = 1;
-    public static final int MESSAGE_READ = 2;
-    public static final int MESSAGE_WRITE = 3;
-    public static final int MESSAGE_DEVICE_NAME = 4;
-    public static final int MESSAGE_TOAST = 5;
-    private static final int REQUEST_ENABLE_BT = 2;
-    //Adapter
-    private BluetoothAdapter mBluetooth = null;
+
     //Strings
-    public static final String DEVICE_NAME = "device_name";
-    public static final String TOAST = "toast";
-    private String mNomeDispConectado = null;
-    private String mAction;
     private String mConnStatus = "";
-    //boolean
-    public boolean mIsMock = false;
-    // Labels
+    // TextViews
     private TextView tvDisp1;
     private TextView tvDisp2;
     private TextView tvDisp3;
@@ -71,14 +53,8 @@ public class MainActivity extends Default {
     // Botoes
     private Button btConectar;
     // Objetos
-    private GravaDados mGravar;
-    // Objeto para os servicos RFCOMM
-    private Bluetooth mRfcommClient = null;
-    private final Handler hHandler = new Handler();
-    private TimerTask mTask;
-    private Timer mTimerAtual = new Timer();
     protected PowerManager.WakeLock mWakeLock;
-
+    // Drawers
     ListView mDrawerList;
     RelativeLayout mDrawerPane;
     private DrawerLayout mDrawerLayout;
@@ -121,29 +97,10 @@ public class MainActivity extends Default {
             }
         });
 
-//            mGravar = new GravaDados();
-//
-//            mIsMock = false;
-
-//        mBluetooth = BluetoothAdapter.getDefaultAdapter();
-//        // if null = Bluetooth nao disponivel
-//        if (mBluetooth == null) {
-//            Toast.makeText(this, getString(R.string.main_bluetooth_error), Toast.LENGTH_LONG).show();
-//            finish();
-//            return;
-//        }
         // Nao permite que o celular desligue a tela
         PowerManager pM = (PowerManager) getSystemService(Context.POWER_SERVICE);
         this.mWakeLock = pM.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK, "My Tag"); 
         this.mWakeLock.acquire();
-
-//        IntentFilter filter1 = new IntentFilter(BluetoothDevice.ACTION_ACL_CONNECTED);
-//        IntentFilter filter2 = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED);
-//        IntentFilter filter3 = new IntentFilter(BluetoothDevice.ACTION_ACL_DISCONNECTED);
-
-//        this.registerReceiver(mReceiver, filter1);
-//        this.registerReceiver(mReceiver, filter2);
-//        this.registerReceiver(mReceiver, filter3);
 
         broadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -159,18 +116,6 @@ public class MainActivity extends Default {
         registerReceiver(broadcastReceiver, new IntentFilter(BackgroundService.BROADCAST_ACTION));
     }
 
-    //O BroadcastReceiver fica recebendo as mensagens de broadcast do bluetooth
-//    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive (Context context, Intent intent){
-//        mAction = intent.getAction();
-//
-//        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(mAction)) {
-//            //Device has disconnected
-//            connectBT();
-//        }
-//        }
-//    };
     
     @Override
 	public void onBackPressed() {
@@ -199,12 +144,6 @@ public class MainActivity extends Default {
     @Override
     public void onStart() {
         super.onStart();
-//        if (!mBluetooth.isEnabled()) {
-//            Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-//            startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
-//        } else {
-//            if (mRfcommClient == null) setupIHM();
-//        }
     }
 
     public void onClick(View src) {
@@ -221,128 +160,6 @@ public class MainActivity extends Default {
             }
         }
     }
-
-//    private void connectBT(){
-//        String address = getString(R.string.mac_address);
-//
-//        BluetoothDevice device = mBluetooth.getRemoteDevice(address);
-//
-//        if (mIsMock) {
-//            MockSensor mMock = new MockSensor();
-//            for (int n = 0; n <= 120; n++) {
-//                geraDadosMock(mMock);
-//            }
-//        }else {
-//            mBluetooth.cancelDiscovery();
-//            mRfcommClient.connect(device);
-//        }
-//    }
-
-//    private void disconnectBT(){
-//        mGravar.CloseWorkbook();
-//        mRfcommClient.stop();
-//    }
-
-    // Handler que recebe as mensagens do BluetoothRfcommClient
-//    private final Handler mHandler = new Handler() {
-//
-//        @Override
-//        public void handleMessage(Message msg) {
-//            switch (msg.what) {
-//            case MESSAGE_STATE_CHANGE:
-//                switch (msg.arg1) {
-//                case Bluetooth.STATE_CONNECTED:
-//                	btConectar.setText(R.string.main_disconnect);
-//                    break;
-//                case Bluetooth.STATE_CONNECTING:
-//                	btConectar.setText(R.string.main_connecting);
-//                    break;
-//                //case Bluetooth.STATE_LISTEN:
-//                case Bluetooth.STATE_NONE:
-//                	btConectar.setText(R.string.main_connect);
-//                    break;
-//                }
-//                break;
-//            case MESSAGE_WRITE:
-//                byte[] writeBuf = (byte[]) msg.obj;
-//                String writeMessage = new String(writeBuf);
-//                //mBTStatus.setText(writeMessage);
-//                break;
-//            case MESSAGE_READ:
-//            	int data_length,i,c;
-//                byte[] readBuf = (byte[]) msg.obj;
-//                data_length = msg.arg1;
-//                if (data_length>=5) {
-//                	String readMessage = new String(readBuf);
-//
-//                	readMessage=readMessage.substring(0,data_length );
-//                	String sEnt=new String(readMessage.substring(5,10));
-//                    String sSensor=new String(readMessage.substring(0,1));
-//                	//sEnt+=" C";
-//
-//                   try {
-//
-//                       if (sSensor.equals("0")) {
-//                           tvDisp1.setText(sEnt);
-//                       }else{
-//                           tvDisp2.setText(sEnt);
-//                       }
-//
-//                       mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
-//
-//                    } catch(Exception e){
-//
-//                   }
-//                }
-//                break;
-//            case MESSAGE_DEVICE_NAME:
-//                // Guarda o nome do dispositivo que foi conectado
-//            	mNomeDispConectado = msg.getData().getString(DEVICE_NAME);
-//                Toast.makeText(getApplicationContext(), getString(R.string.main_connected_into)
-//                               + mNomeDispConectado, Toast.LENGTH_SHORT).show();
-//                break;
-//            case MESSAGE_TOAST:
-//                Toast.makeText(getApplicationContext(), msg.getData().getString(TOAST),
-//                               Toast.LENGTH_SHORT).show();
-//                break;
-//            }
-//        }
-//    };
-    
-//    private void ativaTimer() {
-//        mTask = new TimerTask() {
-//            public void run() {
-//                hHandler.post(new Runnable() {
-//                    public void run() {
-//                        checkBluetooth();
-//                    }
-//                });
-//            }
-//        };
-//
-//        mTimerAtual.schedule(mTask, 300, 30000);
-//    }
-
-    //Método que valida se o Bluetooth está conectado, caso negativo, o sistema refaz a conexão
-//    private void checkBluetooth(){
-//        if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(mAction))
-//            connectBT();
-//    }
-//
-//    private void geraDadosMock(MockSensor mMock) {
-//
-//        String sEnt=  mMock.geraTemp(0.3).replace(",", ".");
-//        String sSensor = mMock.getSensor();
-//
-//        if (sSensor.equals("0")) {
-//            tvDisp1.setText(sEnt);
-//        }else{
-//            tvDisp2.setText(sEnt);
-//        }
-//
-//        mGravar.gravaDadosExcel(Double.parseDouble(sEnt), sSensor);
-//
-//    }
 
     private void selectItemFromDrawer(int position) {
         //Call Desired Activity
