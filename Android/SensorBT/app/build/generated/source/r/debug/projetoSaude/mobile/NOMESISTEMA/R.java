@@ -783,9 +783,11 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f090022;
         public static final int activity_chooser_view_content=0x7f090023;
         public static final int always=0x7f090011;
-        public static final int avatar=0x7f09005f;
+        public static final int avatar=0x7f090062;
         public static final int beginning=0x7f09000d;
-        public static final int btConectar=0x7f09005c;
+        public static final int btConectar=0x7f09005f;
+        public static final int btMacCancel=0x7f09005d;
+        public static final int btMacSave=0x7f09005e;
         public static final int checkbox=0x7f09002b;
         public static final int collapseActionView=0x7f090012;
         public static final int configuracao_corpo=0x7f090042;
@@ -793,14 +795,15 @@ containing a value of this type.
         public static final int configuracao_tab_geral=0x7f09004d;
         public static final int configuracao_tab_rede=0x7f09004f;
         public static final int default_activity_button=0x7f090026;
-        public static final int desc=0x7f090061;
+        public static final int desc=0x7f090064;
         public static final int dialog=0x7f090016;
         public static final int disableHome=0x7f090007;
         public static final int drawerLayout=0x7f090057;
-        public static final int drawerPane=0x7f09005d;
+        public static final int drawerPane=0x7f090060;
         public static final int dropdown=0x7f090017;
         public static final int edit_query=0x7f090036;
         public static final int end=0x7f09000e;
+        public static final int etMac=0x7f09005c;
         public static final int expand_activities_button=0x7f090024;
         public static final int expanded_menu=0x7f09002a;
         public static final int home=0x7f090003;
@@ -824,11 +827,11 @@ containing a value of this type.
         public static final int login_txUsuario=0x7f090054;
         public static final int mainContent=0x7f090058;
         public static final int middle=0x7f09000f;
-        public static final int navList=0x7f090062;
+        public static final int navList=0x7f090065;
         public static final int never=0x7f090014;
         public static final int none=0x7f090010;
         public static final int normal=0x7f090005;
-        public static final int profileBox=0x7f09005e;
+        public static final int profileBox=0x7f090061;
         public static final int progress_circular=0x7f090034;
         public static final int progress_horizontal=0x7f090035;
         public static final int radio=0x7f09002d;
@@ -849,7 +852,7 @@ containing a value of this type.
         public static final int showHome=0x7f09000a;
         public static final int showTitle=0x7f09000b;
         public static final int split_action_bar=0x7f09001c;
-        public static final int subTitle=0x7f090063;
+        public static final int subTitle=0x7f090066;
         public static final int submit_area=0x7f09003f;
         public static final int tabMode=0x7f090006;
         public static final int title=0x7f090029;
@@ -857,7 +860,7 @@ containing a value of this type.
         public static final int top_action_bar=0x7f09001e;
         public static final int up=0x7f09001f;
         public static final int useLogo=0x7f09000c;
-        public static final int userName=0x7f090060;
+        public static final int userName=0x7f090063;
         public static final int withText=0x7f090015;
     }
     public static final class integer {
@@ -1959,7 +1962,7 @@ containing a value of this type.
          */
         public static final int[] MenuView = {
             0x010100ae, 0x0101012c, 0x0101012d, 0x0101012e,
-            0x0101012f, 0x01010130, 0x01010131, 0x010103ea
+            0x0101012f, 0x01010130, 0x01010131, 0x0101041a
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#headerBackground}

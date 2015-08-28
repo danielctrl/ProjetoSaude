@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.BackgroundService;
 import projetoSaude.mobile.NOMESISTEMA.Util;
 import projetoSaude.mobile.NOMESISTEMA.MainActivity;
 import android.bluetooth.BluetoothAdapter;
@@ -52,7 +53,7 @@ public class Bluetooth {
 	        mState = state;
 
 	        // Give the new state to the Handler so the UI Activity can update
-	        mHandler.obtainMessage(MainActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
+	        mHandler.obtainMessage(BackgroundService.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
 	    }
 
 	    /**
@@ -112,9 +113,9 @@ public class Bluetooth {
 	        mConnectedThread.start();
 
 	        // Send the name of the connected device back to the UI Activity
-	        Message msg = mHandler.obtainMessage(MainActivity.MESSAGE_DEVICE_NAME);
+	        Message msg = mHandler.obtainMessage(BackgroundService.MESSAGE_DEVICE_NAME);
 	        Bundle bundle = new Bundle();
-	        bundle.putString(MainActivity.DEVICE_NAME, device.getName());
+	        bundle.putString(BackgroundService.DEVICE_NAME, device.getName());
 	        msg.setData(bundle);
 	        mHandler.sendMessage(msg);
 
@@ -152,9 +153,9 @@ public class Bluetooth {
 	    private void connectionFailed() {
 	        setState(STATE_NONE);
 	        // Send a failure message back to the Activity
-	        Message msg = mHandler.obtainMessage(MainActivity.MESSAGE_TOAST);
+	        Message msg = mHandler.obtainMessage(BackgroundService.MESSAGE_TOAST);
 	        Bundle bundle = new Bundle();
-	        bundle.putString(MainActivity.TOAST, "Unable to connect device");
+	        bundle.putString(BackgroundService.TOAST, "Unable to connect device");
 	        msg.setData(bundle);
 	        mHandler.sendMessage(msg);
 	    }
@@ -165,9 +166,9 @@ public class Bluetooth {
 	    private void connectionLost() {
 	        setState(STATE_NONE);
 	        // Send a failure message back to the Activity
-	        Message msg = mHandler.obtainMessage(MainActivity.MESSAGE_TOAST);
+	        Message msg = mHandler.obtainMessage(BackgroundService.MESSAGE_TOAST);
 	        Bundle bundle = new Bundle();
-	        bundle.putString(MainActivity.TOAST, "Device connection was lost");
+	        bundle.putString(BackgroundService.TOAST, "Device connection was lost");
 	        msg.setData(bundle);
 	        mHandler.sendMessage(msg);
 	    }
@@ -281,7 +282,7 @@ public class Bluetooth {
 	                    buffer[bytes-1]=0;
 	                    
 	                    // Send the obtained bytes to the UI Activity
-	                    mHandler.obtainMessage(MainActivity.MESSAGE_READ, bytes, -1, buffer)
+	                    mHandler.obtainMessage(BackgroundService.MESSAGE_READ, bytes, -1, buffer)
 	                            .sendToTarget();
 	                	
 	                } catch (IOException e) {
@@ -299,7 +300,7 @@ public class Bluetooth {
 	            try {
 	                mmOutStream.write(buffer);
 	                // Share the sent message back to the UI Activity
-	                mHandler.obtainMessage(MainActivity.MESSAGE_WRITE, -1, -1, buffer)
+	                mHandler.obtainMessage(BackgroundService.MESSAGE_WRITE, -1, -1, buffer)
 	                        .sendToTarget();
 	            } catch (IOException e) {
                     Util.ErrorLog(e);

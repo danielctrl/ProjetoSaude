@@ -1,45 +1,46 @@
 package projetoSaude.mobile.NOMESISTEMA;
 
-import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.BackgroundService;
-import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.GravaDados;
-import projetoSaude.mobile.NOMESISTEMA.classes.Bluetooth;
 import android.app.AlertDialog;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.os.PowerManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.MockSensor;
+import java.util.ArrayList;
+
+import projetoSaude.mobile.NOMESISTEMA.Configuration.ConnectivitySettings;
+import projetoSaude.mobile.NOMESISTEMA.ProjetoSaudeLib.BackgroundService;
 import projetoSaude.mobile.NOMESISTEMA.enumerated.ConnStatus;
+
+//import org.apache.commons.lang3.StringUtils;
 
 //Exception's Handler
 
 
 public class MainActivity extends Default {
+
+    //Configuracoes
+    private ConnectivitySettings configConnect;
+    private EditText etMac;
+    private Button btMacSave;
+    private Button btMacCancel;
 
     //Strings
     private String mConnStatus = "";
@@ -69,11 +70,51 @@ public class MainActivity extends Default {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_principal);
 
         tvDisp1 = (TextView) findViewById(R.id.lbDisp1);
         tvDisp2 = (TextView) findViewById(R.id.lbDisp2);
+
         btConectar = (Button) findViewById(R.id.btConectar);
+
+
+
+
+
+//Configuracao - Tirar daqui depois, por favor =)
+        configConnect = new ConnectivitySettings(this);
+        etMac = (EditText) findViewById(R.id.etMac);
+        btMacSave = (Button) findViewById(R.id.btMacSave);
+        btMacCancel = (Button) findViewById(R.id.btMacCancel);
+
+        etMac.setText(configConnect.getBtMacAddress());
+
+        btMacSave.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String textMac = etMac.getText().toString();
+                if (textMac.length() != 17)
+                    Toast.makeText(getApplicationContext(), "Mac informado diferente de 17 caracteres", Toast.LENGTH_SHORT).show();
+                //else if (StringUtils.countMatches(textMac, ":") != 5 )
+                    //Toast.makeText(getApplicationContext(), "Mac informado nao contem 5 dois pontos", Toast.LENGTH_SHORT).show();
+                else
+                    configConnect.setGetBtMAC(textMac);
+            }
+        });
+
+        btMacCancel.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                etMac.setText(configConnect.getBtMacAddress());
+            }
+        });
+
+
+
+
+
+//Fim configuracoes
+
+
 
         //Preparando o menu
         mNavItems.add(new NavItem(getString(R.string.ic_home), getString(R.string.sub_ic_home)));

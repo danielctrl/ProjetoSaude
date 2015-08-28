@@ -35,4 +35,4 @@
         android:layout_below="@+id/title"
         android:layout_alignParentRight="true" />
 
-</RelativeLayout><!-- From: file:/C:/Users/Andre/Documents/GitHub/ProjetoSaude/Android/SensorBT/app/src/main/res/layout/drawer_item.xml -->
+</RelativeLayout><!-- From: file:/C:/Projetos/ProjetoSaude/Android/SensorBT/app/src/main/res/layout/drawer_item.xml -->

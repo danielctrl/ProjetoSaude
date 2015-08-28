@@ -121,7 +121,7 @@ public class BackgroundService extends Service {
 
     private void setupIHM() {
 
-        // Inicializa o mRfcommClient para fazer a conexão com o Bluetooth
+        // Inicializa o mRfcommClient para fazer a conexao com o Bluetooth
         mRfcommClient = new Bluetooth(this, mHandler);
 
     }
@@ -145,7 +145,7 @@ public class BackgroundService extends Service {
 
     }
 
-    //Método que valida se o Bluetooth está conectado, caso negativo, o sistema refaz a conexão
+    //Metodo que valida se o Bluetooth esta conectado, caso negativo, o sistema refaz a conexao
     private void checkBluetooth(){
         if (BluetoothDevice.ACTION_ACL_DISCONNECTED.equals(mAction))
             connectBT();
