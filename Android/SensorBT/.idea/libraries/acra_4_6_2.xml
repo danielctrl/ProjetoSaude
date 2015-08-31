@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="acra-4.6.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/acra-4.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/src/main/java/projetoSaude/mobile/Sensoriando/lib/acra-4.6.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

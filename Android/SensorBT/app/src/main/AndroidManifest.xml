@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="projetoSaude.mobile.NOMESISTEMA"
+    package="projetoSaude.mobile.Sensoriando"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -19,16 +19,15 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name" >
+
+        <activity android:name="projetoSaude.mobile.Sensoriando.MainActivity" android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:label="Principal" ></activity>
+        <activity android:name=".Activitys.Login.LoginActivity" android:label="@string/app_name" />
+        <activity android:name=".Activitys.Configurations.SettingsActivity" android:label="@string/app_name" />
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="2132ee38e2184b646dfc2cbd3048a4d5d8917d96" />

@@ -29,23 +29,23 @@
              android:orientation="horizontal"
              android:padding="10dip" >
          
-         <TextView
-             android:id="@+id/lbNumeroBT"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/settings_tv_num_dev" />
+             <TextView
+                 android:id="@+id/lbNumeroBT"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@string/settings_tv_num_dev" />
 
-         <Spinner
-             android:id="@+id/Configuracao_spNumeroBT"
-             android:layout_width="91dp"
-             android:layout_height="wrap_content" />
-         
-         <Button
-             android:id="@+id/Configuracao_btOK"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="5dp"
-             android:text="@string/settings_button_OK" />
+             <Spinner
+                 android:id="@+id/Configuracao_spNumeroBT"
+                 android:layout_width="91dp"
+                 android:layout_height="wrap_content" />
+
+             <Button
+                 android:id="@+id/Configuracao_btOK"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="5dp"
+                 android:text="@string/settings_button_OK" />
          </LinearLayout>
          
          <Spinner

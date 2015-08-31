@@ -6,7 +6,59 @@
     android:layout_height="fill_parent"
     android:fillViewport="true" >
 
-    <TabHost
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.17">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Em construção - Depois receberá um menu descente"
+            android:id="@+id/textView" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etMac"
+            android:layout_marginTop="30dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/btMacCancel" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/btMacSave"
+                    android:layout_weight="0.52"
+                    android:layout_marginLeft="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--ToDo: Aparentemente este codigo esta muito bom, so falta implementar na class, certo? =) Depois fazermos isso certinho, mas por hora vou comentar pra deixar o que ja fiz funfante-->
+    <!--<TabHost
         android:id="@+id/configuracao_tab_geral"
         android:layout_width="fill_parent"
         android:layout_height="match_parent" >
@@ -19,23 +71,23 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
+                android:layout_height="wrap_content"
                 android:divider="@null"
                 android:tabStripEnabled="true">
-                               
+
             </TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" 
+                android:layout_height="match_parent"
                 android:layout_marginTop="10dp" >
 
                 <LinearLayout
                     android:id="@+id/configuracao_tab_bt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
-                    
+
                     <include layout="@layout/activity_configuracao_bt" />
                 </LinearLayout>
 
@@ -43,11 +95,11 @@
                     android:id="@+id/configuracao_tab_rede"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
-                    
+
                     <include layout="@layout/activity_configuracao_rede" />
                 </LinearLayout>
 
             </FrameLayout>
         </LinearLayout>
-    </TabHost>
+    </TabHost>-->
 </LinearLayout>

@@ -20,7 +20,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "projetoSaude.mobile.NOMESISTEMA"
+        applicationId "projetoSaude.mobile.Sensoriando"
         minSdkVersion 11
         targetSdkVersion 21
     }
@@ -39,6 +39,6 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.5.1@aar') {
         transitive = true;
     }
-    compile files('src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/jxl.jar')
-    compile files('src/main/java/projetoSaude/mobile/NOMESISTEMA/lib/acra-4.6.2.jar')
+    compile files('src/main/java/projetoSaude/mobile/Sensoriando/lib/jxl.jar')
+    compile files('src/main/java/projetoSaude/mobile/Sensoriando/lib/acra-4.6.2.jar')
 }

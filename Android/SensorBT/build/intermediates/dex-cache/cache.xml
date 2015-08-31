@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\acra-4.6.2.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b99297996579b72496c9f81b0c12d8404c74e618">
-        <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\acra-4.6.2-4294a73cfe30b928d477959f0b30f13c0a68ee6c.jar" />
-    </item>
-    <item
         jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\exploded-aar\com.crashlytics.sdk.android\answers\1.3.1\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -37,18 +30,25 @@
         <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-f670e76d414303d163f3575149195d74208a7120.jar" />
     </item>
     <item
-        jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\NOMESISTEMA\lib\jxl.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
-        <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-813c5ab5b130ae178977ea02462570b8ac9bd842.jar" />
-    </item>
-    <item
         jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\18.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
         <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\classes-a6ce86ff518d89c5aa104dcf72fba1e687713b30.jar" />
+    </item>
+    <item
+        jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\Sensoriando\lib\acra-4.6.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b99297996579b72496c9f81b0c12d8404c74e618">
+        <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\acra-4.6.2-4b659c19f6cb28bc90027eb7540da48df61eb57d.jar" />
+    </item>
+    <item
+        jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\src\main\java\projetoSaude\mobile\Sensoriando\lib\jxl.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7faf62e0697f7a88954622dfe8c8de33ed142ac7">
+        <dex dex="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\pre-dexed\debug\jxl-965618be63633830e8fc9c1019a7cec40c596c49.jar" />
     </item>
     <item
         jar="C:\Projetos\ProjetoSaude\Android\SensorBT\app\build\intermediates\exploded-aar\com.crashlytics.sdk.android\beta\1.1.3\classes.jar"
