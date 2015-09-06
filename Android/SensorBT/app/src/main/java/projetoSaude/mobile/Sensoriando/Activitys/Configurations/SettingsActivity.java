@@ -54,6 +54,12 @@ public class SettingsActivity extends Default {
 
         configConnect = new ConnectivitySettings(this);
         etMac1 = (EditText) findViewById(R.id.settings_etMac1);
+        etMac2 = (EditText) findViewById(R.id.settings_etMac2);
+        etMac3 = (EditText) findViewById(R.id.settings_etMac3);
+        etMac4 = (EditText) findViewById(R.id.settings_etMac4);
+        etMac5 = (EditText) findViewById(R.id.settings_etMac5);
+        etMac6 = (EditText) findViewById(R.id.settings_etMac6);
+        etMac7 = (EditText) findViewById(R.id.settings_etMac7);
         btSave = (Button) findViewById(R.id.settings_btSave);
         spNumDisp = (Spinner) findViewById(R.id.settings_spNumeroBT);
 
@@ -80,24 +86,67 @@ public class SettingsActivity extends Default {
                 Integer selected = Integer.parseInt(spItems.getSelectedItem().toString());
                 switch (selected){
                     case 1:
-                        spNumDisp.setVisibility(View.VISIBLE);
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.GONE);
+                        etMac3.setVisibility(View.GONE);
+                        etMac4.setVisibility(View.GONE);
+                        etMac5.setVisibility(View.GONE);
+                        etMac6.setVisibility(View.GONE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 2:
-
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.GONE);
+                        etMac4.setVisibility(View.GONE);
+                        etMac5.setVisibility(View.GONE);
+                        etMac6.setVisibility(View.GONE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 3:
-
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.VISIBLE);
+                        etMac4.setVisibility(View.GONE);
+                        etMac5.setVisibility(View.GONE);
+                        etMac6.setVisibility(View.GONE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 4:
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.VISIBLE);
+                        etMac4.setVisibility(View.VISIBLE);
+                        etMac5.setVisibility(View.GONE);
+                        etMac6.setVisibility(View.GONE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 5:
-
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.VISIBLE);
+                        etMac4.setVisibility(View.VISIBLE);
+                        etMac5.setVisibility(View.VISIBLE);
+                        etMac6.setVisibility(View.GONE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 6:
-
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.VISIBLE);
+                        etMac4.setVisibility(View.VISIBLE);
+                        etMac5.setVisibility(View.VISIBLE);
+                        etMac6.setVisibility(View.VISIBLE);
+                        etMac7.setVisibility(View.GONE);
                         break;
                     case 7:
-
+                        etMac1.setVisibility(View.VISIBLE);
+                        etMac2.setVisibility(View.VISIBLE);
+                        etMac3.setVisibility(View.VISIBLE);
+                        etMac4.setVisibility(View.VISIBLE);
+                        etMac5.setVisibility(View.VISIBLE);
+                        etMac6.setVisibility(View.VISIBLE);
+                        etMac7.setVisibility(View.VISIBLE);
                         break;
                     default: ;
                 }

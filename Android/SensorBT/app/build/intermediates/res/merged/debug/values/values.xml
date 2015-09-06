@@ -159,7 +159,7 @@
     <string name="main_tv_dev_5">---.- º</string>
     <string name="main_tv_dev_6">---.- º</string>
     <string name="settings_button_save">Salvar Configurações</string>
-    <string name="settings_mac_error">Mac informado diferente de 17 caracteres</string>
+    <string name="settings_mac_error">Mac informado precisa ter 17 caracteres</string>
     <string name="settings_tv_num_dev">Núm. Dispositivos: </string>
     <string name="sub_ic_about">Conheça mais sobre o sistema</string>
     <string name="sub_ic_home">Seguir para a tela principal</string>

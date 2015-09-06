@@ -13,7 +13,7 @@
     
     <!-- Form Configuração -->
     <string name="settings_button_save">Salvar Configurações</string>
-    <string name="settings_mac_error">Mac informado diferente de 17 caracteres</string>
+    <string name="settings_mac_error">Mac informado precisa ter 17 caracteres</string>
 	<string name="settings_tv_num_dev">Núm. Dispositivos: </string>
 
     <!-- Form Principal -->

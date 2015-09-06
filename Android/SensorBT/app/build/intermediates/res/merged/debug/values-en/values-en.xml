@@ -28,10 +28,12 @@
     <string name="main_tv_dev_4">---.- º</string>
     <string name="main_tv_dev_5">---.- º</string>
     <string name="main_tv_dev_6">---.- º</string>
-    <string name="settings_button_OK">OK</string>
     <string name="settings_button_save">Save Settings</string>
+    <string name="settings_mac_error">Invalid Mac address informed</string>
     <string name="settings_tv_num_dev">Num. Devices: </string>
     <string name="sub_ic_about">Get to know about us</string>
     <string name="sub_ic_home">Meetup destination</string>
     <string name="sub_ic_preferences">Change your preferences</string>
+    <string name="tab_bluetooth">Bluetooth</string>
+    <string name="tab_rede">Network</string>
 </resources>
