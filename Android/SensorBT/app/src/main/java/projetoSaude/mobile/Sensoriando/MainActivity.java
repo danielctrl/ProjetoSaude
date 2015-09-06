@@ -11,14 +11,11 @@ import android.os.PowerManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import projetoSaude.mobile.Sensoriando.Activitys.Configurations.SettingsActivity;
-import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ConfigurationHelper.ConnectivitySettings;
 import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.BackgroundService;
 import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ScreenHelpers.Drawer.DrawerHelper;
 import projetoSaude.mobile.Sensoriando.enumerated.ConnStatus;

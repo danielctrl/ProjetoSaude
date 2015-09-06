@@ -13,8 +13,9 @@
     
     <!-- Form ConfiguraçãoBT -->
     <string name="settings_button_save">Save Settings</string>
-    <string name="settings_button_OK">OK</string>
-	<string name="settings_tv_num_dev">Num. Devices: </string>
+    <string name="settings_mac_error">Invalid Mac address informed</string>
+    <string name="settings_tv_num_dev">Num. Devices: </string>
+
 
     <!-- Form Principal -->
     <string name="main_button">Connect</string>
@@ -43,5 +44,8 @@
     <string name="sub_ic_preferences">Change your preferences</string>
     <string name="ic_about">About</string>
     <string name="sub_ic_about">Get to know about us</string>
+
+    <string name="tab_bluetooth">Bluetooth</string>
+    <string name="tab_rede">Network</string>
 </resources>
 

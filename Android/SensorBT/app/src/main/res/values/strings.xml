@@ -11,9 +11,9 @@
     <string name="login_et_password">Senha</string>
     <string name="login_button_login">Login</string>
     
-    <!-- Form ConfiguraçãoBT -->
+    <!-- Form Configuração -->
     <string name="settings_button_save">Salvar Configurações</string>
-    <string name="settings_button_OK">OK</string>
+    <string name="settings_mac_error">Mac informado diferente de 17 caracteres</string>
 	<string name="settings_tv_num_dev">Núm. Dispositivos: </string>
 
     <!-- Form Principal -->
@@ -43,6 +43,9 @@
     <string name="sub_ic_preferences">Altere as configurações do sistema</string>
     <string name="ic_about">Sobre</string>
     <string name="sub_ic_about">Conheça mais sobre o sistema</string>
+
+    <string name="tab_bluetooth">Bluetooth</string>
+    <string name="tab_rede">Rede</string>
 
 
 </resources>

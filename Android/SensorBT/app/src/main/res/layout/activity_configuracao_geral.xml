@@ -1,5 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llNumDisp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNumeroBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_tv_num_dev" />
+
+                    <Spinner
+                        android:id="@+id/settings_spNumeroBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llMacBluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac1"
+                        android:layout_marginTop="20dp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac2"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac3"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac4"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac5"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac6"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/settings_etMac7"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llRede"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settings_btSave"
+            android:text="@string/settings_button_save"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</TabHost>
+
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:baselineAligned="false"
     xmlns:android1="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
@@ -55,7 +187,7 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <!--ToDo: Aparentemente este codigo esta muito bom, so falta implementar na class, certo? =) Depois fazermos isso certinho, mas por hora vou comentar pra deixar o que ja fiz funfante-->
     <!--<TabHost
@@ -101,5 +233,5 @@
 
             </FrameLayout>
         </LinearLayout>
-    </TabHost>-->
-</LinearLayout>
+    </TabHost>
+</LinearLayout>-->
