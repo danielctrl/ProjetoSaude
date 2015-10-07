@@ -2,6 +2,8 @@ package projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ConfigurationHelper;
 
 import android.content.Context;
 
+import org.apache.commons.lang3.NotImplementedException;
+
 /**
  * Created by Daniel on 28/08/2015.
  */
@@ -22,11 +24,24 @@ public class ConnectivitySettings extends ConfigurationHelper{
     }
 
 
-    public String getBtMacAddress() {
+    public String getBtMac() {
         return getString(BT_MAC_ADDRESS);
     }
 
-    public void setGetBtMAC(String macAddress) {
+    public void setBtMac(String macAddress) {
         setString(BT_MAC_ADDRESS, macAddress);
+    }
+
+    public boolean validateMacToRead(){
+        String mac = this.getBtMac();
+
+        if (mac == null || mac.isEmpty())
+            return false;
+
+        return true;
+    }
+
+    public boolean validateMacToWrite() {
+        throw new NotImplementedException("Não_implementado");
     }
 }

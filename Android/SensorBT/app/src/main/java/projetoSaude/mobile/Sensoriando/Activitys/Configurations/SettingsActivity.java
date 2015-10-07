@@ -64,7 +64,7 @@ public class SettingsActivity extends Default {
         spNumDisp = (Spinner) findViewById(R.id.settings_spNumeroBT);
 
 
-        etMac1.setText(configConnect.getBtMacAddress());
+        etMac1.setText(configConnect.getBtMac());
         btSave.setText(R.string.settings_button_save);
         btSave.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -74,7 +74,7 @@ public class SettingsActivity extends Default {
                     //else if (StringUtils.countMatches(textMac, ":") != 5 )
                     //Toast.makeText(getApplicationContext(), "Mac informado nao contem 5 dois pontos", Toast.LENGTH_SHORT).show();
                 else
-                    configConnect.setGetBtMAC(textMac);
+                    configConnect.setBtMac(textMac);
             }
         });
 
@@ -197,7 +197,7 @@ public class SettingsActivity extends Default {
 //        btMacSave = (Button) findViewById(R.id.btMacSave);
 //        btMacCancel = (Button) findViewById(R.id.btMacCancel);
 //
-//        etMac.setText(configConnect.getBtMacAddress());
+//        etMac.setText(configConnect.getBtMac());
 //
 //        btMacSave.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
@@ -207,13 +207,13 @@ public class SettingsActivity extends Default {
 //                    //else if (StringUtils.countMatches(textMac, ":") != 5 )
 //                    //Toast.makeText(getApplicationContext(), "Mac informado nao contem 5 dois pontos", Toast.LENGTH_SHORT).show();
 //                else
-//                    configConnect.setGetBtMAC(textMac);
+//                    configConnect.setBtMac(textMac);
 //            }
 //        });
 //
 //        btMacCancel.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
-//                etMac.setText(configConnect.getBtMacAddress());
+//                etMac.setText(configConnect.getBtMac());
 //            }
 //        });
 //    }

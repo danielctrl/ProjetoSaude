@@ -10,6 +10,9 @@
     <string name="login_et_user">Usuario</string>
     <string name="login_et_password">Senha</string>
     <string name="login_button_login">Login</string>
+
+    <!-- Menu superior -->
+    <string name="invalid_mac">Configuração invalida para o Mac Address</string>
     
     <!-- Form Configuração -->
     <string name="settings_button_save">Salvar Configurações</string>

@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ConfigurationHelper.ConnectivitySettings;
 import projetoSaude.mobile.Sensoriando.R;
 import projetoSaude.mobile.Sensoriando.classes.Bluetooth;
 
@@ -35,6 +36,10 @@ public class BackgroundService extends Service {
     private String mNomeDispConectado = null;
     public static final String BROADCAST_ACTION = "projetoSaude.mobile.Sensoriando.ProjetoSaudeLib";
 
+    //Connection
+    private ConnectivitySettings configConnect;
+    private String macAddress;
+
     private GravaDados mGravar;
     // boolean
     public boolean mIsMock = false;
@@ -54,7 +59,19 @@ public class BackgroundService extends Service {
 
     @Override
     public void onCreate() {
+
         mGravar = new GravaDados();
+
+        //Connection Settings
+        configConnect = new ConnectivitySettings(this);
+        if (configConnect.validateMacToRead()){
+            macAddress = configConnect.getBtMac();
+        } else {
+//            Toast.makeText(getApplicationContext(), R.string.invalid_mac, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(BROADCAST_ACTION);
+            intent.putExtra("Disp1", "suaMae");
+            this.stopSelf();
+        }
 
         mIsMock = false;
 
@@ -62,7 +79,6 @@ public class BackgroundService extends Service {
         // if null = Bluetooth nao disponivel
         if (mBluetooth == null) {
             Toast.makeText(this, getString(R.string.main_bluetooth_error), Toast.LENGTH_LONG).show();
-            //Toast.makeText(getApplicationContext(), textoNumbro, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -99,9 +115,8 @@ public class BackgroundService extends Service {
     };
 
     private void connectBT(){
-        String address = getString(R.string.mac_address);
 
-        BluetoothDevice device = mBluetooth.getRemoteDevice(address);
+        BluetoothDevice device = mBluetooth.getRemoteDevice(macAddress);
 
         if (mIsMock) {
             MockSensor mMock = new MockSensor();

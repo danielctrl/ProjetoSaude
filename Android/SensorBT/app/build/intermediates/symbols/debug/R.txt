@@ -377,6 +377,7 @@ int string com_crashlytics_android_build_id 0x7f050000
 int string ic_about 0x7f050003
 int string ic_home 0x7f050004
 int string ic_preferences 0x7f050005
+int string invalid_mac 0x7f050030
 int string login_button_login 0x7f050006
 int string login_et_password 0x7f050007
 int string login_et_user 0x7f050008

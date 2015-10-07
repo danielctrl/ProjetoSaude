@@ -925,6 +925,7 @@ containing a value of this type.
         public static final int ic_about=0x7f050003;
         public static final int ic_home=0x7f050004;
         public static final int ic_preferences=0x7f050005;
+        public static final int invalid_mac=0x7f050030;
         public static final int login_button_login=0x7f050006;
         public static final int login_et_password=0x7f050007;
         public static final int login_et_user=0x7f050008;

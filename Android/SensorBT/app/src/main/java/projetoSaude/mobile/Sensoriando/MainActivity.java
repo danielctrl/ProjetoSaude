@@ -17,14 +17,15 @@ import android.widget.TextView;
 
 import projetoSaude.mobile.Sensoriando.Activitys.Configurations.SettingsActivity;
 import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.BackgroundService;
+import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ConfigurationHelper.ConnectivitySettings;
 import projetoSaude.mobile.Sensoriando.ProjetoSaudeLib.ScreenHelpers.Drawer.DrawerHelper;
 import projetoSaude.mobile.Sensoriando.enumerated.ConnStatus;
-//import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 //Exception's Handler
 
 
-public class MainActivity extends Default {
+public class MainActivity extends Default implements View.OnClickListener {
 
     //Strings
     private String mConnStatus = "";
@@ -58,6 +59,8 @@ public class MainActivity extends Default {
         tvDisp1 = (TextView) findViewById(R.id.lbDisp1);
         tvDisp2 = (TextView) findViewById(R.id.lbDisp2);
         btConectar = (Button) findViewById(R.id.btConectar);
+        btConectar.setOnClickListener(this);
+
 
         //Preparando o menu
         drawerHelper = new DrawerHelper(this, (DrawerLayout) findViewById(R.id.drawerLayout), (RelativeLayout) findViewById(R.id.drawerPane), (ListView) findViewById(R.id.navList));
@@ -116,6 +119,7 @@ public class MainActivity extends Default {
             switch (ConnStatus.valueOf(mConnStatus)) {
                 case CONECTAR:
                     startService(new Intent(this, BackgroundService.class));
+                    break;
                 case CONECTANDO:
                     break;
                 case DESCONECTADO:
