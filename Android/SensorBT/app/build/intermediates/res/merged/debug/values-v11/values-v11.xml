@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Projetos/ProjetoSaude/Android/SensorBT/app/src/main/res/values-v11/arrays.xml -->
+    <eat-comment/>
+    <string-array name="entries_list_preference">
+        <item>Alpha Option 01</item>
+        <item>Beta Option 02</item>
+        <item>Charlie Option 03</item>  
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>Alpha</item>
+        <item>Beta</item>
+        <item>Charlie</item>
+    </string-array>
     <!-- From: file:/C:/Projetos/ProjetoSaude/Android/SensorBT/app/src/main/res/values-v11/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
