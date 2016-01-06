@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="saudeprojeto6" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Projetos\\ProjetoSaude\\Web\\SaudeProjeto6\\SaudeProjeto6\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Projetos\\ProjetoSaude\\Web\\SaudeProjeto6\\SaudeProjeto6\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-SaudeProjeto6-20160105100118.mdf;Initial Catalog=aspnet-SaudeProjeto6-20160105100118;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Projetos\\ProjetoSaude\\Web\\SaudeProjeto6\\SaudeProjeto6\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
