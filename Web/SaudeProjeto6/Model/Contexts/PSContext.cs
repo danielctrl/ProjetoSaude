@@ -32,7 +32,7 @@ namespace Model.Contexts
             modelBuilder.Entity<Telefone>().HasKey(m => m.Id);
 
             //Mapeamento FK
-            modelBuilder.Entity<Telefone>().HasRequired(m => m.Usuario).WithMany(m => m.Telefones).HasForeignKey(m => m.UsuarioId);
+            modelBuilder.Entity<Telefone>().HasRequired(m => m.Usuario).WithMany(m => m.Telefones).HasForeignKey(m => m.UsuarioId).WillCascadeOnDelete(false);
 
             //Não é necessário listarmos se não tiver nenhuma opção a mais
             //modelBuilder.Entity<Telefone>().Property(m => m.Id);

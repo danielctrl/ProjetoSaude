@@ -16,7 +16,7 @@ namespace Model.Migrations
                         Numero = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Usuarios", t => t.UsuarioId, cascadeDelete: true)
+                .ForeignKey("dbo.Usuarios", t => t.UsuarioId)
                 .Index(t => t.UsuarioId);
             
             CreateTable(

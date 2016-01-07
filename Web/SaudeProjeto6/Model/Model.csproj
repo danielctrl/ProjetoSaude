@@ -49,9 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201601070221585_Inicial.cs" />
-    <Compile Include="Migrations\201601070221585_Inicial.Designer.cs">
-      <DependentUpon>201601070221585_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\201601070246495_Inicial.cs" />
+    <Compile Include="Migrations\201601070246495_Inicial.Designer.cs">
+      <DependentUpon>201601070246495_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Telefone.cs" />
@@ -64,8 +64,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601070221585_Inicial.resx">
-      <DependentUpon>201601070221585_Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601070246495_Inicial.resx">
+      <DependentUpon>201601070246495_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
