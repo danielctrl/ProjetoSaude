@@ -1,5 +1,6 @@
-azure DB
+Azure WebApp
 
-projestosaudedb
+Azure DB
+projetosaudedb.database.windows.net
 tantan
 MarioBros1
