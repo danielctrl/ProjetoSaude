@@ -1,5 +1,3 @@
-using Model.Contexts;
-
 namespace Model.Migrations
 {
     using System;
@@ -7,15 +5,14 @@ namespace Model.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<PsContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Model.Contexts.PsContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(PsContext context)
+        protected override void Seed(Model.Contexts.PsContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -49,14 +49,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201601070246495_Inicial.cs" />
-    <Compile Include="Migrations\201601070246495_Inicial.Designer.cs">
-      <DependentUpon>201601070246495_Inicial.cs</DependentUpon>
+    <Compile Include="Contexts\PSContext\Mappings\ClinicaMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\ConvenioMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\EnderecoMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\PacienteParentescoMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\PacienteMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\TelefoneMappings.cs" />
+    <Compile Include="Contexts\PSContext\Mappings\UsuarioMappings.cs" />
+    <Compile Include="Contexts\PSContext\Model\Clinica.cs" />
+    <Compile Include="Contexts\PSContext\Model\Convenio.cs" />
+    <Compile Include="Contexts\PSContext\Model\Endereco.cs" />
+    <Compile Include="Contexts\PSContext\Model\PacienteParentesco.cs" />
+    <Compile Include="Contexts\PSContext\Model\Paciente.cs" />
+    <Compile Include="Enum\ModelEnum.cs" />
+    <Compile Include="Migrations\201601120619116_Inicial.cs" />
+    <Compile Include="Migrations\201601120619116_Inicial.Designer.cs">
+      <DependentUpon>201601120619116_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Model\Telefone.cs" />
+    <Compile Include="Contexts\PSContext\Model\Telefone.cs" />
     <Compile Include="Contexts\PSContext.cs" />
-    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Contexts\PSContext\Model\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,8 +77,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201601070246495_Inicial.resx">
-      <DependentUpon>201601070246495_Inicial.cs</DependentUpon>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601120619116_Inicial.resx">
+      <DependentUpon>201601120619116_Inicial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
